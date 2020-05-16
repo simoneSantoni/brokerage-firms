@@ -1,8 +1,5 @@
-Data collection ― README
-========================
-
-
-
+Twitter data collection - README
+================================
 
 
 ```{bash}
