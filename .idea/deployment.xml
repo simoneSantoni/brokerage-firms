@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="ubuntu@ec2-3-10-232-201.eu-west-2.compute.amazonaws.com:22">
+  <component name="PublishConfigData" autoUpload="Always" serverName="simone@10.16.142.91:22 password">
     <serverData>
+      <paths name="simone@10.16.142.91:22 password">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_325" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="ubuntu@ec2-3-10-232-201.eu-west-2.compute.amazonaws.com:22">
         <serverdata>
           <mappings>
