@@ -31,15 +31,15 @@ os.chdir(wd)
 in_files = glob.glob(os.path.join('.data', '*.rtf'))
 
 
-# %% get text data out of .rft
+# %% get textual data out of .rft
 
-'''
-'unrtf' software seems to work better from the command line
-'''
-
-
+# define custom function
 def get_txt(_bundle):
-
+    '''
+    argument: bundle of .rtf files
+    return  : None
+    notes   : `unrtf' required
+    '''
     # compose command
     _software = 'unrtf'
     _in = _bundle
@@ -47,14 +47,13 @@ def get_txt(_bundle):
     _to = '>'
     _out = _bundle.strip('rtf') + 'txt'
     _cmd = ' '.join([_software, _in, _option, _to, _out])
-
     # run command
     os.system(_cmd)
 
 
 # deploy function
-for bundle in bundles:
-    get_txt(bundle)
+for f in in_files:
+    get_txt(f)
 
 
 # remove garbage
