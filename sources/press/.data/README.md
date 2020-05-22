@@ -1,31 +1,43 @@
 AI query attributes - README
 ============================
 
+<!-- vim-toc-markdown -->
 
+* [Article search](#article-search)
+* [Outcome of the query](#outcome-of-the-query)
+  * [Query 0](#query-0)
+  * [Query 1](#query-1)
+  * [Query 2](#query-2)
 
-# Query outcome
+<!-- vim-toc-markdown -->
 
-## Search terms from the Google Knowledge Graph
+Article search
+==============
 
-Computer Software
-Internet of Things
-Machine Learning
-Robotics
-Technology
-Computer Science
-Computers
-Automation
-Augmented Reality
-Big Data
-Deep Learning
-Cloud Computing
-Natural Language Processing
-Pattern Recognition
-Analytics
-Computing
+Keywords have been derived from the Google Knowledge Graph:
 
++ Computer Software
++ Internet of Things
++ Machine Learning
++ Robotics
++ Technology
++ Computer Science
++ Computers
++ Automation
++ Augmented Reality
++ Big Data
++ Deep Learning
++ Cloud Computing
++ Natural Language Processing
++ Pattern Recognition
++ Analytics
++ Computing
 
-## Query # 0
+Outcome of the query
+====================
+
+Query 0
+-------
 
 | Attribute | Value                                                    |
 |:----------|:---------------------------------------------------------|
@@ -43,8 +55,8 @@ Computing
 | Timestamp | 6 March 2019 21:52                                       |
 | Status    | NOT TO CARRY OUT                                         |
 
-
-## Query # 1
+Query 1
+-------
 
 | Attribute  | Value                                                                    |
 |:-----------|:-------------------------------------------------------------------------|
@@ -64,8 +76,8 @@ Computing
 | Duplicates | Similar                                                                  |
 | Status     | COMPLETED                                                                |
 
-
-## Query # [README]()2
+Query 2
+-------
 
 | Attribute  | Value                                                                    |
 |:-----------|:-------------------------------------------------------------------------|
@@ -83,4 +95,5 @@ Computing
 | Results    | Found 11,200 (english only publications  = 9,767)                        |
 | Timestamp  | 11 April 2019 22:12                                                      |
 | Duplicates | Identical                                                                |
-| Status     | NOT TO CARRY OUT                                             |
+| Status     | NOT TO CARRY OUT                                                         |
+|            |                                                                          |
