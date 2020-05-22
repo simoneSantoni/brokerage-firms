@@ -1,11 +1,6 @@
-# AI query attributes - README
+AI query attributes - README
+============================
 
-
-Author: Simone Santoni, simone.santoni.1@city.ac.uk
-
-Date:
-    - created Wed 06 Mar 2019 22:46:28 GMT
-    - revised --
 
 
 # Query outcome
@@ -46,7 +41,7 @@ Computing
 | Language  | English                                                  |
 | Results   | Found 2,951                                              |
 | Timestamp | 6 March 2019 21:52                                       |
-| Status    | NOT COMPLETED                                            |
+| Status    | NOT TO CARRY OUT                                         |
 
 
 ## Query # 1
@@ -70,7 +65,7 @@ Computing
 | Status     | COMPLETED                                                                |
 
 
-## Query # 2
+## Query # [README]()2
 
 | Attribute  | Value                                                                    |
 |:-----------|:-------------------------------------------------------------------------|
@@ -88,4 +83,4 @@ Computing
 | Results    | Found 11,200 (english only publications  = 9,767)                        |
 | Timestamp  | 11 April 2019 22:12                                                      |
 | Duplicates | Identical                                                                |
-| Status     | COMPLETED UP TO RECORD 2,400                                             |
+| Status     | NOT TO CARRY OUT                                             |
