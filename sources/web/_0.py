@@ -1,54 +1,19 @@
 #!/usr/bin/python3
 
 """
-DOCSTRING
+Docstring
 
 ------------------------------------------------------------------------------
-    _0.py    |
+    _0.py    |    collect company - keywords instances with Google
 ------------------------------------------------------------------------------
 
 Author: Simone Santoni, simone.santoni.1@city.ac.uk
 
-Dates:
-    - Created
-    - Revised
+Edits:
+    - created
+    - last change
 
-Progress/TO DO:
-    - use crawlera to make requests
-    - randomize the order of the query
-    - play with the timespan of the query
-    - names of the companies should make sense for Google
-    - use data on titles to screen for candidate sources
-
-
-Here's the snippet of code to 
-
-import requests
-
-url = "http://httpbin.org/ip"
-proxy_host = "proxy.crawlera.com"
-proxy_port = "8010"
-proxy_auth = "<APIKEY>:" # Make sure to include ':' at the end
-proxies = {"https": "https://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port),
-      "http": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)}
-
-r = requests.get(url, proxies=proxies,
-                 verify=False)
-
-print('''
-Requesting [{}]
-through proxy [{}]
-
-Request Headers:
-{}
-
-Response Time: {}
-Response Code: {}
-Response Headers:
-{}
-
-'''.format(url, proxy_host, r.request.headers, r.elapsed.total_seconds(),
-           r.status_code, r.headers, r.text))
+Notes: NaN
 
 """
 
@@ -61,7 +26,6 @@ import re
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup as bs
 import numpy as np
-from toripchanger import TorIpChanger
 
 
 # %% setup

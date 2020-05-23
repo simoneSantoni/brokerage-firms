@@ -20,6 +20,9 @@ Notes: this should be re-run with dell_1
 import os
 import glob
 import pickle
+import re
+import pymongo
+from pymongo import MongoClient
 import pandas as pd
 
 
@@ -44,7 +47,7 @@ in_files = glob.glob(os.path.join(fdr, src, '*.pickle'))
 
 # assign articles to a list
 # -- empty list 
-l = []
+articles = []
 # -- iterate over pickles & append articles
 '''
 note: pickles have been created with Python 2.7
@@ -54,90 +57,97 @@ note: pickles have been created with Python 2.7
 for f in in_files:
        with open(f, 'rb') as pipe:
               to_append = pickle.load(pipe, encoding='latin1')
-       l.append(to_append)
+       articles.append(to_append)
 
 # assign article to a Pandas df
 # -- read list
-df = pd.DataFrame(l)
-# -- rename axis 1
-df.rename(columns={0: 'document_id',
-                   1: 'title',
-                   2: 'attributes',
-                   3: 'text'},
-          inplace=True)
+col_names = ['document_id', 'title', 'attributes', 'text']
+df = pd.DataFrame(articles, columns=col_names)
 # -- set index
 df.set_index('document_id', inplace=True)
 
 
 # %% extract article attributes
 
+# outlet
+# -- empty list
+outlet = []
+# -- iterate over articles
+for item in articles:
+    # get id
+    _id = item[0]
+    # get attributes
+    _attributes = item[2]
+    # test for pattern matching
+    # -- test for FT
+    if 'Financial Times' in _attributes:
+        outlet.append([_id, 'ft'])
+    # test for WSJ
+    elif ('Wall Street Journal' in _attributes) or ('WSJ' in _attributes):
+        outlet.append([_id, 'wsj'])
+    # test for The Economist
+    elif 'The Economist' in _attributes:
+        outlet.append([_id, 'te'])
+    else:
+        pass
 
-df['attributes'][2]
 
-
-# author
-
-
-# count of words
-
+# -- get Pandas df
+col_names = ['document_id', 'outlet']
+df_o = pd.DataFrame(outlet, columns=col_names)
+# -- set index
+df_o.set_index('document_id', inplace=True)
 
 # date
+# -- empty list
+date = []
+# -- iterate over articles
+for item in articles:
+    # get id
+    _id = item[0]
+    # get attributes
+    _attributes = item[2]
+    # pattern matching
+    # -- find month (word) + day (digit) + year (digit)
+    to_append = re.search("(\d+) (\w+) (\d+)", _attributes)
+    if to_append is not None:
+        date.append([_id, to_append.group(0)])
+    else:
+        pass
 
 
-# outlet
+# -- get Pandas df
+col_names = ['document_id', 'date']
+df_d = pd.DataFrame(date, columns=col_names)
+# -- set index
+df_d.set_index('document_id', inplace=True)
 
 
+# %% polish data
 
-DF = DF.loc[DF['year'].notnull()]
+# merge with all the rest 
+df = pd.merge(df, df_o, left_index=True, right_index=True, how='inner')
+df = pd.merge(df, df_d, left_index=True, right_index=True, how='inner')
 
+# date cleaning
+# -- dates and datetime
+df.loc[:, 'date'] = pd.to_datetime(df['date'])
+# -- drop redundant cols
+df.drop('attributes', axis=1, inplace=True)
 
-# serialize individual fields
-
-# serialize attributes
-att = df['attributes'].str.split('\n', expand=True)
-
-att.head(1).T
-
-att.reset_index(inplace=true)
-att = att.melt(id_vars='document_id')
-att.set_index('document_id', inplace=true)
-
-## serialize titles
-#TI = DF['title'].str.split('\n', expand=True)
-#TI.reset_index(inplace=True)
-#TI = TI.melt(id_vars='document_id')
-#TI.set_index('document_id', inplace=True)
-#
-## housekeeping
-#DF.drop('attributes', axis=1, inplace=True)
-#DF.drop('title', axis=1, inplace=True)
-#TXT = DF
+# quality check
+df.loc[:, 'text_len'] = df['text'].str.len()
+# -- focus on articles whose len is >= 1,000
+df = df.loc[df['text_len'] >= 1000]
 
 
-# %% double check text
+# %% write corpus of text to mongo
 
-#TXT.loc[:, 'text_len'] = TXT['text'].str.len()
-#
-## empty records
-#TXT = TXT.loc[TXT['text_len'] > 0]
-#
-## document reference number records/urls
-#TXT = TXT.loc[TXT['text_len'] > 100]
-#
-## rule of thumb for articles
-#TXT = TXT.loc[TXT['text_len'] > 1000]
+# open pipeline
+client = MongoClient()
 
+# pick-up db
+db = client.digitalTechs
 
-# %% write corpus of text
-
-#for article in TXT.index:
-#    text = TXT.loc[article, 'text']
-#    out = article + '.txt'
-#    folder = '108966fa-9980-11e9-90f7-f8b156d0a52b'
-#    write = os.path.join(SRV, PATH, folder, out)
-#    with open(write, 'wb') as pipe:
-#        pipe.write(text)
-
-FOLDER = '002787c0-99a7-11e9-90f7-f8b156d0a52b'
-TARGET = os.path.join(SRV, PATH, FOLDER, 'blockchain_articles.csv')
-DF.to_csv(TARGET, index=False)
+# bulk insert
+db.press_releases.insert_many(df.to_dict('records'))

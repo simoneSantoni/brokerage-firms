@@ -80,7 +80,7 @@ Outcome of the query
 | Author     | All Authors                                                              |
 | Company    | All Companies                                                            |
 | Subject    | All Subjects                                                             |
-| Industry   | All Industries                                                           |
+| Industry   | Financial Services                                                       |
 | Region     | All Regions                                                              |
 | Language   | English                                                                  |
 | Results    | Found 11,200 (english only publications  = 9,767)                        |

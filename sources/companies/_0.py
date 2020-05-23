@@ -24,6 +24,7 @@ Notes: None.
 
 import os
 import pandas as pd
+from pymongo import MongoClient
 
 
 # %% setup
@@ -55,3 +56,16 @@ df.rename(columns=dict(zip(old_names, new_names)), inplace=True)
 df.loc[:, 'revenues'] = pd.to_numeric(df['revenues'], errors='coerce')
 # -- sort
 df.sort_values(by='revenues', ascending=[False], inplace=True)
+
+
+# %% write data to mongo
+
+# open pipeline
+client = MongoClient()
+
+# pick-up collection
+db = client.digitalTechs
+
+# bulk insert
+db.companies.insert_many(df.to_dict('records'))
+
