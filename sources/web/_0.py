@@ -19,6 +19,7 @@ Notes: NaN
 
 # %% load libraries
 import os
+import pickle
 from time import sleep
 from typing import List
 import requests
@@ -30,7 +31,7 @@ import numpy as np
 
 # %% setup
 srv = '/home/simone'
-prj = 'githubRepos/digital-leadership-center/dataCollection'
+prj = 'githubRepos/digital-leadership-center/sources'
 cd = os.path.join(srv, prj)
 os.chdir(cd)
 
@@ -62,10 +63,10 @@ def google_search(_entity,
                 with the query (i.e., _entity - _keywords pairs)
     '''
     # container
-    #_hrefs: List[str] = []
+    _hrefs: List[str] = []
     # clean query
     _query = '+'.join(['+OR+'.join(['%22{}%22'.format(i) for i in _keywords]),
-                       '%22{}%22'.format(_entity.replace(' ', '+')),
+                       '%22{}%22'.format(_entity),
                        'after%3A{}'.format(_after),
                        'before%3A{}'.format(_before)])
     # compose url
@@ -84,7 +85,12 @@ def google_search(_entity,
                          verify=False)
     if _html.status_code == 200:
         _soup = bs(_html.text, 'lxml')
+        # write soup as text
         out_f = '{}_{}_soup.txt'.format(_entity, _after + 1)
+        with open(out_f, 'w') as _pipe:
+            _pipe.write(str(_soup.get_text()))
+        # write soup as html
+        out_f = '{}_{}_soup.html'.format(_entity, _after + 1)
         with open(out_f, 'w') as _pipe:
             _pipe.write(str(_soup))
         _a = _soup.find_all('a')
@@ -97,20 +103,20 @@ def google_search(_entity,
                 _domain = urlparse(_rul)
                 if (re.search('google.com', _domain.netloc)):
                     continue
+                if (re.search('googleusercontent.com', _domain.netloc)):
+                    continue
                 else:
                     _hrefs.append(_rul)
             except:
                 continue
-        out_f = '{}_{}_hrefs.txt'.format(_entity, _after + 1)
-        with open(out_f, 'w') as _pipe:
-            for item in _hrefs:
-                _pipe.write('{}\n'.format(item))
-        print("""Data have been written to {}""".format(out_f))
+        out_f = '{}_{}_hrefs.pickle'.format(_entity, _after + 1)
+        with open(out_f, 'wb') as _pipe:
+            pickle.dump(_hrefs, _pipe)
     else:
         pass
 
 
-# %% operate function
+# %% run function 
 
 # keywords
 keywords = ['artificial+intelligence',
@@ -128,25 +134,8 @@ entities included in the Bloomber export
 with open(os.path.join('companies', 'top100_disambiguated.txt')) as pipe:
     entities = [i.rstrip() for i in pipe.readlines()]
 
-# tor ip changer
-# -- renew ip after one call
-tor_ip_changer_1 = TorIpChanger(tor_password='my password',
-                                tor_port=9051,
-                                local_http_proxy='http://127.0.0.1:8118')
-
-
-tor_ip_changer_1.get_new_ip()
-
-
-# -- don't reuse an ip
-tor_ip_changer_0 = TorIpChanger(tor_password='my password',
-                                tor_port=9051,
-                                local_http_proxy='http://127.0.0.1:8118',
-                                reuse_threshold=0)
-current_ip = tor_ip_changer_0.get_new_ip()
-
 # pick-up directory
-os.chdir(os.path.join(cd, '.data'))
+os.chdir(os.path.join(cd, 'web/.data'))
 
 # Crawlera proxy
 proxy_host = "proxy.crawlera.com"
@@ -157,25 +146,10 @@ proxies = {"https": "https://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_por
 
 # iterate over entities and timespans
 for entity in entities[0:3]:
-    # sleep(50)
-    for i in np.arange(2009, 2019, 1):
-        urls.append(google_search(_proxy=proxies,
-                                  _entity=entity,
-                                  _keywords=keywords,
-                                  _after=i,
-                                  _before=i + 2))
-        print("""
-        Searching [{}, {}]
-        through proxy [{}]
-        
-        Request Headers:
-        {}
-        
-        Response Time: {}
-        Response Code: {}
-        Response Headers:
-        {}
-        
-        """.format(entity, i,
-                   proxy_host, r.request.headers, r.elapsed.total_seconds(),
-                   r.status_code, r.headers, r.text))
+    for i in np.arange(2009, 2020, 1):
+        google_search(_proxy=proxies,
+                      _entity=entity,
+                      _keywords=keywords,
+                      _after=i,
+                      _before=i + 2)
+
