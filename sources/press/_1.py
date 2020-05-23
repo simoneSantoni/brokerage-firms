@@ -42,46 +42,66 @@ in_files = glob.glob(os.path.join(fdr, src, '*.pickle'))
 
 # %% manage the corpus of text 
 
-# empty list 
+# assign articles to a list
+# -- empty list 
 l = []
-# iterate over pickles & append articles
+# -- iterate over pickles & append articles
 '''
 note: pickles have been created with Python 2.7
-      -- encoding has to be passed explicitely
+      -- cause: Python 3 doesn't go well with 'unrtf'
+      -- solution: encoding has to be passed explicitely in pickle.load()
 '''
 for f in in_files:
        with open(f, 'rb') as pipe:
               to_append = pickle.load(pipe, encoding='latin1')
        l.append(to_append)
 
-# get
-DF = pd.DataFrame(DF)
-
-# rename and index
-DF.rename(columns={0: 'document_id',
+# assign article to a Pandas df
+# -- read list
+df = pd.DataFrame(l)
+# -- rename axis 1
+df.rename(columns={0: 'document_id',
                    1: 'title',
                    2: 'attributes',
                    3: 'text'},
           inplace=True)
+# -- set index
+df.set_index('document_id', inplace=True)
 
-DF.set_index('document_id', inplace=True)
+
+# %% extract article attributes
 
 
-# %% get date
+df['attributes'][2]
+
+
+# author
+
+
+# count of words
+
+
+# date
+
+
+# outlet
 
 
 
 DF = DF.loc[DF['year'].notnull()]
 
 
-# %% serialize individual fields
+# serialize individual fields
 
 # serialize attributes
-#ATT = DF['attributes'].str.split('\n', expand=True)
-#ATT.reset_index(inplace=True)
-#ATT = ATT.melt(id_vars='document_id')
-#ATT.set_index('document_id', inplace=True)
-#
+att = df['attributes'].str.split('\n', expand=True)
+
+att.head(1).T
+
+att.reset_index(inplace=true)
+att = att.melt(id_vars='document_id')
+att.set_index('document_id', inplace=true)
+
 ## serialize titles
 #TI = DF['title'].str.split('\n', expand=True)
 #TI.reset_index(inplace=True)
