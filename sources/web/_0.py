@@ -19,6 +19,7 @@ Notes: NaN
 
 # %% load libraries
 import os
+import glob
 import pickle
 from time import sleep
 from typing import List
@@ -27,6 +28,8 @@ import re
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup as bs
 import numpy as np
+import pandas as pd
+from pymongo import MongoClient
 
 
 # %% setup
@@ -145,11 +148,51 @@ proxies = {"https": "https://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_por
            "http": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)}
 
 # iterate over entities and timespans
-for entity in entities[0:3]:
+for entity in entities[3:]:
     for i in np.arange(2009, 2020, 1):
         google_search(_proxy=proxies,
                       _entity=entity,
                       _keywords=keywords,
                       _after=i,
                       _before=i + 2)
+
+
+# %% load lists with results
+
+# scan for files
+in_files = glob.glob('*.pickle')
+
+# parse data
+# -- empty list
+urls = []
+# -- iterate over files
+for f in in_files:
+    # company
+    company = f.split('_')[0]
+    # year
+    year = f.split('_')[1]
+    # open pipeline
+    pipe = open(f, 'rb')
+    # populate list with urls
+    for item in pickle.load(pipe):
+        urls.append([company, year, item])
+    # close pipeline
+    pipe.close()
+
+
+# get Pandas df
+df = pd.DataFrame(urls, columns=['company', 'year', 'url'])
+# -- set index
+#df.set_index(['company', 'year'], inplace=True)
+
+# %% send data to mongo
+
+# open client
+client = MongoClient()
+
+# pick-up db
+db = client.digitalTechs
+
+# push data via bulk insert
+db.web_search.insert_many(df.to_dict('records'))
 
