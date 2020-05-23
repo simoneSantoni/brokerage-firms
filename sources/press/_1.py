@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """
+Docstring
 -------------------------------------------------------------------------------
-                         CREATE CORPUS OF TEXT
+    _1.py                          CREATE CORPUS OF TEXT
 -------------------------------------------------------------------------------
 
 Author: Simone Santoni, simone.santoni.1@city.ac.uk
@@ -16,37 +17,42 @@ Notes: this should be re-run with dell_1
 """
 
 # %% load libraries
-
 import os
 import glob
 import pickle
 import pandas as pd
 
 
-# %% read files
-
-SRV = '/media/simone/data'
-PATH = 'Dropbox/dataProjects/code/AI/pressRelease/factiva/'
-# AI-related articles
-#FOLDER = '70d990e8-5e9d-11e9-9534-91cda7545daf'
-# blockchain-related articles
-FOLDER = 'b11148e2-98f7-11e9-92d0-8c859092e3b0'
+# %% set path to data
+srv = '/media/simone'
+dr = 'data/dataDirectory'
+wd = os.path.join(srv, dr)
+os.chdir(wd)
 
 
-#TODO: the folder should be moved to dell_1/dataDirectory
+# %% scree for pickles containing individual articles
 
-ARTICLES = glob.glob(os.path.join(SRV, PATH, FOLDER, '*.pickle'))
+# folder/source
+fdr = '2b50f5c0-9cd6-11ea-9ed2-f8b156d0a52b'
+src = 'press'
+
+# read files
+in_files = glob.glob(os.path.join(fdr, src, '*.pickle'))
 
 
-# %% tie data together
+# %% manage the corpus of text 
 
-DF = []
-
-for article in ARTICLES:
-       with open(article, 'rb') as pipe:
-              to_append = pickle.load(pipe)
-       DF.append(to_append)
-
+# empty list 
+l = []
+# iterate over pickles & append articles
+'''
+note: pickles have been created with Python 2.7
+      -- encoding has to be passed explicitely
+'''
+for f in in_files:
+       with open(f, 'rb') as pipe:
+              to_append = pickle.load(pipe, encoding='latin1')
+       l.append(to_append)
 
 # get
 DF = pd.DataFrame(DF)
@@ -63,8 +69,7 @@ DF.set_index('document_id', inplace=True)
 
 # %% get date
 
-DF.loc[DF['attributes'].str.contains('2017'), 'year'] =  2017
-DF.loc[DF['attributes'].str.contains('2018'), 'year'] =  2018
+
 
 DF = DF.loc[DF['year'].notnull()]
 
