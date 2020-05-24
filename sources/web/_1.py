@@ -19,18 +19,15 @@ Notes: NaN
 
 
 # %% load libraries
-import os
 import requests
-import eventlet
-eventlet.monkey_patch()
 import re
 import bs4
 from pymongo import MongoClient
 
 
 # %% mongo pipeline
-#client = MongoClient()
-#db = client.digitalTechs
+client = MongoClient()
+db = client.digitalTechs
 
 
 # %% define function to crawl (and push data to mongo)
@@ -50,13 +47,14 @@ def crawl_and_push(_url):
             # get text
             _text = str(_soup.get_text())
             _text = re.sub(r'\n+', '\n', _text).strip()
-            return [_url, _text]
+            # return list
+            #return [_url, _text]
             # push text to mongo
-            #db.web_contents.insert_one({'url': _url, 'content': _text})
+            db.web_contents.insert_one({'url': _url, 'content': _text})
         else:
             pass
-    except requests.exceptions.Timeout as e: 
-        print(e)
+    except:
+        pass
 
 
 # %% run function
@@ -64,7 +62,7 @@ def crawl_and_push(_url):
 # get target urls
 urls = list(db.web_search.find())
 target_urls = [item['url'] for item in urls]  
-# -- filter out google ads
+# -- filter out ads
 target_urls = [item for item in target_urls if 'googlead' not in item]
 target_urls = [item for item in target_urls if 'cloudera' not in item]
 target_urls = [item for item in target_urls if 'oracle' not in item]
@@ -73,6 +71,8 @@ target_urls = [item for item in target_urls if 'linkedin.com' not in item]
 target_urls = [item for item in target_urls if 'qubole.com' not in item]
 target_urls = [item for item in target_urls if 'ibm.com' not in item]
 target_urls = [item for item in target_urls if 'glassdoor.com' not in item]
+target_urls = [item for item in target_urls if 'intel.com' not in item]
+target_urls = [item for item in target_urls if 'amazon.com' not in item]
 # -- filter out long documents
 target_urls = [item for item in target_urls if '.pptx' not in item]
 target_urls = [item for item in target_urls if '.docx' not in item]
@@ -83,6 +83,7 @@ target_urls = [item for item in target_urls if '.xls' not in item]
 target_urls = [item for item in target_urls if '.pdf' not in item]
 target_urls = [item for item in target_urls if '.zip' not in item]
 target_urls = [item for item in target_urls if '.tar.gz' not in item]
+target_urls = [item for item in target_urls if '.xml.gz' not in item]
 
 
 # run function

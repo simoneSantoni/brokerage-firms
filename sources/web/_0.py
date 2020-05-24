@@ -31,7 +31,6 @@ import numpy as np
 import pandas as pd
 from pymongo import MongoClient
 
-
 # %% setup
 srv = '/home/simone'
 prj = 'githubRepos/digital-leadership-center/sources'
@@ -45,8 +44,8 @@ def google_search(_entity,
                   _after,
                   _before,
                   _proxy,
-                  _seed = 'https://www.google.com/search?client=ubuntu&channel=fs&q=',
-                  target_n = 100):
+                  _seed='https://www.google.com/search?client=ubuntu&channel=fs&q=',
+                  target_n=100):
     '''
     Docstring
     =========
@@ -73,10 +72,11 @@ def google_search(_entity,
                        'after%3A{}'.format(_after),
                        'before%3A{}'.format(_before)])
     # compose url
-    _url = '{}{}&num={}&hl=en&gl=en&ie=utf-8'.format(_seed, _query, str(target_n))
+    _url = '{}{}&num={}&hl=en&gl=en&ie=utf-8'.format(_seed, _query,
+                                                     str(target_n))
     # notification
     print(
-    """
+        """
     ====================================================================
     Working on `{}' / year {}
     --------------------------------------------------------------------
@@ -144,8 +144,9 @@ os.chdir(os.path.join(cd, 'web/.data'))
 proxy_host = "proxy.crawlera.com"
 proxy_port = "8010"
 proxy_auth = "24f6d103004d4ff1986826fb94a2c704:"
-proxies = {"https": "https://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port),
-           "http": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)}
+proxies = {
+    "https": "https://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port),
+    "http": "http://{}@{}:{}/".format(proxy_auth, proxy_host, proxy_port)}
 
 # iterate over entities and timespans
 for entity in entities[3:]:
@@ -155,7 +156,6 @@ for entity in entities[3:]:
                       _keywords=keywords,
                       _after=i,
                       _before=i + 2)
-
 
 # %% load lists with results
 
@@ -179,11 +179,10 @@ for f in in_files:
     # close pipeline
     pipe.close()
 
-
 # get Pandas df
 df = pd.DataFrame(urls, columns=['company', 'year', 'url'])
 # -- set index
-#df.set_index(['company', 'year'], inplace=True)
+# df.set_index(['company', 'year'], inplace=True)
 
 # %% send data to mongo
 
@@ -195,4 +194,3 @@ db = client.digitalTechs
 
 # push data via bulk insert
 db.web_search.insert_many(df.to_dict('records'))
-
