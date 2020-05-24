@@ -29,11 +29,11 @@ from pymongo import MongoClient
 
 
 # %% mongo pipeline
-client = MongoClient()
-db = client.digitalTechs
+#client = MongoClient()
+#db = client.digitalTechs
 
 
-# %% crawl and push data to mongo
+# %% define function to crawl (and push data to mongo)
 
 # custom function
 def crawl_and_push(_url):
@@ -50,13 +50,16 @@ def crawl_and_push(_url):
             # get text
             _text = str(_soup.get_text())
             _text = re.sub(r'\n+', '\n', _text).strip()
+            return [_url, _text]
             # push text to mongo
-            db.web_contents.insert_one({'url': _url, 'content': _text})
+            #db.web_contents.insert_one({'url': _url, 'content': _text})
         else:
             pass
     except requests.exceptions.Timeout as e: 
-        continue
+        print(e)
 
+
+# %% run function
 
 # get target urls
 urls = list(db.web_search.find())
