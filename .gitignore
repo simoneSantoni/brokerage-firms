@@ -131,3 +131,6 @@ dmypy.json
 
 # data folders
 .data/
+
+# pycharm setting
+.idea/
