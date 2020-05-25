@@ -19,10 +19,7 @@ Notes: NaN
 
 
 # %% load libraries
-import os
 import requests
-import eventlet
-eventlet.monkey_patch()
 import re
 import bs4
 from pymongo import MongoClient
