@@ -95,7 +95,7 @@ targets = [item for item in targets if'.tar.gz' not in item[2]]
 targets = [item for item in targets if'.xml.gz' not in item[2]]
 
 # run function
-for entity, year, url in targets[0:10]:
+for entity, year, url in targets:
     crawl_and_push(_entity=entity,
                    _year=year,
                    _url=url)
