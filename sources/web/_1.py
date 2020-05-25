@@ -23,6 +23,7 @@ import requests
 import re
 import bs4
 from pymongo import MongoClient
+import pandas as pd
 
 
 # %% mongo pipeline
@@ -33,7 +34,7 @@ db = client.digitalTechs
 # %% define function to crawl (and push data to mongo)
 
 # custom function
-def crawl_and_push(_url):
+def crawl_and_push(_url, _entity, _year):
     '''
     : argument: url, string
     : return  : url contents in .json format, pushed to mongo
@@ -50,7 +51,10 @@ def crawl_and_push(_url):
             # return list
             #return [_url, _text]
             # push text to mongo
-            db.web_contents.insert_one({'url': _url, 'content': _text})
+            db.web_contents.insert_one({'entity': _entity,
+                                        'year': _year,
+                                        'url': _url,
+                                        'content': _text})
         else:
             pass
     except:
@@ -61,32 +65,38 @@ def crawl_and_push(_url):
 
 # get target urls
 urls = list(db.web_search.find())
-target_urls = [item['url'] for item in urls]  
-# -- filter out ads
-target_urls = [item for item in target_urls if 'googlead' not in item]
-target_urls = [item for item in target_urls if 'cloudera' not in item]
-target_urls = [item for item in target_urls if 'oracle' not in item]
-target_urls = [item for item in target_urls if 'sas.com' not in item]
-target_urls = [item for item in target_urls if 'linkedin.com' not in item]
-target_urls = [item for item in target_urls if 'qubole.com' not in item]
-target_urls = [item for item in target_urls if 'ibm.com' not in item]
-target_urls = [item for item in target_urls if 'glassdoor.com' not in item]
-target_urls = [item for item in target_urls if 'intel.com' not in item]
-target_urls = [item for item in target_urls if 'amazon.com' not in item]
-# -- filter out long documents
-target_urls = [item for item in target_urls if '.pptx' not in item]
-target_urls = [item for item in target_urls if '.docx' not in item]
-target_urls = [item for item in target_urls if '.xlsx' not in item]
-target_urls = [item for item in target_urls if '.ppt' not in item]
-target_urls = [item for item in target_urls if '.doc' not in item]
-target_urls = [item for item in target_urls if '.xls' not in item]
-target_urls = [item for item in target_urls if '.pdf' not in item]
-target_urls = [item for item in target_urls if '.zip' not in item]
-target_urls = [item for item in target_urls if '.tar.gz' not in item]
-target_urls = [item for item in target_urls if '.xml.gz' not in item]
 
+# get Pandas df
+df = pd.DataFrame(urls)
+
+targets = [[item['company'], item['year'], item['url']] for item in urls]
+
+# -- filter out ads
+targets = [item for item in targets if 'googlead' not in item[2]]
+targets = [item for item in targets if'cloudera' not in item[2]]
+targets = [item for item in targets if'oracle' not in item[2]]
+targets = [item for item in targets if'sas.com' not in item[2]]
+targets = [item for item in targets if'linkedin.com' not in item[2]]
+targets = [item for item in targets if'qubole.com' not in item[2]]
+targets = [item for item in targets if'ibm.com' not in item[2]]
+targets = [item for item in targets if'glassdoor.com' not in item[2]]
+targets = [item for item in targets if'intel.com' not in item[2]]
+targets = [item for item in targets if'amazon.com' not in item[2]]
+# -- filter out long files
+targets = [item for item in targets if'.pptx' not in item[2]]
+targets = [item for item in targets if'.docx' not in item[2]]
+targets = [item for item in targets if'.xlsx' not in item[2]]
+targets = [item for item in targets if'.ppt' not in item[2]]
+targets = [item for item in targets if'.doc' not in item[2]]
+targets = [item for item in targets if'.xls' not in item[2]]
+targets = [item for item in targets if'.pdf' not in item[2]]
+targets = [item for item in targets if'.zip' not in item[2]]
+targets = [item for item in targets if'.tar.gz' not in item[2]]
+targets = [item for item in targets if'.xml.gz' not in item[2]]
 
 # run function
-for item in target_urls:
-    crawl_and_push(item)
+for entity, year, url in targets[0:10]:
+    crawl_and_push(_entity=entity,
+                   _year=year,
+                   _url=url)
 
