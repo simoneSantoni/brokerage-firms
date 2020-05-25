@@ -30,7 +30,7 @@ client = MongoClient()
 db = client.digitalTechs
 
 
-# %% crawl and push data to mongo
+# %% define function to crawl (and push data to mongo)
 
 # custom function
 def crawl_and_push(_url):
@@ -47,18 +47,22 @@ def crawl_and_push(_url):
             # get text
             _text = str(_soup.get_text())
             _text = re.sub(r'\n+', '\n', _text).strip()
+            # return list
+            #return [_url, _text]
             # push text to mongo
             db.web_contents.insert_one({'url': _url, 'content': _text})
         else:
             pass
-    except requests.exceptions.Timeout as e: 
-        continue
+    except:
+        pass
 
+
+# %% run function
 
 # get target urls
 urls = list(db.web_search.find())
 target_urls = [item['url'] for item in urls]  
-# -- filter out google ads
+# -- filter out ads
 target_urls = [item for item in target_urls if 'googlead' not in item]
 target_urls = [item for item in target_urls if 'cloudera' not in item]
 target_urls = [item for item in target_urls if 'oracle' not in item]
@@ -67,6 +71,8 @@ target_urls = [item for item in target_urls if 'linkedin.com' not in item]
 target_urls = [item for item in target_urls if 'qubole.com' not in item]
 target_urls = [item for item in target_urls if 'ibm.com' not in item]
 target_urls = [item for item in target_urls if 'glassdoor.com' not in item]
+target_urls = [item for item in target_urls if 'intel.com' not in item]
+target_urls = [item for item in target_urls if 'amazon.com' not in item]
 # -- filter out long documents
 target_urls = [item for item in target_urls if '.pptx' not in item]
 target_urls = [item for item in target_urls if '.docx' not in item]
@@ -77,6 +83,7 @@ target_urls = [item for item in target_urls if '.xls' not in item]
 target_urls = [item for item in target_urls if '.pdf' not in item]
 target_urls = [item for item in target_urls if '.zip' not in item]
 target_urls = [item for item in target_urls if '.tar.gz' not in item]
+target_urls = [item for item in target_urls if '.xml.gz' not in item]
 
 
 # run function
