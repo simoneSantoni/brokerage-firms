@@ -1,0 +1,1410 @@
+2020-05-26 10:39:45,020 : INFO : collecting all words and their counts
+2020-05-26 10:39:45,020 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:39:45,029 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:39:45,030 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:39:45,030 : INFO : collecting all words and their counts
+2020-05-26 10:39:45,031 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:39:45,051 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:39:45,051 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:40:00,486 : INFO : collecting all words and their counts
+2020-05-26 10:40:00,486 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:40:00,496 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:40:00,497 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:40:00,497 : INFO : collecting all words and their counts
+2020-05-26 10:40:00,498 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:40:00,517 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:40:00,517 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:40:50,724 : INFO : collecting all words and their counts
+2020-05-26 10:40:50,724 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:40:50,731 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:40:50,731 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:40:50,731 : INFO : collecting all words and their counts
+2020-05-26 10:40:50,732 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:40:50,751 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:40:50,752 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:42:49,180 : INFO : collecting all words and their counts
+2020-05-26 10:42:49,180 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:42:49,191 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:42:49,191 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:42:49,192 : INFO : collecting all words and their counts
+2020-05-26 10:42:49,194 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:42:49,218 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:42:49,218 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:03,418 : INFO : collecting all words and their counts
+2020-05-26 10:43:03,419 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:43:03,431 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:43:03,431 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:03,432 : INFO : collecting all words and their counts
+2020-05-26 10:43:03,433 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:43:03,458 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:43:03,458 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:13,179 : INFO : collecting all words and their counts
+2020-05-26 10:43:13,179 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:43:13,191 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:43:13,191 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:13,191 : INFO : collecting all words and their counts
+2020-05-26 10:43:13,193 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:43:13,218 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:43:13,218 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:16,726 : INFO : collecting all words and their counts
+2020-05-26 10:43:16,726 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:43:16,737 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:43:16,737 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:16,738 : INFO : collecting all words and their counts
+2020-05-26 10:43:16,739 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:43:16,759 : INFO : collected 5807 word types from a corpus of 4391 words (unigram + bigrams) and 10 sentences
+2020-05-26 10:43:16,759 : INFO : using 5807 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:43:27,788 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2020-05-26 10:43:27,799 : INFO : built Dictionary(1703 unique tokens: ['\t', ' \t', '  \t', '1980', '90']...) from 10 documents (total 4391 corpus positions)
+2020-05-26 10:45:46,236 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:45:46,237 : INFO : using serial LDA version on this node
+2020-05-26 10:45:46,244 : INFO : running online (multi-pass) LDA training, 15 topics, 10 passes over the supplied corpus of 10 documents, updating model once every 10 documents, evaluating perplexity every 10 documents, iterating 50x with a convergence threshold of 0.001000
+2020-05-26 10:45:46,271 : INFO : -16.362 per-word bound, 84246.5 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,272 : INFO : PROGRESS: pass 0, at document #10/10
+2020-05-26 10:45:46,289 : INFO : topic #4 (0.010): 0.012*"arm" + 0.010*"option" + 0.009*"mortgage" + 0.009*"borrower" + 0.007*"loan" + 0.007*"property" + 0.007*"accord" + 0.006*"subprime" + 0.006*"payment" + 0.006*"home"
+2020-05-26 10:45:46,289 : INFO : topic #9 (0.010): 0.007*"price" + 0.006*"year" + 0.006*"loan" + 0.006*"bank" + 0.005*"sell" + 0.004*"firm" + 0.004*"market" + 0.004*"property" + 0.004*"home" + 0.003*"investment"
+2020-05-26 10:45:46,289 : INFO : topic #6 (0.010): 0.018*"year" + 0.013*"ipo" + 0.010*"market" + 0.009*"model" + 0.008*"company" + 0.007*"fund" + 0.007*"price" + 0.006*"investor" + 0.006*"buy" + 0.005*"firm"
+2020-05-26 10:45:46,289 : INFO : topic #2 (0.010): 0.008*"kumar" + 0.008*"company" + 0.007*"bank" + 0.007*"loan" + 0.006*"index" + 0.006*"mckinsey" + 0.006*"fall" + 0.006*"mortgage" + 0.006*"home" + 0.005*"arm"
+2020-05-26 10:45:46,290 : INFO : topic #7 (0.010): 0.012*"	" + 0.010*"bond" + 0.009*"investor" + 0.008*"loan" + 0.008*"firm" + 0.007*"market" + 0.007*"buy" + 0.007*"capital" + 0.007*"investment" + 0.006*" 	"
+2020-05-26 10:45:46,290 : INFO : topic diff=5.856385, rho=1.000000
+2020-05-26 10:45:46,311 : INFO : -9.589 per-word bound, 770.1 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,311 : INFO : PROGRESS: pass 1, at document #10/10
+2020-05-26 10:45:46,324 : INFO : topic #2 (0.010): 0.009*"index" + 0.008*"fall" + 0.008*"company" + 0.006*"decline" + 0.006*"rise" + 0.006*"bank" + 0.006*"kumar" + 0.005*"report" + 0.005*"loan" + 0.004*"mckinsey"
+2020-05-26 10:45:46,324 : INFO : topic #0 (0.010): 0.014*"inland" + 0.010*"investor" + 0.009*"real" + 0.009*"reit" + 0.008*"property" + 0.008*"share" + 0.008*"price" + 0.007*"year" + 0.007*"american" + 0.006*"sell"
+2020-05-26 10:45:46,324 : INFO : topic #10 (0.010): 0.016*"index" + 0.012*"rise" + 0.011*"fall" + 0.010*"report" + 0.008*"dow" + 0.007*"share" + 0.007*"earning" + 0.007*"year" + 0.007*"decline" + 0.007*"company"
+2020-05-26 10:45:46,324 : INFO : topic #9 (0.010): 0.004*"price" + 0.004*"year" + 0.004*"loan" + 0.004*"bank" + 0.003*"sell" + 0.003*"firm" + 0.002*"market" + 0.002*"property" + 0.002*"home" + 0.002*"investment"
+2020-05-26 10:45:46,324 : INFO : topic #7 (0.010): 0.020*"	" + 0.016*"bond" + 0.014*" 	" + 0.013*"investor" + 0.013*"loan" + 0.010*"firm" + 0.010*"buy" + 0.010*"capital" + 0.010*"investment" + 0.009*"market"
+2020-05-26 10:45:46,324 : INFO : topic diff=2.129310, rho=0.577350
+2020-05-26 10:45:46,341 : INFO : -8.082 per-word bound, 271.0 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,341 : INFO : PROGRESS: pass 2, at document #10/10
+2020-05-26 10:45:46,349 : INFO : topic #0 (0.010): 0.023*"inland" + 0.015*"reit" + 0.013*"real" + 0.013*"property" + 0.012*"american" + 0.011*"share" + 0.011*"investor" + 0.008*"office" + 0.008*"sell" + 0.008*"estate"
+2020-05-26 10:45:46,349 : INFO : topic #5 (0.010): 0.019*"manager" + 0.014*"compliance" + 0.011*"insider" + 0.009*"fund" + 0.009*"trading" + 0.009*"edge" + 0.007*"management" + 0.007*"firm" + 0.007*"founder" + 0.007*"analyst"
+2020-05-26 10:45:46,349 : INFO : topic #6 (0.010): 0.027*"year" + 0.026*"ipo" + 0.011*"company" + 0.010*"stock" + 0.010*"offering" + 0.009*"buy" + 0.009*"market" + 0.008*"index" + 0.007*"investor" + 0.007*"good"
+2020-05-26 10:45:46,350 : INFO : topic #4 (0.010): 0.026*"arm" + 0.026*"option" + 0.019*"mortgage" + 0.019*"borrower" + 0.018*"payment" + 0.016*"loan" + 0.013*"subprime" + 0.013*"home" + 0.011*"accord" + 0.008*"company"
+2020-05-26 10:45:46,350 : INFO : topic #7 (0.010): 0.023*"	" + 0.017*"bond" + 0.017*" 	" + 0.014*"investor" + 0.014*"loan" + 0.011*"firm" + 0.011*"buy" + 0.011*"capital" + 0.011*"investment" + 0.009*"market"
+2020-05-26 10:45:46,350 : INFO : topic diff=1.375759, rho=0.500000
+2020-05-26 10:45:46,366 : INFO : -7.626 per-word bound, 197.6 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,366 : INFO : PROGRESS: pass 3, at document #10/10
+2020-05-26 10:45:46,374 : INFO : topic #14 (0.010): 0.002*"year" + 0.002*"loan" + 0.002*"market" + 0.002*" 	" + 0.002*"bank" + 0.002*"	" + 0.002*"firm" + 0.002*"investor" + 0.002*"fund" + 0.001*"sell"
+2020-05-26 10:45:46,374 : INFO : topic #13 (0.010): 0.002*"price" + 0.002*"loan" + 0.002*"sell" + 0.002*"bank" + 0.002*"year" + 0.002*"fund" + 0.002*"home" + 0.001*"market" + 0.001*"kumar" + 0.001*"accord"
+2020-05-26 10:45:46,374 : INFO : topic #7 (0.010): 0.023*"	" + 0.018*"bond" + 0.018*" 	" + 0.015*"investor" + 0.015*"loan" + 0.011*"firm" + 0.011*"buy" + 0.011*"capital" + 0.011*"investment" + 0.009*"market"
+2020-05-26 10:45:46,374 : INFO : topic #3 (0.010): 0.014*"price" + 0.012*"oil" + 0.011*"asset" + 0.009*"big" + 0.009*"government" + 0.009*"treasury" + 0.008*"year" + 0.008*"bank" + 0.008*"investment" + 0.007*"sand"
+2020-05-26 10:45:46,374 : INFO : topic #9 (0.010): 0.002*"price" + 0.002*"year" + 0.002*"loan" + 0.002*"bank" + 0.001*"sell" + 0.001*"firm" + 0.001*"market" + 0.001*"property" + 0.001*"home" + 0.001*"investment"
+2020-05-26 10:45:46,374 : INFO : topic diff=0.906913, rho=0.447214
+2020-05-26 10:45:46,390 : INFO : -7.430 per-word bound, 172.4 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,390 : INFO : PROGRESS: pass 4, at document #10/10
+2020-05-26 10:45:46,398 : INFO : topic #3 (0.010): 0.014*"price" + 0.013*"oil" + 0.011*"asset" + 0.009*"big" + 0.009*"government" + 0.009*"treasury" + 0.008*"year" + 0.008*"bank" + 0.008*"investment" + 0.008*"sand"
+2020-05-26 10:45:46,398 : INFO : topic #10 (0.010): 0.028*"index" + 0.019*"rise" + 0.019*"fall" + 0.016*"report" + 0.013*"dow" + 0.012*"decline" + 0.010*"share" + 0.010*"earning" + 0.010*"company" + 0.010*"slide"
+2020-05-26 10:45:46,398 : INFO : topic #6 (0.010): 0.031*"year" + 0.031*"ipo" + 0.012*"company" + 0.012*"stock" + 0.012*"offering" + 0.010*"index" + 0.009*"buy" + 0.009*"market" + 0.009*"good" + 0.008*"public"
+2020-05-26 10:45:46,398 : INFO : topic #0 (0.010): 0.034*"inland" + 0.022*"reit" + 0.018*"property" + 0.018*"real" + 0.018*"american" + 0.015*"share" + 0.013*"estate" + 0.013*"investor" + 0.012*"office" + 0.011*"sell"
+2020-05-26 10:45:46,398 : INFO : topic #8 (0.010): 0.003*"inland" + 0.002*"american" + 0.002*"reit" + 0.002*"index" + 0.002*"share" + 0.002*"property" + 0.002*"sell" + 0.002*"estate" + 0.002*"buy" + 0.002*"year"
+2020-05-26 10:45:46,399 : INFO : topic diff=0.600662, rho=0.408248
+2020-05-26 10:45:46,415 : INFO : -7.334 per-word bound, 161.4 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,415 : INFO : PROGRESS: pass 5, at document #10/10
+2020-05-26 10:45:46,422 : INFO : topic #0 (0.010): 0.036*"inland" + 0.024*"reit" + 0.019*"property" + 0.019*"american" + 0.019*"real" + 0.016*"share" + 0.015*"estate" + 0.013*"investor" + 0.012*"office" + 0.012*"sell"
+2020-05-26 10:45:46,422 : INFO : topic #7 (0.010): 0.024*"	" + 0.019*"bond" + 0.019*" 	" + 0.015*"investor" + 0.015*"loan" + 0.011*"firm" + 0.011*"buy" + 0.011*"capital" + 0.011*"investment" + 0.009*"market"
+2020-05-26 10:45:46,422 : INFO : topic #10 (0.010): 0.029*"index" + 0.019*"rise" + 0.019*"fall" + 0.016*"report" + 0.013*"dow" + 0.013*"decline" + 0.010*"share" + 0.010*"earning" + 0.010*"company" + 0.010*"slide"
+2020-05-26 10:45:46,422 : INFO : topic #3 (0.010): 0.014*"price" + 0.013*"oil" + 0.012*"asset" + 0.009*"big" + 0.009*"government" + 0.009*"treasury" + 0.008*"year" + 0.008*"bank" + 0.008*"investment" + 0.008*"sand"
+2020-05-26 10:45:46,422 : INFO : topic #2 (0.010): 0.002*"index" + 0.002*"fall" + 0.002*"company" + 0.002*"decline" + 0.002*"rise" + 0.002*"bank" + 0.002*"kumar" + 0.002*"report" + 0.001*"loan" + 0.001*"mckinsey"
+2020-05-26 10:45:46,422 : INFO : topic diff=0.400416, rho=0.377964
+2020-05-26 10:45:46,438 : INFO : -7.285 per-word bound, 156.0 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,438 : INFO : PROGRESS: pass 6, at document #10/10
+2020-05-26 10:45:46,445 : INFO : topic #6 (0.010): 0.033*"year" + 0.033*"ipo" + 0.013*"company" + 0.013*"stock" + 0.013*"offering" + 0.011*"index" + 0.010*"good" + 0.009*"market" + 0.009*"buy" + 0.008*"public"
+2020-05-26 10:45:46,446 : INFO : topic #9 (0.010): 0.001*"price" + 0.001*"year" + 0.001*"loan" + 0.001*"bank" + 0.001*"sell" + 0.001*"firm" + 0.001*"market" + 0.001*"property" + 0.001*"home" + 0.001*"investment"
+2020-05-26 10:45:46,446 : INFO : topic #4 (0.010): 0.029*"arm" + 0.029*"option" + 0.021*"mortgage" + 0.021*"borrower" + 0.020*"payment" + 0.018*"loan" + 0.015*"subprime" + 0.015*"home" + 0.012*"accord" + 0.009*"company"
+2020-05-26 10:45:46,446 : INFO : topic #13 (0.010): 0.001*"price" + 0.001*"loan" + 0.001*"sell" + 0.001*"bank" + 0.001*"year" + 0.001*"fund" + 0.001*"home" + 0.001*"market" + 0.001*"kumar" + 0.001*"accord"
+2020-05-26 10:45:46,446 : INFO : topic #1 (0.010): 0.001*"year" + 0.001*"market" + 0.001*"fund" + 0.001*"sell" + 0.001*"model" + 0.001*"bank" + 0.001*"price" + 0.001*"ipo" + 0.001*"manager" + 0.001*" "
+2020-05-26 10:45:46,446 : INFO : topic diff=0.269641, rho=0.353553
+2020-05-26 10:45:46,462 : INFO : -7.259 per-word bound, 153.2 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,462 : INFO : PROGRESS: pass 7, at document #10/10
+2020-05-26 10:45:46,469 : INFO : topic #11 (0.010): 0.024*"sell" + 0.020*"loan" + 0.020*"home" + 0.017*"bank" + 0.013*"price" + 0.013*"property" + 0.013*"foreclosure" + 0.013*"trust" + 0.013*"atlanta" + 0.013*"original"
+2020-05-26 10:45:46,469 : INFO : topic #0 (0.010): 0.037*"inland" + 0.025*"reit" + 0.020*"property" + 0.020*"american" + 0.020*"real" + 0.017*"share" + 0.016*"estate" + 0.014*"investor" + 0.013*"office" + 0.012*"sell"
+2020-05-26 10:45:46,469 : INFO : topic #13 (0.010): 0.001*"price" + 0.001*"loan" + 0.001*"sell" + 0.001*"bank" + 0.001*"year" + 0.001*"fund" + 0.001*"home" + 0.001*"market" + 0.001*"kumar" + 0.001*"accord"
+2020-05-26 10:45:46,469 : INFO : topic #7 (0.010): 0.024*"	" + 0.019*"bond" + 0.019*" 	" + 0.015*"investor" + 0.015*"loan" + 0.011*"firm" + 0.011*"buy" + 0.011*"capital" + 0.011*"investment" + 0.010*"market"
+2020-05-26 10:45:46,469 : INFO : topic #9 (0.010): 0.001*"price" + 0.001*"year" + 0.001*"loan" + 0.001*"bank" + 0.001*"sell" + 0.001*"firm" + 0.001*"market" + 0.001*"property" + 0.001*"home" + 0.001*"investment"
+2020-05-26 10:45:46,470 : INFO : topic diff=0.183841, rho=0.333333
+2020-05-26 10:45:46,485 : INFO : -7.244 per-word bound, 151.6 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,485 : INFO : PROGRESS: pass 8, at document #10/10
+2020-05-26 10:45:46,493 : INFO : topic #8 (0.010): 0.001*"inland" + 0.001*"american" + 0.001*"reit" + 0.001*"index" + 0.001*"share" + 0.001*"property" + 0.001*"sell" + 0.001*"estate" + 0.001*"buy" + 0.001*"year"
+2020-05-26 10:45:46,493 : INFO : topic #14 (0.010): 0.001*"year" + 0.001*"loan" + 0.001*"market" + 0.001*" 	" + 0.001*"bank" + 0.001*"	" + 0.001*"firm" + 0.001*"investor" + 0.001*"fund" + 0.001*"sell"
+2020-05-26 10:45:46,493 : INFO : topic #10 (0.010): 0.030*"index" + 0.020*"rise" + 0.020*"fall" + 0.017*"report" + 0.013*"dow" + 0.013*"decline" + 0.010*"share" + 0.010*"earning" + 0.010*"company" + 0.010*"slide"
+2020-05-26 10:45:46,493 : INFO : topic #6 (0.010): 0.034*"ipo" + 0.034*"year" + 0.014*"company" + 0.013*"stock" + 0.013*"offering" + 0.011*"index" + 0.010*"good" + 0.010*"market" + 0.008*"buy" + 0.008*"public"
+2020-05-26 10:45:46,493 : INFO : topic #2 (0.010): 0.001*"index" + 0.001*"fall" + 0.001*"company" + 0.001*"decline" + 0.001*"rise" + 0.001*"bank" + 0.001*"kumar" + 0.001*"report" + 0.001*"loan" + 0.001*"mckinsey"
+2020-05-26 10:45:46,493 : INFO : topic diff=0.127020, rho=0.316228
+2020-05-26 10:45:46,509 : INFO : -7.236 per-word bound, 150.7 perplexity estimate based on a held-out corpus of 10 documents with 4391 words
+2020-05-26 10:45:46,509 : INFO : PROGRESS: pass 9, at document #10/10
+2020-05-26 10:45:46,516 : INFO : topic #8 (0.010): 0.001*"inland" + 0.001*"american" + 0.001*"reit" + 0.001*"index" + 0.001*"share" + 0.001*"property" + 0.001*"sell" + 0.001*"estate" + 0.001*"buy" + 0.001*"year"
+2020-05-26 10:45:46,516 : INFO : topic #6 (0.010): 0.035*"ipo" + 0.035*"year" + 0.014*"company" + 0.013*"stock" + 0.013*"offering" + 0.012*"index" + 0.010*"good" + 0.010*"market" + 0.008*"research" + 0.008*"corp"
+2020-05-26 10:45:46,516 : INFO : topic #7 (0.010): 0.025*"	" + 0.019*"bond" + 0.019*" 	" + 0.015*"investor" + 0.015*"loan" + 0.011*"firm" + 0.011*"buy" + 0.011*"capital" + 0.011*"investment" + 0.010*"market"
+2020-05-26 10:45:46,516 : INFO : topic #13 (0.010): 0.001*"price" + 0.001*"loan" + 0.001*"sell" + 0.001*"bank" + 0.001*"year" + 0.001*"fund" + 0.001*"home" + 0.001*"market" + 0.001*"kumar" + 0.001*"accord"
+2020-05-26 10:45:46,517 : INFO : topic #1 (0.010): 0.001*"year" + 0.001*"market" + 0.001*"fund" + 0.001*"sell" + 0.001*"model" + 0.001*"bank" + 0.001*"price" + 0.001*"ipo" + 0.001*"manager" + 0.001*" "
+2020-05-26 10:45:46,517 : INFO : topic diff=0.088929, rho=0.301511
+2020-05-26 10:45:49,987 : INFO :  EM iter 0
+2020-05-26 10:45:49,987 : INFO : E Step
+2020-05-26 10:45:49,987 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:45:49,987 : INFO : using serial LDA version on this node
+2020-05-26 10:45:54,400 : INFO : M Step
+2020-05-26 10:45:54,400 : INFO : Fitting topic number 0
+2020-05-26 10:45:54,587 : INFO : Computing bound, all times
+2020-05-26 10:45:54,747 : INFO : initial sslm bound is 71403.186461
+2020-05-26 10:45:55,399 : INFO : Computing bound, all times
+2020-05-26 10:45:55,551 : INFO : iteration 1 iteration lda seq bound is 71431.944494 convergence is 0.000403
+2020-05-26 10:45:55,969 : INFO : Computing bound, all times
+2020-05-26 10:45:56,130 : INFO : iteration 2 iteration lda seq bound is 71432.306633 convergence is 0.000005
+2020-05-26 10:45:56,182 : INFO : Fitting topic number 1
+2020-05-26 10:45:56,415 : INFO : Computing bound, all times
+2020-05-26 10:45:56,571 : INFO : initial sslm bound is 73295.892022
+2020-05-26 10:45:56,674 : INFO : Computing bound, all times
+2020-05-26 10:45:56,845 : INFO : iteration 1 iteration lda seq bound is 73295.843123 convergence is 0.000001
+2020-05-26 10:45:56,898 : INFO : Fitting topic number 2
+2020-05-26 10:45:57,080 : INFO : Computing bound, all times
+2020-05-26 10:45:57,236 : INFO : initial sslm bound is 73295.494241
+2020-05-26 10:45:57,339 : INFO : Computing bound, all times
+2020-05-26 10:45:57,491 : INFO : iteration 1 iteration lda seq bound is 73295.450359 convergence is 0.000001
+2020-05-26 10:45:57,544 : INFO : Fitting topic number 3
+2020-05-26 10:45:57,726 : INFO : Computing bound, all times
+2020-05-26 10:45:57,879 : INFO : initial sslm bound is 69151.150667
+2020-05-26 10:46:00,014 : INFO : Computing bound, all times
+2020-05-26 10:46:00,167 : INFO : iteration 1 iteration lda seq bound is 69222.539902 convergence is 0.001032
+2020-05-26 10:46:04,290 : INFO : Computing bound, all times
+2020-05-26 10:46:04,443 : INFO : iteration 2 iteration lda seq bound is 69215.727635 convergence is 0.000098
+2020-05-26 10:46:04,497 : INFO : Fitting topic number 4
+2020-05-26 10:46:04,677 : INFO : Computing bound, all times
+2020-05-26 10:46:04,830 : INFO : initial sslm bound is 72088.323678
+2020-05-26 10:46:05,647 : INFO : Computing bound, all times
+2020-05-26 10:46:05,800 : INFO : iteration 1 iteration lda seq bound is 72123.548410 convergence is 0.000489
+2020-05-26 10:46:06,583 : INFO : Computing bound, all times
+2020-05-26 10:46:06,736 : INFO : iteration 2 iteration lda seq bound is 72125.672848 convergence is 0.000029
+2020-05-26 10:46:06,790 : INFO : Fitting topic number 5
+2020-05-26 10:46:06,970 : INFO : Computing bound, all times
+2020-05-26 10:46:07,123 : INFO : initial sslm bound is 70699.082182
+2020-05-26 10:46:08,395 : INFO : Computing bound, all times
+2020-05-26 10:46:08,548 : INFO : iteration 1 iteration lda seq bound is 70745.114815 convergence is 0.000651
+2020-05-26 10:46:10,024 : INFO : Computing bound, all times
+2020-05-26 10:46:10,175 : INFO : iteration 2 iteration lda seq bound is 70739.344690 convergence is 0.000082
+2020-05-26 10:46:10,228 : INFO : Fitting topic number 6
+2020-05-26 10:46:10,408 : INFO : Computing bound, all times
+2020-05-26 10:46:10,560 : INFO : initial sslm bound is 70725.861308
+2020-05-26 10:46:11,906 : INFO : Computing bound, all times
+2020-05-26 10:46:12,057 : INFO : iteration 1 iteration lda seq bound is 70780.904170 convergence is 0.000778
+2020-05-26 10:46:13,444 : INFO : Computing bound, all times
+2020-05-26 10:46:13,596 : INFO : iteration 2 iteration lda seq bound is 70779.579286 convergence is 0.000019
+2020-05-26 10:46:13,649 : INFO : Fitting topic number 7
+2020-05-26 10:46:13,830 : INFO : Computing bound, all times
+2020-05-26 10:46:13,981 : INFO : initial sslm bound is 70870.483652
+2020-05-26 10:46:15,318 : INFO : Computing bound, all times
+2020-05-26 10:46:15,470 : INFO : iteration 1 iteration lda seq bound is 70936.250445 convergence is 0.000928
+2020-05-26 10:46:16,920 : INFO : Computing bound, all times
+2020-05-26 10:46:17,073 : INFO : iteration 2 iteration lda seq bound is 70939.592924 convergence is 0.000047
+2020-05-26 10:46:17,125 : INFO : Fitting topic number 8
+2020-05-26 10:46:17,304 : INFO : Computing bound, all times
+2020-05-26 10:46:17,456 : INFO : initial sslm bound is 73295.480856
+2020-05-26 10:46:17,559 : INFO : Computing bound, all times
+2020-05-26 10:46:17,711 : INFO : iteration 1 iteration lda seq bound is 73295.437398 convergence is 0.000001
+2020-05-26 10:46:17,763 : INFO : Fitting topic number 9
+2020-05-26 10:46:17,942 : INFO : Computing bound, all times
+2020-05-26 10:46:18,093 : INFO : initial sslm bound is 73295.876634
+2020-05-26 10:46:18,195 : INFO : Computing bound, all times
+2020-05-26 10:46:18,347 : INFO : iteration 1 iteration lda seq bound is 73295.834448 convergence is 0.000001
+2020-05-26 10:46:18,399 : INFO : Fitting topic number 10
+2020-05-26 10:46:18,577 : INFO : Computing bound, all times
+2020-05-26 10:46:18,728 : INFO : initial sslm bound is 72301.419746
+2020-05-26 10:46:19,394 : INFO : Computing bound, all times
+2020-05-26 10:46:19,546 : INFO : iteration 1 iteration lda seq bound is 72325.153814 convergence is 0.000328
+2020-05-26 10:46:20,036 : INFO : Computing bound, all times
+2020-05-26 10:46:20,188 : INFO : iteration 2 iteration lda seq bound is 72324.920530 convergence is 0.000003
+2020-05-26 10:46:20,240 : INFO : Fitting topic number 11
+2020-05-26 10:46:20,422 : INFO : Computing bound, all times
+2020-05-26 10:46:20,574 : INFO : initial sslm bound is 70217.253513
+2020-05-26 10:46:22,114 : INFO : Computing bound, all times
+2020-05-26 10:46:22,264 : INFO : iteration 1 iteration lda seq bound is 70295.881324 convergence is 0.001120
+2020-05-26 10:46:24,203 : INFO : Computing bound, all times
+2020-05-26 10:46:24,356 : INFO : iteration 2 iteration lda seq bound is 70300.980127 convergence is 0.000073
+2020-05-26 10:46:24,409 : INFO : Fitting topic number 12
+2020-05-26 10:46:24,588 : INFO : Computing bound, all times
+2020-05-26 10:46:24,740 : INFO : initial sslm bound is 65467.047304
+2020-05-26 10:46:28,736 : INFO : Computing bound, all times
+2020-05-26 10:46:28,887 : INFO : iteration 1 iteration lda seq bound is 65622.198283 convergence is 0.002370
+2020-05-26 10:46:35,599 : INFO : Computing bound, all times
+2020-05-26 10:46:35,749 : INFO : iteration 2 iteration lda seq bound is 65628.387768 convergence is 0.000094
+2020-05-26 10:46:35,800 : INFO : Fitting topic number 13
+2020-05-26 10:46:35,982 : INFO : Computing bound, all times
+2020-05-26 10:46:36,134 : INFO : initial sslm bound is 73295.872680
+2020-05-26 10:46:36,237 : INFO : Computing bound, all times
+2020-05-26 10:46:36,388 : INFO : iteration 1 iteration lda seq bound is 73295.814900 convergence is 0.000001
+2020-05-26 10:46:36,440 : INFO : Fitting topic number 14
+2020-05-26 10:46:36,620 : INFO : Computing bound, all times
+2020-05-26 10:46:36,772 : INFO : initial sslm bound is 73295.718887
+2020-05-26 10:46:36,875 : INFO : Computing bound, all times
+2020-05-26 10:46:37,027 : INFO : iteration 1 iteration lda seq bound is 73295.690767 convergence is 0.000000
+2020-05-26 10:46:37,080 : INFO : iteration 0 iteration lda seq bound is 1046502.056278 convergence is inf
+2020-05-26 10:46:37,080 : INFO :  EM iter 1
+2020-05-26 10:46:37,080 : INFO : E Step
+2020-05-26 10:46:37,080 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:46:37,081 : INFO : using serial LDA version on this node
+2020-05-26 10:46:41,283 : INFO : M Step
+2020-05-26 10:46:41,283 : INFO : Fitting topic number 0
+2020-05-26 10:46:41,463 : INFO : Computing bound, all times
+2020-05-26 10:46:41,613 : INFO : initial sslm bound is 71514.429359
+2020-05-26 10:46:41,961 : INFO : Computing bound, all times
+2020-05-26 10:46:42,114 : INFO : iteration 1 iteration lda seq bound is 71513.629378 convergence is 0.000011
+2020-05-26 10:46:42,370 : INFO : Computing bound, all times
+2020-05-26 10:46:42,520 : INFO : iteration 2 iteration lda seq bound is 71512.926748 convergence is 0.000010
+2020-05-26 10:46:42,571 : INFO : Fitting topic number 1
+2020-05-26 10:46:42,750 : INFO : Computing bound, all times
+2020-05-26 10:46:42,901 : INFO : initial sslm bound is 73295.843123
+2020-05-26 10:46:43,003 : INFO : Computing bound, all times
+2020-05-26 10:46:43,154 : INFO : iteration 1 iteration lda seq bound is 73295.905044 convergence is 0.000001
+2020-05-26 10:46:43,206 : INFO : Fitting topic number 2
+2020-05-26 10:46:43,383 : INFO : Computing bound, all times
+2020-05-26 10:46:43,534 : INFO : initial sslm bound is 73263.274051
+2020-05-26 10:46:43,625 : INFO : Computing bound, all times
+2020-05-26 10:46:43,787 : INFO : iteration 1 iteration lda seq bound is 73263.254746 convergence is 0.000000
+2020-05-26 10:46:43,839 : INFO : Fitting topic number 3
+2020-05-26 10:46:44,017 : INFO : Computing bound, all times
+2020-05-26 10:46:44,169 : INFO : initial sslm bound is 69215.727635
+2020-05-26 10:46:45,047 : INFO : Computing bound, all times
+2020-05-26 10:46:45,202 : INFO : iteration 1 iteration lda seq bound is 69209.360646 convergence is 0.000092
+2020-05-26 10:46:45,844 : INFO : Computing bound, all times
+2020-05-26 10:46:45,997 : INFO : iteration 2 iteration lda seq bound is 69203.791249 convergence is 0.000080
+2020-05-26 10:46:46,049 : INFO : Fitting topic number 4
+2020-05-26 10:46:46,228 : INFO : Computing bound, all times
+2020-05-26 10:46:46,378 : INFO : initial sslm bound is 72125.672848
+2020-05-26 10:46:47,259 : INFO : Computing bound, all times
+2020-05-26 10:46:47,415 : INFO : iteration 1 iteration lda seq bound is 72123.094675 convergence is 0.000036
+2020-05-26 10:46:47,850 : INFO : Computing bound, all times
+2020-05-26 10:46:48,003 : INFO : iteration 2 iteration lda seq bound is 72121.941619 convergence is 0.000016
+2020-05-26 10:46:48,055 : INFO : Fitting topic number 5
+2020-05-26 10:46:48,236 : INFO : Computing bound, all times
+2020-05-26 10:46:48,391 : INFO : initial sslm bound is 70739.344690
+2020-05-26 10:46:48,972 : INFO : Computing bound, all times
+2020-05-26 10:46:49,126 : INFO : iteration 1 iteration lda seq bound is 70735.298006 convergence is 0.000057
+2020-05-26 10:46:49,542 : INFO : Computing bound, all times
+2020-05-26 10:46:49,696 : INFO : iteration 2 iteration lda seq bound is 70732.062616 convergence is 0.000046
+2020-05-26 10:46:49,749 : INFO : Fitting topic number 6
+2020-05-26 10:46:49,929 : INFO : Computing bound, all times
+2020-05-26 10:46:50,081 : INFO : initial sslm bound is 70719.311808
+2020-05-26 10:46:50,647 : INFO : Computing bound, all times
+2020-05-26 10:46:50,801 : INFO : iteration 1 iteration lda seq bound is 70717.208773 convergence is 0.000030
+2020-05-26 10:46:51,171 : INFO : Computing bound, all times
+2020-05-26 10:46:51,324 : INFO : iteration 2 iteration lda seq bound is 70714.841706 convergence is 0.000033
+2020-05-26 10:46:51,375 : INFO : Fitting topic number 7
+2020-05-26 10:46:51,557 : INFO : Computing bound, all times
+2020-05-26 10:46:51,709 : INFO : initial sslm bound is 70939.592924
+2020-05-26 10:46:52,366 : INFO : Computing bound, all times
+2020-05-26 10:46:52,521 : INFO : iteration 1 iteration lda seq bound is 70937.420483 convergence is 0.000031
+2020-05-26 10:46:52,997 : INFO : Computing bound, all times
+2020-05-26 10:46:53,149 : INFO : iteration 2 iteration lda seq bound is 70934.440403 convergence is 0.000042
+2020-05-26 10:46:53,201 : INFO : Fitting topic number 8
+2020-05-26 10:46:53,382 : INFO : Computing bound, all times
+2020-05-26 10:46:53,534 : INFO : initial sslm bound is 73295.437398
+2020-05-26 10:46:53,638 : INFO : Computing bound, all times
+2020-05-26 10:46:53,789 : INFO : iteration 1 iteration lda seq bound is 73295.492430 convergence is 0.000001
+2020-05-26 10:46:53,841 : INFO : Fitting topic number 9
+2020-05-26 10:46:54,023 : INFO : Computing bound, all times
+2020-05-26 10:46:54,176 : INFO : initial sslm bound is 73295.834448
+2020-05-26 10:46:54,280 : INFO : Computing bound, all times
+2020-05-26 10:46:54,434 : INFO : iteration 1 iteration lda seq bound is 73295.887869 convergence is 0.000001
+2020-05-26 10:46:54,486 : INFO : Fitting topic number 10
+2020-05-26 10:46:54,667 : INFO : Computing bound, all times
+2020-05-26 10:46:54,818 : INFO : initial sslm bound is 72324.920530
+2020-05-26 10:46:55,393 : INFO : Computing bound, all times
+2020-05-26 10:46:55,547 : INFO : iteration 1 iteration lda seq bound is 72322.958364 convergence is 0.000027
+2020-05-26 10:46:55,810 : INFO : Computing bound, all times
+2020-05-26 10:46:55,964 : INFO : iteration 2 iteration lda seq bound is 72322.114919 convergence is 0.000012
+2020-05-26 10:46:56,015 : INFO : Fitting topic number 11
+2020-05-26 10:46:56,196 : INFO : Computing bound, all times
+2020-05-26 10:46:56,349 : INFO : initial sslm bound is 70300.980127
+2020-05-26 10:46:57,190 : INFO : Computing bound, all times
+2020-05-26 10:46:57,342 : INFO : iteration 1 iteration lda seq bound is 70298.384139 convergence is 0.000037
+2020-05-26 10:46:57,852 : INFO : Computing bound, all times
+2020-05-26 10:46:58,004 : INFO : iteration 2 iteration lda seq bound is 70294.633209 convergence is 0.000053
+2020-05-26 10:46:58,055 : INFO : Fitting topic number 12
+2020-05-26 10:46:58,236 : INFO : Computing bound, all times
+2020-05-26 10:46:58,389 : INFO : initial sslm bound is 65661.937481
+2020-05-26 10:47:00,053 : INFO : Computing bound, all times
+2020-05-26 10:47:00,205 : INFO : iteration 1 iteration lda seq bound is 65657.752003 convergence is 0.000064
+2020-05-26 10:47:01,460 : INFO : Computing bound, all times
+2020-05-26 10:47:01,615 : INFO : iteration 2 iteration lda seq bound is 65648.085772 convergence is 0.000147
+2020-05-26 10:47:01,666 : INFO : Fitting topic number 13
+2020-05-26 10:47:01,847 : INFO : Computing bound, all times
+2020-05-26 10:47:02,000 : INFO : initial sslm bound is 73295.814900
+2020-05-26 10:47:02,104 : INFO : Computing bound, all times
+2020-05-26 10:47:02,259 : INFO : iteration 1 iteration lda seq bound is 73295.888067 convergence is 0.000001
+2020-05-26 10:47:02,311 : INFO : Fitting topic number 14
+2020-05-26 10:47:02,493 : INFO : Computing bound, all times
+2020-05-26 10:47:02,647 : INFO : initial sslm bound is 73295.690767
+2020-05-26 10:47:02,752 : INFO : Computing bound, all times
+2020-05-26 10:47:02,922 : INFO : iteration 1 iteration lda seq bound is 73295.726375 convergence is 0.000000
+2020-05-26 10:47:02,979 : INFO : iteration 1 iteration lda seq bound is 1047022.983987 convergence is 0.000498
+2020-05-26 10:47:02,979 : INFO :  EM iter 2
+2020-05-26 10:47:02,979 : INFO : E Step
+2020-05-26 10:47:02,980 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:47:02,980 : INFO : using serial LDA version on this node
+2020-05-26 10:47:06,877 : INFO : M Step
+2020-05-26 10:47:06,877 : INFO : Fitting topic number 0
+2020-05-26 10:47:07,058 : INFO : Computing bound, all times
+2020-05-26 10:47:07,212 : INFO : initial sslm bound is 71536.632259
+2020-05-26 10:47:07,425 : INFO : Computing bound, all times
+2020-05-26 10:47:07,577 : INFO : iteration 1 iteration lda seq bound is 71536.141077 convergence is 0.000007
+2020-05-26 10:47:07,744 : INFO : Computing bound, all times
+2020-05-26 10:47:07,909 : INFO : iteration 2 iteration lda seq bound is 71535.902142 convergence is 0.000003
+2020-05-26 10:47:07,961 : INFO : Fitting topic number 1
+2020-05-26 10:47:08,145 : INFO : Computing bound, all times
+2020-05-26 10:47:08,297 : INFO : initial sslm bound is 73295.905044
+2020-05-26 10:47:08,411 : INFO : Computing bound, all times
+2020-05-26 10:47:08,566 : INFO : iteration 1 iteration lda seq bound is 73295.907777 convergence is 0.000000
+2020-05-26 10:47:08,619 : INFO : Fitting topic number 2
+2020-05-26 10:47:08,801 : INFO : Computing bound, all times
+2020-05-26 10:47:08,955 : INFO : initial sslm bound is 72976.194735
+2020-05-26 10:47:09,075 : INFO : Computing bound, all times
+2020-05-26 10:47:09,229 : INFO : iteration 1 iteration lda seq bound is 72979.751162 convergence is 0.000049
+2020-05-26 10:47:09,364 : INFO : Computing bound, all times
+2020-05-26 10:47:09,519 : INFO : iteration 2 iteration lda seq bound is 72979.802082 convergence is 0.000001
+2020-05-26 10:47:09,571 : INFO : Fitting topic number 3
+2020-05-26 10:47:09,754 : INFO : Computing bound, all times
+2020-05-26 10:47:09,908 : INFO : initial sslm bound is 69203.791249
+2020-05-26 10:47:10,437 : INFO : Computing bound, all times
+2020-05-26 10:47:10,592 : INFO : iteration 1 iteration lda seq bound is 69200.172881 convergence is 0.000052
+2020-05-26 10:47:11,056 : INFO : Computing bound, all times
+2020-05-26 10:47:11,211 : INFO : iteration 2 iteration lda seq bound is 69197.773190 convergence is 0.000035
+2020-05-26 10:47:11,264 : INFO : Fitting topic number 4
+2020-05-26 10:47:11,446 : INFO : Computing bound, all times
+2020-05-26 10:47:11,600 : INFO : initial sslm bound is 72121.941619
+2020-05-26 10:47:11,909 : INFO : Computing bound, all times
+2020-05-26 10:47:12,063 : INFO : iteration 1 iteration lda seq bound is 72120.757238 convergence is 0.000016
+2020-05-26 10:47:12,286 : INFO : Computing bound, all times
+2020-05-26 10:47:12,440 : INFO : iteration 2 iteration lda seq bound is 72119.964203 convergence is 0.000011
+2020-05-26 10:47:12,492 : INFO : Fitting topic number 5
+2020-05-26 10:47:12,675 : INFO : Computing bound, all times
+2020-05-26 10:47:12,829 : INFO : initial sslm bound is 70732.062616
+2020-05-26 10:47:13,163 : INFO : Computing bound, all times
+2020-05-26 10:47:13,317 : INFO : iteration 1 iteration lda seq bound is 70730.092621 convergence is 0.000028
+2020-05-26 10:47:13,616 : INFO : Computing bound, all times
+2020-05-26 10:47:13,770 : INFO : iteration 2 iteration lda seq bound is 70728.879322 convergence is 0.000017
+2020-05-26 10:47:13,823 : INFO : Fitting topic number 6
+2020-05-26 10:47:14,006 : INFO : Computing bound, all times
+2020-05-26 10:47:14,160 : INFO : initial sslm bound is 70697.791015
+2020-05-26 10:47:14,486 : INFO : Computing bound, all times
+2020-05-26 10:47:14,640 : INFO : iteration 1 iteration lda seq bound is 70696.327109 convergence is 0.000021
+2020-05-26 10:47:14,899 : INFO : Computing bound, all times
+2020-05-26 10:47:15,053 : INFO : iteration 2 iteration lda seq bound is 70695.408830 convergence is 0.000013
+2020-05-26 10:47:15,107 : INFO : Fitting topic number 7
+2020-05-26 10:47:15,298 : INFO : Computing bound, all times
+2020-05-26 10:47:15,455 : INFO : initial sslm bound is 70934.440403
+2020-05-26 10:47:15,897 : INFO : Computing bound, all times
+2020-05-26 10:47:16,052 : INFO : iteration 1 iteration lda seq bound is 70932.040100 convergence is 0.000034
+2020-05-26 10:47:16,402 : INFO : Computing bound, all times
+2020-05-26 10:47:16,557 : INFO : iteration 2 iteration lda seq bound is 70930.278379 convergence is 0.000025
+2020-05-26 10:47:16,609 : INFO : Fitting topic number 8
+2020-05-26 10:47:16,792 : INFO : Computing bound, all times
+2020-05-26 10:47:16,945 : INFO : initial sslm bound is 73295.492430
+2020-05-26 10:47:17,055 : INFO : Computing bound, all times
+2020-05-26 10:47:17,211 : INFO : iteration 1 iteration lda seq bound is 73295.494859 convergence is 0.000000
+2020-05-26 10:47:17,263 : INFO : Fitting topic number 9
+2020-05-26 10:47:17,446 : INFO : Computing bound, all times
+2020-05-26 10:47:17,599 : INFO : initial sslm bound is 73295.887869
+2020-05-26 10:47:17,711 : INFO : Computing bound, all times
+2020-05-26 10:47:17,867 : INFO : iteration 1 iteration lda seq bound is 73295.890227 convergence is 0.000000
+2020-05-26 10:47:17,920 : INFO : Fitting topic number 10
+2020-05-26 10:47:18,109 : INFO : Computing bound, all times
+2020-05-26 10:47:18,273 : INFO : initial sslm bound is 72322.114919
+2020-05-26 10:47:18,468 : INFO : Computing bound, all times
+2020-05-26 10:47:18,622 : INFO : iteration 1 iteration lda seq bound is 72321.537916 convergence is 0.000008
+2020-05-26 10:47:18,835 : INFO : Computing bound, all times
+2020-05-26 10:47:18,990 : INFO : iteration 2 iteration lda seq bound is 72321.177083 convergence is 0.000005
+2020-05-26 10:47:19,043 : INFO : Fitting topic number 11
+2020-05-26 10:47:19,225 : INFO : Computing bound, all times
+2020-05-26 10:47:19,378 : INFO : initial sslm bound is 70294.633209
+2020-05-26 10:47:19,845 : INFO : Computing bound, all times
+2020-05-26 10:47:20,000 : INFO : iteration 1 iteration lda seq bound is 70291.678350 convergence is 0.000042
+2020-05-26 10:47:20,415 : INFO : Computing bound, all times
+2020-05-26 10:47:20,567 : INFO : iteration 2 iteration lda seq bound is 70289.484886 convergence is 0.000031
+2020-05-26 10:47:20,619 : INFO : Fitting topic number 12
+2020-05-26 10:47:20,801 : INFO : Computing bound, all times
+2020-05-26 10:47:20,957 : INFO : initial sslm bound is 65949.231632
+2020-05-26 10:47:21,869 : INFO : Computing bound, all times
+2020-05-26 10:47:22,022 : INFO : iteration 1 iteration lda seq bound is 65940.444588 convergence is 0.000133
+2020-05-26 10:47:22,859 : INFO : Computing bound, all times
+2020-05-26 10:47:23,012 : INFO : iteration 2 iteration lda seq bound is 65933.595215 convergence is 0.000104
+2020-05-26 10:47:23,064 : INFO : Fitting topic number 13
+2020-05-26 10:47:23,247 : INFO : Computing bound, all times
+2020-05-26 10:47:23,400 : INFO : initial sslm bound is 73295.888067
+2020-05-26 10:47:23,511 : INFO : Computing bound, all times
+2020-05-26 10:47:23,664 : INFO : iteration 1 iteration lda seq bound is 73295.891297 convergence is 0.000000
+2020-05-26 10:47:23,716 : INFO : Fitting topic number 14
+2020-05-26 10:47:23,898 : INFO : Computing bound, all times
+2020-05-26 10:47:24,052 : INFO : initial sslm bound is 73295.726375
+2020-05-26 10:47:24,163 : INFO : Computing bound, all times
+2020-05-26 10:47:24,316 : INFO : iteration 1 iteration lda seq bound is 73295.727947 convergence is 0.000000
+2020-05-26 10:47:24,368 : INFO : Bound went down, increasing iterations to 25
+2020-05-26 10:47:24,368 : INFO : Starting final iterations, max iter is 500
+2020-05-26 10:47:24,368 : INFO : iteration 2 iteration lda seq bound is 1046949.301295 convergence is 1.000000
+2020-05-26 10:47:24,368 : INFO :  EM iter 3
+2020-05-26 10:47:24,368 : INFO : E Step
+2020-05-26 10:47:24,368 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:47:24,369 : INFO : using serial LDA version on this node
+2020-05-26 10:47:28,112 : INFO : M Step
+2020-05-26 10:47:28,113 : INFO : Fitting topic number 0
+2020-05-26 10:47:28,296 : INFO : Computing bound, all times
+2020-05-26 10:47:28,448 : INFO : initial sslm bound is 71540.975494
+2020-05-26 10:47:28,589 : INFO : Computing bound, all times
+2020-05-26 10:47:28,742 : INFO : iteration 1 iteration lda seq bound is 71540.828538 convergence is 0.000002
+2020-05-26 10:47:28,876 : INFO : Computing bound, all times
+2020-05-26 10:47:29,029 : INFO : iteration 2 iteration lda seq bound is 71540.761085 convergence is 0.000001
+2020-05-26 10:47:29,080 : INFO : Fitting topic number 1
+2020-05-26 10:47:29,263 : INFO : Computing bound, all times
+2020-05-26 10:47:29,416 : INFO : initial sslm bound is 73295.907777
+2020-05-26 10:47:29,508 : INFO : Computing bound, all times
+2020-05-26 10:47:29,661 : INFO : iteration 1 iteration lda seq bound is 73295.909780 convergence is 0.000000
+2020-05-26 10:47:29,712 : INFO : Fitting topic number 2
+2020-05-26 10:47:29,895 : INFO : Computing bound, all times
+2020-05-26 10:47:30,049 : INFO : initial sslm bound is 72478.599387
+2020-05-26 10:47:30,182 : INFO : Computing bound, all times
+2020-05-26 10:47:30,335 : INFO : iteration 1 iteration lda seq bound is 72480.949777 convergence is 0.000032
+2020-05-26 10:47:30,428 : INFO : Computing bound, all times
+2020-05-26 10:47:30,583 : INFO : iteration 2 iteration lda seq bound is 72480.932925 convergence is 0.000000
+2020-05-26 10:47:30,636 : INFO : Fitting topic number 3
+2020-05-26 10:47:30,819 : INFO : Computing bound, all times
+2020-05-26 10:47:30,974 : INFO : initial sslm bound is 69197.773190
+2020-05-26 10:47:31,355 : INFO : Computing bound, all times
+2020-05-26 10:47:31,510 : INFO : iteration 1 iteration lda seq bound is 69196.264846 convergence is 0.000022
+2020-05-26 10:47:31,819 : INFO : Computing bound, all times
+2020-05-26 10:47:31,975 : INFO : iteration 2 iteration lda seq bound is 69195.416484 convergence is 0.000012
+2020-05-26 10:47:32,027 : INFO : Fitting topic number 4
+2020-05-26 10:47:32,210 : INFO : Computing bound, all times
+2020-05-26 10:47:32,364 : INFO : initial sslm bound is 72119.964203
+2020-05-26 10:47:32,577 : INFO : Computing bound, all times
+2020-05-26 10:47:32,730 : INFO : iteration 1 iteration lda seq bound is 72119.419522 convergence is 0.000008
+2020-05-26 10:47:32,930 : INFO : Computing bound, all times
+2020-05-26 10:47:33,083 : INFO : iteration 2 iteration lda seq bound is 72119.031470 convergence is 0.000005
+2020-05-26 10:47:33,136 : INFO : Fitting topic number 5
+2020-05-26 10:47:33,318 : INFO : Computing bound, all times
+2020-05-26 10:47:33,472 : INFO : initial sslm bound is 70728.879322
+2020-05-26 10:47:33,752 : INFO : Computing bound, all times
+2020-05-26 10:47:33,907 : INFO : iteration 1 iteration lda seq bound is 70728.257820 convergence is 0.000009
+2020-05-26 10:47:34,139 : INFO : Computing bound, all times
+2020-05-26 10:47:34,293 : INFO : iteration 2 iteration lda seq bound is 70727.838261 convergence is 0.000006
+2020-05-26 10:47:34,345 : INFO : Fitting topic number 6
+2020-05-26 10:47:34,527 : INFO : Computing bound, all times
+2020-05-26 10:47:34,681 : INFO : initial sslm bound is 70691.868973
+2020-05-26 10:47:34,897 : INFO : Computing bound, all times
+2020-05-26 10:47:35,051 : INFO : iteration 1 iteration lda seq bound is 70691.345989 convergence is 0.000007
+2020-05-26 10:47:35,257 : INFO : Computing bound, all times
+2020-05-26 10:47:35,411 : INFO : iteration 2 iteration lda seq bound is 70691.029723 convergence is 0.000004
+2020-05-26 10:47:35,464 : INFO : Fitting topic number 7
+2020-05-26 10:47:35,645 : INFO : Computing bound, all times
+2020-05-26 10:47:35,800 : INFO : initial sslm bound is 70930.278379
+2020-05-26 10:47:36,136 : INFO : Computing bound, all times
+2020-05-26 10:47:36,289 : INFO : iteration 1 iteration lda seq bound is 70928.965798 convergence is 0.000019
+2020-05-26 10:47:36,563 : INFO : Computing bound, all times
+2020-05-26 10:47:36,717 : INFO : iteration 2 iteration lda seq bound is 70928.066627 convergence is 0.000013
+2020-05-26 10:47:36,770 : INFO : Fitting topic number 8
+2020-05-26 10:47:36,953 : INFO : Computing bound, all times
+2020-05-26 10:47:37,107 : INFO : initial sslm bound is 73295.494859
+2020-05-26 10:47:37,200 : INFO : Computing bound, all times
+2020-05-26 10:47:37,355 : INFO : iteration 1 iteration lda seq bound is 73295.496639 convergence is 0.000000
+2020-05-26 10:47:37,408 : INFO : Fitting topic number 9
+2020-05-26 10:47:37,590 : INFO : Computing bound, all times
+2020-05-26 10:47:37,744 : INFO : initial sslm bound is 73295.890227
+2020-05-26 10:47:37,836 : INFO : Computing bound, all times
+2020-05-26 10:47:37,990 : INFO : iteration 1 iteration lda seq bound is 73295.891955 convergence is 0.000000
+2020-05-26 10:47:38,043 : INFO : Fitting topic number 10
+2020-05-26 10:47:38,224 : INFO : Computing bound, all times
+2020-05-26 10:47:38,377 : INFO : initial sslm bound is 72321.177083
+2020-05-26 10:47:38,528 : INFO : Computing bound, all times
+2020-05-26 10:47:38,682 : INFO : iteration 1 iteration lda seq bound is 72320.998299 convergence is 0.000002
+2020-05-26 10:47:38,827 : INFO : Computing bound, all times
+2020-05-26 10:47:38,979 : INFO : iteration 2 iteration lda seq bound is 72320.881843 convergence is 0.000002
+2020-05-26 10:47:39,031 : INFO : Fitting topic number 11
+2020-05-26 10:47:39,212 : INFO : Computing bound, all times
+2020-05-26 10:47:39,366 : INFO : initial sslm bound is 70289.484886
+2020-05-26 10:47:39,725 : INFO : Computing bound, all times
+2020-05-26 10:47:39,879 : INFO : iteration 1 iteration lda seq bound is 70287.883070 convergence is 0.000023
+2020-05-26 10:47:40,191 : INFO : Computing bound, all times
+2020-05-26 10:47:40,345 : INFO : iteration 2 iteration lda seq bound is 70286.726271 convergence is 0.000016
+2020-05-26 10:47:40,397 : INFO : Fitting topic number 12
+2020-05-26 10:47:40,575 : INFO : Computing bound, all times
+2020-05-26 10:47:40,727 : INFO : initial sslm bound is 66457.248683
+2020-05-26 10:47:41,659 : INFO : Computing bound, all times
+2020-05-26 10:47:41,811 : INFO : iteration 1 iteration lda seq bound is 66449.358373 convergence is 0.000119
+2020-05-26 10:47:42,629 : INFO : Computing bound, all times
+2020-05-26 10:47:42,786 : INFO : iteration 2 iteration lda seq bound is 66443.111606 convergence is 0.000094
+2020-05-26 10:47:42,837 : INFO : Fitting topic number 13
+2020-05-26 10:47:43,018 : INFO : Computing bound, all times
+2020-05-26 10:47:43,170 : INFO : initial sslm bound is 73295.891297
+2020-05-26 10:47:43,258 : INFO : Computing bound, all times
+2020-05-26 10:47:43,411 : INFO : iteration 1 iteration lda seq bound is 73295.893664 convergence is 0.000000
+2020-05-26 10:47:43,463 : INFO : Fitting topic number 14
+2020-05-26 10:47:43,643 : INFO : Computing bound, all times
+2020-05-26 10:47:43,795 : INFO : initial sslm bound is 73295.727947
+2020-05-26 10:47:43,883 : INFO : Computing bound, all times
+2020-05-26 10:47:44,035 : INFO : iteration 1 iteration lda seq bound is 73295.729099 convergence is 0.000000
+2020-05-26 10:47:44,086 : INFO : Bound went down, increasing iterations to 500
+2020-05-26 10:47:44,086 : INFO : Starting final iterations, max iter is 500
+2020-05-26 10:47:44,086 : INFO : iteration 3 iteration lda seq bound is 1046919.951636 convergence is 1.000000
+2020-05-26 10:47:44,087 : INFO :  EM iter 4
+2020-05-26 10:47:44,087 : INFO : E Step
+2020-05-26 10:47:44,087 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:47:44,087 : INFO : using serial LDA version on this node
+2020-05-26 10:47:47,861 : INFO : M Step
+2020-05-26 10:47:47,861 : INFO : Fitting topic number 0
+2020-05-26 10:47:48,040 : INFO : Computing bound, all times
+2020-05-26 10:47:48,191 : INFO : initial sslm bound is 71542.489025
+2020-05-26 10:47:48,311 : INFO : Computing bound, all times
+2020-05-26 10:47:48,463 : INFO : iteration 1 iteration lda seq bound is 71542.453589 convergence is 0.000000
+2020-05-26 10:47:48,515 : INFO : Fitting topic number 1
+2020-05-26 10:47:48,692 : INFO : Computing bound, all times
+2020-05-26 10:47:48,843 : INFO : initial sslm bound is 73295.909780
+2020-05-26 10:47:48,927 : INFO : Computing bound, all times
+2020-05-26 10:47:49,080 : INFO : iteration 1 iteration lda seq bound is 73295.909780 convergence is 0.000000
+2020-05-26 10:47:49,132 : INFO : Fitting topic number 2
+2020-05-26 10:47:49,308 : INFO : Computing bound, all times
+2020-05-26 10:47:49,460 : INFO : initial sslm bound is 72030.052644
+2020-05-26 10:47:49,613 : INFO : Computing bound, all times
+2020-05-26 10:47:49,771 : INFO : iteration 1 iteration lda seq bound is 72037.793906 convergence is 0.000107
+2020-05-26 10:47:49,870 : INFO : Computing bound, all times
+2020-05-26 10:47:50,040 : INFO : iteration 2 iteration lda seq bound is 72037.642438 convergence is 0.000002
+2020-05-26 10:47:50,096 : INFO : Fitting topic number 3
+2020-05-26 10:47:50,282 : INFO : Computing bound, all times
+2020-05-26 10:47:50,434 : INFO : initial sslm bound is 69195.416484
+2020-05-26 10:47:50,732 : INFO : Computing bound, all times
+2020-05-26 10:47:50,883 : INFO : iteration 1 iteration lda seq bound is 69194.833561 convergence is 0.000008
+2020-05-26 10:47:51,085 : INFO : Computing bound, all times
+2020-05-26 10:47:51,246 : INFO : iteration 2 iteration lda seq bound is 69194.779442 convergence is 0.000001
+2020-05-26 10:47:51,299 : INFO : Fitting topic number 4
+2020-05-26 10:47:51,475 : INFO : Computing bound, all times
+2020-05-26 10:47:51,629 : INFO : initial sslm bound is 72119.031470
+2020-05-26 10:47:51,807 : INFO : Computing bound, all times
+2020-05-26 10:47:51,966 : INFO : iteration 1 iteration lda seq bound is 72118.826118 convergence is 0.000003
+2020-05-26 10:47:52,131 : INFO : Computing bound, all times
+2020-05-26 10:47:52,284 : INFO : iteration 2 iteration lda seq bound is 72118.670337 convergence is 0.000002
+2020-05-26 10:47:52,337 : INFO : Fitting topic number 5
+2020-05-26 10:47:52,515 : INFO : Computing bound, all times
+2020-05-26 10:47:52,669 : INFO : initial sslm bound is 70727.838261
+2020-05-26 10:47:52,892 : INFO : Computing bound, all times
+2020-05-26 10:47:53,046 : INFO : iteration 1 iteration lda seq bound is 70727.605185 convergence is 0.000003
+2020-05-26 10:47:53,211 : INFO : Computing bound, all times
+2020-05-26 10:47:53,365 : INFO : iteration 2 iteration lda seq bound is 70727.552724 convergence is 0.000001
+2020-05-26 10:47:53,418 : INFO : Fitting topic number 6
+2020-05-26 10:47:53,595 : INFO : Computing bound, all times
+2020-05-26 10:47:53,748 : INFO : initial sslm bound is 70689.791455
+2020-05-26 10:47:53,907 : INFO : Computing bound, all times
+2020-05-26 10:47:54,060 : INFO : iteration 1 iteration lda seq bound is 70689.716450 convergence is 0.000001
+2020-05-26 10:47:54,239 : INFO : Computing bound, all times
+2020-05-26 10:47:54,393 : INFO : iteration 2 iteration lda seq bound is 70689.554874 convergence is 0.000002
+2020-05-26 10:47:54,445 : INFO : Fitting topic number 7
+2020-05-26 10:47:54,623 : INFO : Computing bound, all times
+2020-05-26 10:47:54,776 : INFO : initial sslm bound is 70928.066627
+2020-05-26 10:47:55,009 : INFO : Computing bound, all times
+2020-05-26 10:47:55,162 : INFO : iteration 1 iteration lda seq bound is 70927.489316 convergence is 0.000008
+2020-05-26 10:47:55,385 : INFO : Computing bound, all times
+2020-05-26 10:47:55,539 : INFO : iteration 2 iteration lda seq bound is 70927.060103 convergence is 0.000006
+2020-05-26 10:47:55,592 : INFO : Fitting topic number 8
+2020-05-26 10:47:55,769 : INFO : Computing bound, all times
+2020-05-26 10:47:55,923 : INFO : initial sslm bound is 73295.496639
+2020-05-26 10:47:56,014 : INFO : Computing bound, all times
+2020-05-26 10:47:56,167 : INFO : iteration 1 iteration lda seq bound is 73295.496639 convergence is 0.000000
+2020-05-26 10:47:56,220 : INFO : Fitting topic number 9
+2020-05-26 10:47:56,397 : INFO : Computing bound, all times
+2020-05-26 10:47:56,550 : INFO : initial sslm bound is 73295.891955
+2020-05-26 10:47:56,634 : INFO : Computing bound, all times
+2020-05-26 10:47:56,787 : INFO : iteration 1 iteration lda seq bound is 73295.891955 convergence is 0.000000
+2020-05-26 10:47:56,840 : INFO : Fitting topic number 10
+2020-05-26 10:47:57,018 : INFO : Computing bound, all times
+2020-05-26 10:47:57,172 : INFO : initial sslm bound is 72320.881843
+2020-05-26 10:47:57,287 : INFO : Computing bound, all times
+2020-05-26 10:47:57,440 : INFO : iteration 1 iteration lda seq bound is 72320.875191 convergence is 0.000000
+2020-05-26 10:47:57,492 : INFO : Fitting topic number 11
+2020-05-26 10:47:57,669 : INFO : Computing bound, all times
+2020-05-26 10:47:57,822 : INFO : initial sslm bound is 70286.726271
+2020-05-26 10:47:58,076 : INFO : Computing bound, all times
+2020-05-26 10:47:58,229 : INFO : iteration 1 iteration lda seq bound is 70286.017284 convergence is 0.000010
+2020-05-26 10:47:58,485 : INFO : Computing bound, all times
+2020-05-26 10:47:58,638 : INFO : iteration 2 iteration lda seq bound is 70285.454966 convergence is 0.000008
+2020-05-26 10:47:58,690 : INFO : Fitting topic number 12
+2020-05-26 10:47:58,868 : INFO : Computing bound, all times
+2020-05-26 10:47:59,021 : INFO : initial sslm bound is 66910.041665
+2020-05-26 10:47:59,890 : INFO : Computing bound, all times
+2020-05-26 10:48:00,043 : INFO : iteration 1 iteration lda seq bound is 66904.953364 convergence is 0.000076
+2020-05-26 10:48:00,817 : INFO : Computing bound, all times
+2020-05-26 10:48:00,972 : INFO : iteration 2 iteration lda seq bound is 66899.391924 convergence is 0.000083
+2020-05-26 10:48:01,024 : INFO : Fitting topic number 13
+2020-05-26 10:48:01,203 : INFO : Computing bound, all times
+2020-05-26 10:48:01,355 : INFO : initial sslm bound is 73295.893664
+2020-05-26 10:48:01,440 : INFO : Computing bound, all times
+2020-05-26 10:48:01,594 : INFO : iteration 1 iteration lda seq bound is 73295.893664 convergence is 0.000000
+2020-05-26 10:48:01,646 : INFO : Fitting topic number 14
+2020-05-26 10:48:01,825 : INFO : Computing bound, all times
+2020-05-26 10:48:01,978 : INFO : initial sslm bound is 73295.729099
+2020-05-26 10:48:02,063 : INFO : Computing bound, all times
+2020-05-26 10:48:02,216 : INFO : iteration 1 iteration lda seq bound is 73295.729099 convergence is 0.000000
+2020-05-26 10:48:02,268 : INFO : Bound went down, increasing iterations to 500
+2020-05-26 10:48:02,268 : INFO : Starting final iterations, max iter is 500
+2020-05-26 10:48:02,268 : INFO : iteration 4 iteration lda seq bound is 1046916.209243 convergence is 1.000000
+2020-05-26 10:48:02,268 : INFO :  EM iter 5
+2020-05-26 10:48:02,268 : INFO : E Step
+2020-05-26 10:48:02,269 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:48:02,269 : INFO : using serial LDA version on this node
+2020-05-26 10:48:06,145 : INFO : M Step
+2020-05-26 10:48:06,145 : INFO : Fitting topic number 0
+2020-05-26 10:48:06,331 : INFO : Computing bound, all times
+2020-05-26 10:48:06,483 : INFO : initial sslm bound is 71542.546042
+2020-05-26 10:48:06,597 : INFO : Computing bound, all times
+2020-05-26 10:48:06,751 : INFO : iteration 1 iteration lda seq bound is 71542.541367 convergence is 0.000000
+2020-05-26 10:48:06,803 : INFO : Fitting topic number 1
+2020-05-26 10:48:06,987 : INFO : Computing bound, all times
+2020-05-26 10:48:07,141 : INFO : initial sslm bound is 73295.909780
+2020-05-26 10:48:07,229 : INFO : Computing bound, all times
+2020-05-26 10:48:07,383 : INFO : iteration 1 iteration lda seq bound is 73295.909780 convergence is 0.000000
+2020-05-26 10:48:07,436 : INFO : Fitting topic number 2
+2020-05-26 10:48:07,620 : INFO : Computing bound, all times
+2020-05-26 10:48:07,775 : INFO : initial sslm bound is 71633.525577
+2020-05-26 10:48:08,032 : INFO : Computing bound, all times
+2020-05-26 10:48:08,186 : INFO : iteration 1 iteration lda seq bound is 71641.839448 convergence is 0.000116
+2020-05-26 10:48:08,345 : INFO : Computing bound, all times
+2020-05-26 10:48:08,498 : INFO : iteration 2 iteration lda seq bound is 71641.794100 convergence is 0.000001
+2020-05-26 10:48:08,550 : INFO : Fitting topic number 3
+2020-05-26 10:48:08,734 : INFO : Computing bound, all times
+2020-05-26 10:48:08,886 : INFO : initial sslm bound is 69194.779442
+2020-05-26 10:48:09,162 : INFO : Computing bound, all times
+2020-05-26 10:48:09,317 : INFO : iteration 1 iteration lda seq bound is 69194.465622 convergence is 0.000005
+2020-05-26 10:48:09,529 : INFO : Computing bound, all times
+2020-05-26 10:48:09,681 : INFO : iteration 2 iteration lda seq bound is 69194.367395 convergence is 0.000001
+2020-05-26 10:48:09,734 : INFO : Fitting topic number 4
+2020-05-26 10:48:09,915 : INFO : Computing bound, all times
+2020-05-26 10:48:10,068 : INFO : initial sslm bound is 72118.670337
+2020-05-26 10:48:10,198 : INFO : Computing bound, all times
+2020-05-26 10:48:10,350 : INFO : iteration 1 iteration lda seq bound is 72118.655408 convergence is 0.000000
+2020-05-26 10:48:10,402 : INFO : Fitting topic number 5
+2020-05-26 10:48:10,590 : INFO : Computing bound, all times
+2020-05-26 10:48:10,744 : INFO : initial sslm bound is 70727.552724
+2020-05-26 10:48:10,898 : INFO : Computing bound, all times
+2020-05-26 10:48:11,051 : INFO : iteration 1 iteration lda seq bound is 70727.550854 convergence is 0.000000
+2020-05-26 10:48:11,103 : INFO : Fitting topic number 6
+2020-05-26 10:48:11,282 : INFO : Computing bound, all times
+2020-05-26 10:48:11,435 : INFO : initial sslm bound is 70689.512496
+2020-05-26 10:48:11,580 : INFO : Computing bound, all times
+2020-05-26 10:48:11,734 : INFO : iteration 1 iteration lda seq bound is 70689.499680 convergence is 0.000000
+2020-05-26 10:48:11,786 : INFO : Fitting topic number 7
+2020-05-26 10:48:11,976 : INFO : Computing bound, all times
+2020-05-26 10:48:12,139 : INFO : initial sslm bound is 70927.060103
+2020-05-26 10:48:12,366 : INFO : Computing bound, all times
+2020-05-26 10:48:12,519 : INFO : iteration 1 iteration lda seq bound is 70926.755728 convergence is 0.000004
+2020-05-26 10:48:12,728 : INFO : Computing bound, all times
+2020-05-26 10:48:12,882 : INFO : iteration 2 iteration lda seq bound is 70926.586358 convergence is 0.000002
+2020-05-26 10:48:12,934 : INFO : Fitting topic number 8
+2020-05-26 10:48:13,113 : INFO : Computing bound, all times
+2020-05-26 10:48:13,268 : INFO : initial sslm bound is 73295.496639
+2020-05-26 10:48:13,353 : INFO : Computing bound, all times
+2020-05-26 10:48:13,506 : INFO : iteration 1 iteration lda seq bound is 73295.496639 convergence is 0.000000
+2020-05-26 10:48:13,557 : INFO : Fitting topic number 9
+2020-05-26 10:48:13,740 : INFO : Computing bound, all times
+2020-05-26 10:48:13,901 : INFO : initial sslm bound is 73295.891955
+2020-05-26 10:48:13,988 : INFO : Computing bound, all times
+2020-05-26 10:48:14,141 : INFO : iteration 1 iteration lda seq bound is 73295.891955 convergence is 0.000000
+2020-05-26 10:48:14,194 : INFO : Fitting topic number 10
+2020-05-26 10:48:14,374 : INFO : Computing bound, all times
+2020-05-26 10:48:14,528 : INFO : initial sslm bound is 72320.875191
+2020-05-26 10:48:14,642 : INFO : Computing bound, all times
+2020-05-26 10:48:14,795 : INFO : iteration 1 iteration lda seq bound is 72320.875191 convergence is 0.000000
+2020-05-26 10:48:14,848 : INFO : Fitting topic number 11
+2020-05-26 10:48:15,031 : INFO : Computing bound, all times
+2020-05-26 10:48:15,184 : INFO : initial sslm bound is 70285.454966
+2020-05-26 10:48:15,431 : INFO : Computing bound, all times
+2020-05-26 10:48:15,584 : INFO : iteration 1 iteration lda seq bound is 70285.061081 convergence is 0.000006
+2020-05-26 10:48:15,824 : INFO : Computing bound, all times
+2020-05-26 10:48:15,977 : INFO : iteration 2 iteration lda seq bound is 70284.817518 convergence is 0.000003
+2020-05-26 10:48:16,029 : INFO : Fitting topic number 12
+2020-05-26 10:48:16,211 : INFO : Computing bound, all times
+2020-05-26 10:48:16,365 : INFO : initial sslm bound is 67325.920133
+2020-05-26 10:48:17,222 : INFO : Computing bound, all times
+2020-05-26 10:48:17,375 : INFO : iteration 1 iteration lda seq bound is 67322.492004 convergence is 0.000051
+2020-05-26 10:48:18,104 : INFO : Computing bound, all times
+2020-05-26 10:48:18,257 : INFO : iteration 2 iteration lda seq bound is 67317.384325 convergence is 0.000076
+2020-05-26 10:48:18,309 : INFO : Fitting topic number 13
+2020-05-26 10:48:18,492 : INFO : Computing bound, all times
+2020-05-26 10:48:18,646 : INFO : initial sslm bound is 73295.893664
+2020-05-26 10:48:18,732 : INFO : Computing bound, all times
+2020-05-26 10:48:18,887 : INFO : iteration 1 iteration lda seq bound is 73295.893664 convergence is 0.000000
+2020-05-26 10:48:18,939 : INFO : Fitting topic number 14
+2020-05-26 10:48:19,123 : INFO : Computing bound, all times
+2020-05-26 10:48:19,276 : INFO : initial sslm bound is 73295.729099
+2020-05-26 10:48:19,363 : INFO : Computing bound, all times
+2020-05-26 10:48:19,518 : INFO : iteration 1 iteration lda seq bound is 73295.729099 convergence is 0.000000
+2020-05-26 10:48:19,571 : INFO : Starting final iterations, max iter is 500
+2020-05-26 10:48:19,571 : INFO : iteration 5 iteration lda seq bound is 1046947.433203 convergence is 1.000000
+2020-05-26 10:48:19,571 : INFO :  EM iter 6
+2020-05-26 10:48:19,571 : INFO : E Step
+2020-05-26 10:48:19,571 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 10:48:19,571 : INFO : using serial LDA version on this node
+2020-05-26 10:48:23,504 : INFO : M Step
+2020-05-26 10:48:23,504 : INFO : Fitting topic number 0
+2020-05-26 10:48:23,687 : INFO : Computing bound, all times
+2020-05-26 10:48:23,840 : INFO : initial sslm bound is 71542.539085
+2020-05-26 10:48:23,956 : INFO : Computing bound, all times
+2020-05-26 10:48:24,109 : INFO : iteration 1 iteration lda seq bound is 71542.530541 convergence is 0.000000
+2020-05-26 10:48:24,163 : INFO : Fitting topic number 1
+2020-05-26 10:48:24,348 : INFO : Computing bound, all times
+2020-05-26 10:48:24,500 : INFO : initial sslm bound is 73295.909780
+2020-05-26 10:48:24,587 : INFO : Computing bound, all times
+2020-05-26 10:48:24,741 : INFO : iteration 1 iteration lda seq bound is 73295.909780 convergence is 0.000000
+2020-05-26 10:48:24,795 : INFO : Fitting topic number 2
+2020-05-26 10:48:24,977 : INFO : Computing bound, all times
+2020-05-26 10:48:25,131 : INFO : initial sslm bound is 71389.732355
+2020-05-26 10:48:25,374 : INFO : Computing bound, all times
+2020-05-26 10:48:25,528 : INFO : iteration 1 iteration lda seq bound is 71397.188661 convergence is 0.000104
+2020-05-26 10:48:25,715 : INFO : Computing bound, all times
+2020-05-26 10:48:25,868 : INFO : iteration 2 iteration lda seq bound is 71396.906756 convergence is 0.000004
+2020-05-26 10:48:25,920 : INFO : Fitting topic number 3
+2020-05-26 10:48:26,100 : INFO : Computing bound, all times
+2020-05-26 10:48:26,253 : INFO : initial sslm bound is 69194.367395
+2020-05-26 10:48:26,447 : INFO : Computing bound, all times
+2020-05-26 10:48:26,601 : INFO : iteration 1 iteration lda seq bound is 69194.341416 convergence is 0.000000
+2020-05-26 10:48:26,653 : INFO : Fitting topic number 4
+2020-05-26 10:48:26,836 : INFO : Computing bound, all times
+2020-05-26 10:48:26,989 : INFO : initial sslm bound is 72118.655408
+2020-05-26 10:48:27,149 : INFO : Computing bound, all times
+2020-05-26 10:48:27,302 : INFO : iteration 1 iteration lda seq bound is 72118.543977 convergence is 0.000002
+2020-05-26 10:48:27,432 : INFO : Computing bound, all times
+2020-05-26 10:48:27,586 : INFO : iteration 2 iteration lda seq bound is 72118.535510 convergence is 0.000000
+2020-05-26 10:48:27,638 : INFO : Fitting topic number 5
+2020-05-26 10:48:27,819 : INFO : Computing bound, all times
+2020-05-26 10:48:27,973 : INFO : initial sslm bound is 70727.550854
+2020-05-26 10:48:28,124 : INFO : Computing bound, all times
+2020-05-26 10:48:28,277 : INFO : iteration 1 iteration lda seq bound is 70727.550854 convergence is 0.000000
+2020-05-26 10:48:28,330 : INFO : Fitting topic number 6
+2020-05-26 10:48:28,514 : INFO : Computing bound, all times
+2020-05-26 10:48:28,667 : INFO : initial sslm bound is 70689.508644
+2020-05-26 10:48:28,810 : INFO : Computing bound, all times
+2020-05-26 10:48:28,965 : INFO : iteration 1 iteration lda seq bound is 70689.503085 convergence is 0.000000
+2020-05-26 10:48:29,017 : INFO : Fitting topic number 7
+2020-05-26 10:48:29,199 : INFO : Computing bound, all times
+2020-05-26 10:48:29,354 : INFO : initial sslm bound is 70926.586358
+2020-05-26 10:48:29,524 : INFO : Computing bound, all times
+2020-05-26 10:48:29,678 : INFO : iteration 1 iteration lda seq bound is 70926.513394 convergence is 0.000001
+2020-05-26 10:48:29,832 : INFO : Computing bound, all times
+2020-05-26 10:48:29,986 : INFO : iteration 2 iteration lda seq bound is 70926.497724 convergence is 0.000000
+2020-05-26 10:48:30,039 : INFO : Fitting topic number 8
+2020-05-26 10:48:30,221 : INFO : Computing bound, all times
+2020-05-26 10:48:30,376 : INFO : initial sslm bound is 73295.496639
+2020-05-26 10:48:30,463 : INFO : Computing bound, all times
+2020-05-26 10:48:30,617 : INFO : iteration 1 iteration lda seq bound is 73295.496639 convergence is 0.000000
+2020-05-26 10:48:30,669 : INFO : Fitting topic number 9
+2020-05-26 10:48:30,854 : INFO : Computing bound, all times
+2020-05-26 10:48:31,008 : INFO : initial sslm bound is 73295.891955
+2020-05-26 10:48:31,095 : INFO : Computing bound, all times
+2020-05-26 10:48:31,249 : INFO : iteration 1 iteration lda seq bound is 73295.891955 convergence is 0.000000
+2020-05-26 10:48:31,302 : INFO : Fitting topic number 10
+2020-05-26 10:48:31,485 : INFO : Computing bound, all times
+2020-05-26 10:48:31,640 : INFO : initial sslm bound is 72320.875191
+2020-05-26 10:48:31,755 : INFO : Computing bound, all times
+2020-05-26 10:48:31,910 : INFO : iteration 1 iteration lda seq bound is 72320.875191 convergence is 0.000000
+2020-05-26 10:48:31,963 : INFO : Fitting topic number 11
+2020-05-26 10:48:32,145 : INFO : Computing bound, all times
+2020-05-26 10:48:32,298 : INFO : initial sslm bound is 70284.817518
+2020-05-26 10:48:32,490 : INFO : Computing bound, all times
+2020-05-26 10:48:32,650 : INFO : iteration 1 iteration lda seq bound is 70284.732248 convergence is 0.000001
+2020-05-26 10:48:32,814 : INFO : Computing bound, all times
+2020-05-26 10:48:32,971 : INFO : iteration 2 iteration lda seq bound is 70284.706512 convergence is 0.000000
+2020-05-26 10:48:33,024 : INFO : Fitting topic number 12
+2020-05-26 10:48:33,206 : INFO : Computing bound, all times
+2020-05-26 10:48:33,361 : INFO : initial sslm bound is 67581.338697
+2020-05-26 10:48:34,171 : INFO : Computing bound, all times
+2020-05-26 10:48:34,325 : INFO : iteration 1 iteration lda seq bound is 67575.855191 convergence is 0.000081
+2020-05-26 10:57:33,723 : INFO : collecting all words and their counts
+2020-05-26 10:57:33,723 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:57:33,811 : INFO : pruned out 0 tokens with count <=1 (before 50222, after 50222)
+2020-05-26 10:57:33,825 : INFO : pruned out 40825 tokens with count <=2 (before 50250, after 9425)
+2020-05-26 10:57:33,903 : INFO : pruned out 42774 tokens with count <=3 (before 50072, after 7298)
+2020-05-26 10:57:33,984 : INFO : pruned out 43583 tokens with count <=4 (before 50165, after 6582)
+2020-05-26 10:57:34,064 : INFO : pruned out 43948 tokens with count <=5 (before 50098, after 6150)
+2020-05-26 10:57:34,151 : INFO : pruned out 44434 tokens with count <=6 (before 50394, after 5960)
+2020-05-26 10:57:34,233 : INFO : pruned out 44475 tokens with count <=7 (before 50231, after 5756)
+2020-05-26 10:57:34,319 : INFO : pruned out 44531 tokens with count <=8 (before 50195, after 5664)
+2020-05-26 10:57:34,404 : INFO : pruned out 44748 tokens with count <=9 (before 50267, after 5519)
+2020-05-26 10:57:34,488 : INFO : pruned out 44926 tokens with count <=10 (before 50340, after 5414)
+2020-05-26 10:57:34,575 : INFO : pruned out 47514 tokens with count <=11 (before 52885, after 5371)
+2020-05-26 10:57:34,659 : INFO : pruned out 44764 tokens with count <=12 (before 50055, after 5291)
+2020-05-26 10:57:34,748 : INFO : pruned out 45313 tokens with count <=13 (before 50518, after 5205)
+2020-05-26 10:57:34,832 : INFO : pruned out 45160 tokens with count <=14 (before 50305, after 5145)
+2020-05-26 10:57:34,915 : INFO : pruned out 45302 tokens with count <=15 (before 50387, after 5085)
+2020-05-26 10:57:35,001 : INFO : pruned out 44991 tokens with count <=16 (before 50019, after 5028)
+2020-05-26 10:57:35,086 : INFO : pruned out 45691 tokens with count <=17 (before 50660, after 4969)
+2020-05-26 10:57:35,171 : INFO : pruned out 45123 tokens with count <=18 (before 50057, after 4934)
+2020-05-26 10:57:35,257 : INFO : pruned out 45462 tokens with count <=19 (before 50363, after 4901)
+2020-05-26 10:57:35,350 : INFO : pruned out 50762 tokens with count <=20 (before 55650, after 4888)
+2020-05-26 10:57:35,436 : INFO : pruned out 46940 tokens with count <=21 (before 51789, after 4849)
+2020-05-26 10:57:35,521 : INFO : pruned out 45211 tokens with count <=22 (before 50037, after 4826)
+2020-05-26 10:57:35,607 : INFO : pruned out 45247 tokens with count <=23 (before 50037, after 4790)
+2020-05-26 10:57:35,691 : INFO : pruned out 45523 tokens with count <=24 (before 50266, after 4743)
+2020-05-26 10:57:35,774 : INFO : pruned out 45362 tokens with count <=25 (before 50077, after 4715)
+2020-05-26 10:57:35,856 : INFO : pruned out 45588 tokens with count <=26 (before 50283, after 4695)
+2020-05-26 10:57:35,940 : INFO : pruned out 45487 tokens with count <=27 (before 50166, after 4679)
+2020-05-26 10:57:36,026 : INFO : pruned out 46376 tokens with count <=28 (before 51036, after 4660)
+2020-05-26 10:57:36,110 : INFO : pruned out 45394 tokens with count <=29 (before 50048, after 4654)
+2020-05-26 10:57:36,197 : INFO : pruned out 45375 tokens with count <=30 (before 50011, after 4636)
+2020-05-26 10:57:36,282 : INFO : pruned out 45393 tokens with count <=31 (before 50012, after 4619)
+2020-05-26 10:57:36,371 : INFO : pruned out 45683 tokens with count <=32 (before 50286, after 4603)
+2020-05-26 10:57:36,460 : INFO : pruned out 48119 tokens with count <=33 (before 52712, after 4593)
+2020-05-26 10:57:36,547 : INFO : pruned out 45615 tokens with count <=34 (before 50199, after 4584)
+2020-05-26 10:57:36,648 : INFO : pruned out 45858 tokens with count <=35 (before 50431, after 4573)
+2020-05-26 10:57:36,753 : INFO : pruned out 45508 tokens with count <=36 (before 50067, after 4559)
+2020-05-26 10:57:36,761 : INFO : collected 10659 word types from a corpus of 1862901 words (unigram + bigrams) and 4384 sentences
+2020-05-26 10:57:36,761 : INFO : using 10659 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 10:57:36,762 : INFO : collecting all words and their counts
+2020-05-26 10:57:36,763 : INFO : PROGRESS: at sentence #0, processed 0 words and 0 word types
+2020-05-26 10:57:36,965 : INFO : pruned out 0 tokens with count <=1 (before 50210, after 50210)
+2020-05-26 10:57:36,980 : INFO : pruned out 40846 tokens with count <=2 (before 50238, after 9392)
+2020-05-26 10:57:37,160 : INFO : pruned out 42796 tokens with count <=3 (before 50062, after 7266)
+2020-05-26 10:57:37,347 : INFO : pruned out 43594 tokens with count <=4 (before 50146, after 6552)
+2020-05-26 10:57:37,540 : INFO : pruned out 43967 tokens with count <=5 (before 50087, after 6120)
+2020-05-26 10:57:37,742 : INFO : pruned out 44458 tokens with count <=6 (before 50385, after 5927)
+2020-05-26 10:57:37,939 : INFO : pruned out 44510 tokens with count <=7 (before 50229, after 5719)
+2020-05-26 10:57:38,146 : INFO : pruned out 44566 tokens with count <=8 (before 50190, after 5624)
+2020-05-26 10:57:38,342 : INFO : pruned out 44778 tokens with count <=9 (before 50258, after 5480)
+2020-05-26 10:57:38,543 : INFO : pruned out 44958 tokens with count <=10 (before 50333, after 5375)
+2020-05-26 10:57:38,748 : INFO : pruned out 47552 tokens with count <=11 (before 52881, after 5329)
+2020-05-26 10:57:38,943 : INFO : pruned out 44809 tokens with count <=12 (before 50057, after 5248)
+2020-05-26 10:57:39,144 : INFO : pruned out 45349 tokens with count <=13 (before 50511, after 5162)
+2020-05-26 10:57:39,331 : INFO : pruned out 45195 tokens with count <=14 (before 50298, after 5103)
+2020-05-26 10:57:39,522 : INFO : pruned out 45339 tokens with count <=15 (before 50382, after 5043)
+2020-05-26 10:57:39,714 : INFO : pruned out 45023 tokens with count <=16 (before 50010, after 4987)
+2020-05-26 10:57:39,911 : INFO : pruned out 45720 tokens with count <=17 (before 50648, after 4928)
+2020-05-26 10:57:40,104 : INFO : pruned out 45149 tokens with count <=18 (before 50041, after 4892)
+2020-05-26 10:57:40,301 : INFO : pruned out 45494 tokens with count <=19 (before 50355, after 4861)
+2020-05-26 10:57:40,517 : INFO : pruned out 50794 tokens with count <=20 (before 55641, after 4847)
+2020-05-26 10:57:40,713 : INFO : pruned out 46974 tokens with count <=21 (before 51782, after 4808)
+2020-05-26 10:57:40,903 : INFO : pruned out 45244 tokens with count <=22 (before 50029, after 4785)
+2020-05-26 10:57:41,102 : INFO : pruned out 45292 tokens with count <=23 (before 50041, after 4749)
+2020-05-26 10:57:41,290 : INFO : pruned out 45546 tokens with count <=24 (before 50248, after 4702)
+2020-05-26 10:57:41,487 : INFO : pruned out 45386 tokens with count <=25 (before 50060, after 4674)
+2020-05-26 10:57:41,678 : INFO : pruned out 45627 tokens with count <=26 (before 50281, after 4654)
+2020-05-26 10:57:41,873 : INFO : pruned out 45516 tokens with count <=27 (before 50154, after 4638)
+2020-05-26 10:57:42,071 : INFO : pruned out 46402 tokens with count <=28 (before 51021, after 4619)
+2020-05-26 10:57:42,268 : INFO : pruned out 45432 tokens with count <=29 (before 50045, after 4613)
+2020-05-26 10:57:42,472 : INFO : pruned out 45406 tokens with count <=30 (before 50002, after 4596)
+2020-05-26 10:57:42,670 : INFO : pruned out 45431 tokens with count <=31 (before 50010, after 4579)
+2020-05-26 10:57:42,871 : INFO : pruned out 45716 tokens with count <=32 (before 50279, after 4563)
+2020-05-26 10:57:43,075 : INFO : pruned out 48156 tokens with count <=33 (before 52709, after 4553)
+2020-05-26 10:57:43,274 : INFO : pruned out 45641 tokens with count <=34 (before 50185, after 4544)
+2020-05-26 10:57:43,514 : INFO : pruned out 45470 tokens with count <=35 (before 50004, after 4534)
+2020-05-26 10:57:43,757 : INFO : pruned out 45813 tokens with count <=36 (before 50329, after 4516)
+2020-05-26 10:57:43,792 : INFO : collected 12417 word types from a corpus of 1851509 words (unigram + bigrams) and 4384 sentences
+2020-05-26 10:57:43,793 : INFO : using 12417 counts as vocab in Phrases<0 vocab, min_count=50, threshold=5, max_vocab_size=50000>
+2020-05-26 11:00:55,713 : INFO : adding document #0 to Dictionary(0 unique tokens: [])
+2020-05-26 11:00:57,173 : INFO : built Dictionary(33165 unique tokens: ['\t', ' \t', '  \t', '1980', '90']...) from 4384 documents (total 1851509 corpus positions)
+2020-05-26 11:01:04,367 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 11:01:04,371 : INFO : using serial LDA version on this node
+2020-05-26 11:01:04,429 : INFO : running online (multi-pass) LDA training, 15 topics, 10 passes over the supplied corpus of 4384 documents, updating model once every 2000 documents, evaluating perplexity every 4384 documents, iterating 50x with a convergence threshold of 0.001000
+2020-05-26 11:01:04,429 : INFO : PROGRESS: pass 0, at document #2000/4384
+2020-05-26 11:01:07,655 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:07,709 : INFO : topic #7 (0.010): 0.019*"fund" + 0.017*"company" + 0.006*"business" + 0.006*"firm" + 0.005*"bank" + 0.005*"investor" + 0.005*"year" + 0.005*"capital" + 0.005*"investment" + 0.005*"accord"
+2020-05-26 11:01:07,710 : INFO : topic #0 (0.010): 0.010*"year" + 0.010*"bank" + 0.007*"investor" + 0.006*"market" + 0.006*"company" + 0.006*"fund" + 0.006*"investment" + 0.005*"new" + 0.005*"include" + 0.005*"accord"
+2020-05-26 11:01:07,710 : INFO : topic #6 (0.010): 0.009*"year" + 0.008*"investor" + 0.008*"fund" + 0.006*"company" + 0.006*"bank" + 0.006*"investment" + 0.006*"new" + 0.005*"capital" + 0.004*"financial" + 0.004*"people"
+2020-05-26 11:01:07,711 : INFO : topic #14 (0.010): 0.011*"bank" + 0.010*"company" + 0.009*"market" + 0.009*"year" + 0.006*"new" + 0.005*"fund" + 0.005*"investor" + 0.005*"firm" + 0.005*"big" + 0.005*"datum"
+2020-05-26 11:01:07,712 : INFO : topic #5 (0.010): 0.013*"company" + 0.009*"market" + 0.008*"bank" + 0.007*"year" + 0.006*"investment" + 0.005*"firm" + 0.005*"new" + 0.005*"deal" + 0.005*"datum" + 0.005*"investor"
+2020-05-26 11:01:07,713 : INFO : topic diff=8.061609, rho=1.000000
+2020-05-26 11:01:07,713 : INFO : PROGRESS: pass 0, at document #4000/4384
+2020-05-26 11:01:11,706 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:11,748 : INFO : topic #14 (0.010): 0.014*"bank" + 0.008*"company" + 0.007*"year" + 0.007*"market" + 0.006*"new" + 0.006*"financial" + 0.005*" " + 0.005*"big" + 0.005*"datum" + 0.004*"firm"
+2020-05-26 11:01:11,749 : INFO : topic #6 (0.010): 0.016*" " + 0.013*"think" + 0.009*"know" + 0.007*"year" + 0.006*"go" + 0.006*"people" + 0.005*"like" + 0.005*"thing" + 0.005*"right" + 0.005*"bank"
+2020-05-26 11:01:11,750 : INFO : topic #5 (0.010): 0.015*"company" + 0.008*"venture" + 0.006*"year" + 0.006*"datum" + 0.006*"investment" + 0.006*"market" + 0.005*"firm" + 0.005*"new" + 0.005*"deal" + 0.005*"investor"
+2020-05-26 11:01:11,750 : INFO : topic #0 (0.010): 0.010*"year" + 0.009*"bank" + 0.007*"investor" + 0.007*"accord" + 0.005*"market" + 0.005*"financial" + 0.005*"company" + 0.005*"new" + 0.005*"firm" + 0.005*"include"
+2020-05-26 11:01:11,751 : INFO : topic #2 (0.010): 0.012*"company" + 0.009*"investor" + 0.009*"year" + 0.009*"market" + 0.007*"new" + 0.006*"firm" + 0.006*"fund" + 0.005*"investment" + 0.005*"bank" + 0.005*"china"
+2020-05-26 11:01:11,752 : INFO : topic diff=3.119570, rho=0.707107
+2020-05-26 11:01:13,360 : INFO : -8.358 per-word bound, 328.2 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:01:13,360 : INFO : PROGRESS: pass 0, at document #4384/4384
+2020-05-26 11:01:14,222 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:01:14,264 : INFO : topic #13 (0.010): 0.010*"asset" + 0.010*"business" + 0.010*"market" + 0.009*"year" + 0.008*"investment" + 0.007*"investor" + 0.007*"manager" + 0.007*"group" + 0.007*"executive" + 0.006*"trading"
+2020-05-26 11:01:14,265 : INFO : topic #11 (0.010): 0.056*"price" + 0.010*"fund" + 0.010*"trust" + 0.009*"charge" + 0.009*"share" + 0.008*"unit" + 0.008*"operator" + 0.007*"company" + 0.006*"sale" + 0.006*"tax"
+2020-05-26 11:01:14,266 : INFO : topic #14 (0.010): 0.015*"bank" + 0.007*"year" + 0.007*"company" + 0.007*" " + 0.006*"new" + 0.006*"market" + 0.006*"big" + 0.006*"financial" + 0.006*"" + 0.005*"customer"
+2020-05-26 11:01:14,267 : INFO : topic #1 (0.010): 0.015*"mortgage" + 0.015*"loan" + 0.013*"borrower" + 0.011*"lender" + 0.010*"year" + 0.009*"credit" + 0.008*"deal" + 0.008*"rate" + 0.006*"company" + 0.006*" "
+2020-05-26 11:01:14,268 : INFO : topic #12 (0.010): 0.015*"fund" + 0.010*"year" + 0.008*"company" + 0.008*"manager" + 0.007*"market" + 0.007*"new" + 0.006*"datum" + 0.006*"investment" + 0.006*"active" + 0.006*"insurance"
+2020-05-26 11:01:14,269 : INFO : topic diff=1.824129, rho=0.577350
+2020-05-26 11:01:14,269 : INFO : PROGRESS: pass 1, at document #2000/4384
+2020-05-26 11:01:17,521 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:17,564 : INFO : topic #14 (0.010): 0.015*"bank" + 0.007*"company" + 0.007*"year" + 0.007*"new" + 0.006*"customer" + 0.006*"datum" + 0.006*"big" + 0.006*"market" + 0.006*"financial" + 0.006*"technology"
+2020-05-26 11:01:17,565 : INFO : topic #2 (0.010): 0.012*"company" + 0.012*"investor" + 0.011*"year" + 0.011*"market" + 0.008*"property" + 0.008*"new" + 0.007*"investment" + 0.006*"firm" + 0.005*"deal" + 0.005*"capital"
+2020-05-26 11:01:17,566 : INFO : topic #11 (0.010): 0.057*"price" + 0.011*"share" + 0.011*"trust" + 0.010*"fund" + 0.008*"yield" + 0.008*"charge" + 0.007*"unit" + 0.007*"bond" + 0.007*"sale" + 0.007*"company"
+2020-05-26 11:01:17,566 : INFO : topic #3 (0.010): 0.018*"bank" + 0.009*"rate" + 0.008*"year" + 0.007*"financial" + 0.006*"fed" + 0.006*"market" + 0.005*"u.s" + 0.005*"new" + 0.005*"policy" + 0.005*"company"
+2020-05-26 11:01:17,567 : INFO : topic #1 (0.010): 0.024*"loan" + 0.022*"mortgage" + 0.018*"borrower" + 0.014*"credit" + 0.013*"lender" + 0.010*"year" + 0.009*"score" + 0.008*"rate" + 0.006*"home" + 0.006*"deal"
+2020-05-26 11:01:17,568 : INFO : topic diff=1.227152, rho=0.488415
+2020-05-26 11:01:17,569 : INFO : PROGRESS: pass 1, at document #4000/4384
+2020-05-26 11:01:21,554 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:21,597 : INFO : topic #7 (0.010): 0.035*"fund" + 0.021*"company" + 0.019*"capital" + 0.018*"firm" + 0.014*"investment" + 0.013*"partner" + 0.009*"new" + 0.009*"invest" + 0.009*"investor" + 0.009*"raise"
+2020-05-26 11:01:21,598 : INFO : topic #4 (0.010): 0.018*"year" + 0.018*"company" + 0.010*"cent" + 0.009*"share" + 0.008*"market" + 0.006*"price" + 0.005*"revenue" + 0.005*"investor" + 0.005*"accord" + 0.005*"big"
+2020-05-26 11:01:21,598 : INFO : topic #12 (0.010): 0.018*"fund" + 0.009*"manager" + 0.008*"year" + 0.008*"datum" + 0.008*"investment" + 0.007*"company" + 0.007*"market" + 0.007*"insurance" + 0.006*"asset" + 0.006*"new"
+2020-05-26 11:01:21,599 : INFO : topic #13 (0.010): 0.013*"market" + 0.013*"asset" + 0.011*"business" + 0.010*"trading" + 0.010*"investment" + 0.009*"manager" + 0.008*"head" + 0.008*"exchange" + 0.008*"year" + 0.008*"group"
+2020-05-26 11:01:21,600 : INFO : topic #3 (0.010): 0.017*"bank" + 0.008*"rate" + 0.008*"financial" + 0.007*"year" + 0.006*"fed" + 0.006*"market" + 0.005*"u.s" + 0.005*"policy" + 0.005*"new" + 0.004*"central"
+2020-05-26 11:01:21,601 : INFO : topic diff=1.042366, rho=0.488415
+2020-05-26 11:01:22,945 : INFO : -7.685 per-word bound, 205.8 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:01:22,947 : INFO : PROGRESS: pass 1, at document #4384/4384
+2020-05-26 11:01:23,700 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:01:23,743 : INFO : topic #8 (0.010): 0.020*"bank" + 0.010*"financial" + 0.010*"company" + 0.007*"regulator" + 0.007*"year" + 0.006*"new" + 0.005*"rule" + 0.005*"firm" + 0.004*"u.s" + 0.004*"include"
+2020-05-26 11:01:23,743 : INFO : topic #9 (0.010): 0.027*"fund" + 0.010*"hedge" + 0.010*"year" + 0.008*"investment" + 0.008*"market" + 0.007*"investor" + 0.007*"asset" + 0.005*"rate" + 0.005*"alternative" + 0.005*"new"
+2020-05-26 11:01:23,744 : INFO : topic #10 (0.010): 0.027*"company" + 0.012*"ai" + 0.010*"technology" + 0.009*"datum" + 0.007*"service" + 0.007*"firm" + 0.006*"year" + 0.006*"business" + 0.006*"security" + 0.005*"chief"
+2020-05-26 11:01:23,745 : INFO : topic #14 (0.010): 0.018*"bank" + 0.008*"technology" + 0.007*" " + 0.007*"customer" + 0.007*"" + 0.007*"new" + 0.007*"big" + 0.006*"year" + 0.006*"company" + 0.006*"financial"
+2020-05-26 11:01:23,746 : INFO : topic #12 (0.010): 0.018*"fund" + 0.010*"year" + 0.009*"manager" + 0.008*"company" + 0.008*"investment" + 0.008*"datum" + 0.007*"insurance" + 0.007*"market" + 0.007*"active" + 0.006*"new"
+2020-05-26 11:01:23,747 : INFO : topic diff=0.972894, rho=0.488415
+2020-05-26 11:01:23,747 : INFO : PROGRESS: pass 2, at document #2000/4384
+2020-05-26 11:01:26,899 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:26,941 : INFO : topic #7 (0.010): 0.034*"fund" + 0.022*"company" + 0.021*"capital" + 0.021*"firm" + 0.015*"investment" + 0.014*"partner" + 0.010*"raise" + 0.009*"new" + 0.009*"investor" + 0.009*"invest"
+2020-05-26 11:01:26,942 : INFO : topic #14 (0.010): 0.018*"bank" + 0.008*"technology" + 0.008*"customer" + 0.007*"new" + 0.007*"big" + 0.007*"financial" + 0.006*"datum" + 0.006*"company" + 0.006*"year" + 0.006*"service"
+2020-05-26 11:01:26,943 : INFO : topic #10 (0.010): 0.028*"company" + 0.010*"datum" + 0.010*"technology" + 0.008*"ai" + 0.007*"firm" + 0.007*"service" + 0.006*"business" + 0.006*"year" + 0.006*"information" + 0.006*"include"
+2020-05-26 11:01:26,944 : INFO : topic #2 (0.010): 0.013*"year" + 0.013*"investor" + 0.012*"company" + 0.011*"market" + 0.009*"property" + 0.008*"investment" + 0.008*"new" + 0.007*"china" + 0.007*"deal" + 0.006*"capital"
+2020-05-26 11:01:26,944 : INFO : topic #6 (0.010): 0.027*" " + 0.027*"think" + 0.021*"know" + 0.013*"go" + 0.010*"thing" + 0.009*"people" + 0.008*"right" + 0.007*"question" + 0.007*"lot" + 0.007*"like"
+2020-05-26 11:01:26,945 : INFO : topic diff=0.663403, rho=0.438867
+2020-05-26 11:01:26,946 : INFO : PROGRESS: pass 2, at document #4000/4384
+2020-05-26 11:01:30,870 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:30,912 : INFO : topic #6 (0.010): 0.033*" " + 0.028*"think" + 0.020*"know" + 0.014*"go" + 0.010*"thing" + 0.009*"people" + 0.008*"right" + 0.008*"lot" + 0.007*"question" + 0.007*"like"
+2020-05-26 11:01:30,913 : INFO : topic #2 (0.010): 0.013*"year" + 0.012*"investor" + 0.012*"company" + 0.011*"market" + 0.010*"china" + 0.008*"investment" + 0.008*"chinese" + 0.008*"property" + 0.007*"new" + 0.007*"firm"
+2020-05-26 11:01:30,914 : INFO : topic #4 (0.010): 0.019*"year" + 0.019*"company" + 0.011*"cent" + 0.010*"share" + 0.010*"market" + 0.007*"price" + 0.006*"investor" + 0.006*"revenue" + 0.005*"rise" + 0.005*"big"
+2020-05-26 11:01:30,914 : INFO : topic #5 (0.010): 0.035*"venture" + 0.021*"company" + 0.020*"startup" + 0.018*"round" + 0.014*"funding" + 0.014*"capital" + 0.014*"lead" + 0.011*"investor" + 0.010*"new" + 0.010*"include"
+2020-05-26 11:01:30,915 : INFO : topic #3 (0.010): 0.018*"bank" + 0.009*"rate" + 0.007*"fed" + 0.007*"year" + 0.007*"financial" + 0.007*"market" + 0.006*"u.s" + 0.006*"policy" + 0.005*"central" + 0.005*"trump"
+2020-05-26 11:01:30,916 : INFO : topic diff=0.560112, rho=0.438867
+2020-05-26 11:01:32,247 : INFO : -7.541 per-word bound, 186.3 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:01:32,247 : INFO : PROGRESS: pass 2, at document #4384/4384
+2020-05-26 11:01:33,001 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:01:33,044 : INFO : topic #14 (0.010): 0.020*"bank" + 0.010*"technology" + 0.008*"customer" + 0.008*"" + 0.007*" " + 0.007*"big" + 0.007*"new" + 0.007*"financial" + 0.006*"company" + 0.006*"year"
+2020-05-26 11:01:33,047 : INFO : topic #10 (0.010): 0.027*"company" + 0.011*"ai" + 0.011*"datum" + 0.011*"technology" + 0.007*"service" + 0.006*"information" + 0.006*"firm" + 0.006*"business" + 0.006*"use" + 0.006*"chief"
+2020-05-26 11:01:33,047 : INFO : topic #7 (0.010): 0.033*"fund" + 0.024*"firm" + 0.022*"capital" + 0.021*"company" + 0.016*"investment" + 0.016*"partner" + 0.010*"new" + 0.009*"raise" + 0.009*"invest" + 0.009*"investor"
+2020-05-26 11:01:33,048 : INFO : topic #13 (0.010): 0.017*"asset" + 0.011*"investment" + 0.011*"business" + 0.010*"manager" + 0.010*"executive" + 0.010*"year" + 0.010*"market" + 0.009*"group" + 0.009*"management" + 0.009*"chief"
+2020-05-26 11:01:33,049 : INFO : topic #9 (0.010): 0.034*"fund" + 0.012*"hedge" + 0.010*"market" + 0.010*"year" + 0.009*"investment" + 0.008*"investor" + 0.007*"asset" + 0.007*"stock" + 0.007*"alternative" + 0.006*"money"
+2020-05-26 11:01:33,050 : INFO : topic diff=0.552402, rho=0.438867
+2020-05-26 11:01:33,051 : INFO : PROGRESS: pass 3, at document #2000/4384
+2020-05-26 11:01:36,143 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:36,186 : INFO : topic #6 (0.010): 0.028*" " + 0.028*"think" + 0.021*"know" + 0.013*"go" + 0.010*"thing" + 0.009*"people" + 0.008*"right" + 0.008*"question" + 0.008*"lot" + 0.007*"look"
+2020-05-26 11:01:36,187 : INFO : topic #0 (0.010): 0.014*"property" + 0.010*"accord" + 0.010*"year" + 0.009*"insurance" + 0.008*"investor" + 0.008*"market" + 0.007*"home" + 0.006*"commercial" + 0.006*"loan" + 0.005*" 	"
+2020-05-26 11:01:36,188 : INFO : topic #14 (0.010): 0.020*"bank" + 0.010*"technology" + 0.008*"customer" + 0.007*"new" + 0.007*"big" + 0.007*"financial" + 0.006*"" + 0.006*"service" + 0.006*" " + 0.006*"datum"
+2020-05-26 11:01:36,188 : INFO : topic #8 (0.010): 0.022*"bank" + 0.012*"financial" + 0.009*"company" + 0.008*"regulator" + 0.006*"rule" + 0.006*"firm" + 0.006*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"include"
+2020-05-26 11:01:36,189 : INFO : topic #9 (0.010): 0.038*"fund" + 0.012*"market" + 0.011*"hedge" + 0.011*"investor" + 0.011*"investment" + 0.010*"year" + 0.009*"stock" + 0.009*"bond" + 0.008*"asset" + 0.007*"money"
+2020-05-26 11:01:36,190 : INFO : topic diff=0.400949, rho=0.401869
+2020-05-26 11:01:36,191 : INFO : PROGRESS: pass 3, at document #4000/4384
+2020-05-26 11:01:39,983 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:40,026 : INFO : topic #13 (0.010): 0.018*"asset" + 0.012*"investment" + 0.012*"manager" + 0.011*"business" + 0.011*"market" + 0.010*"executive" + 0.010*"chief" + 0.010*"management" + 0.010*"group" + 0.010*"head"
+2020-05-26 11:01:40,027 : INFO : topic #4 (0.010): 0.020*"year" + 0.020*"company" + 0.011*"share" + 0.011*"cent" + 0.010*"market" + 0.008*"price" + 0.007*"investor" + 0.007*"revenue" + 0.006*"rise" + 0.006*"growth"
+2020-05-26 11:01:40,028 : INFO : topic #2 (0.010): 0.013*"year" + 0.013*"investor" + 0.012*"company" + 0.011*"china" + 0.010*"market" + 0.009*"investment" + 0.009*"chinese" + 0.008*"property" + 0.007*"new" + 0.007*"deal"
+2020-05-26 11:01:40,029 : INFO : topic #1 (0.010): 0.039*"loan" + 0.026*"credit" + 0.024*"mortgage" + 0.020*"lender" + 0.017*"borrower" + 0.015*"year" + 0.013*"rate" + 0.010*"card" + 0.009*"score" + 0.008*"home"
+2020-05-26 11:01:40,029 : INFO : topic #14 (0.010): 0.020*"bank" + 0.011*"technology" + 0.008*"customer" + 0.008*"new" + 0.007*"financial" + 0.007*"big" + 0.007*" " + 0.007*"" + 0.006*"service" + 0.006*"datum"
+2020-05-26 11:01:40,030 : INFO : topic diff=0.337894, rho=0.401869
+2020-05-26 11:01:41,301 : INFO : -7.482 per-word bound, 178.8 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:01:41,301 : INFO : PROGRESS: pass 3, at document #4384/4384
+2020-05-26 11:01:41,992 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:01:42,035 : INFO : topic #9 (0.010): 0.039*"fund" + 0.013*"hedge" + 0.011*"market" + 0.010*"investment" + 0.010*"year" + 0.009*"investor" + 0.008*"asset" + 0.008*"stock" + 0.007*"bond" + 0.007*"alternative"
+2020-05-26 11:01:42,036 : INFO : topic #4 (0.010): 0.020*"year" + 0.020*"company" + 0.011*"cent" + 0.010*"share" + 0.010*"market" + 0.007*"price" + 0.007*"investor" + 0.006*"revenue" + 0.006*"growth" + 0.006*"big"
+2020-05-26 11:01:42,036 : INFO : topic #0 (0.010): 0.014*"property" + 0.012*"insurance" + 0.011*"accord" + 0.010*"year" + 0.008*"home" + 0.008*"investor" + 0.007*"market" + 0.007*"insurer" + 0.007*"claim" + 0.006*"damage"
+2020-05-26 11:01:42,037 : INFO : topic #2 (0.010): 0.014*"year" + 0.012*"investor" + 0.012*"company" + 0.010*"china" + 0.010*"market" + 0.010*"investment" + 0.009*"chinese" + 0.008*"property" + 0.007*"capital" + 0.007*"accord"
+2020-05-26 11:01:42,038 : INFO : topic #1 (0.010): 0.032*"loan" + 0.023*"mortgage" + 0.020*"credit" + 0.019*"lender" + 0.016*"year" + 0.015*"borrower" + 0.013*"rate" + 0.011*"card" + 0.010*"deal" + 0.008*"home"
+2020-05-26 11:01:42,039 : INFO : topic diff=0.364877, rho=0.401869
+2020-05-26 11:01:42,039 : INFO : PROGRESS: pass 4, at document #2000/4384
+2020-05-26 11:01:45,105 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:45,148 : INFO : topic #1 (0.010): 0.038*"loan" + 0.026*"mortgage" + 0.022*"credit" + 0.020*"lender" + 0.018*"borrower" + 0.015*"year" + 0.013*"rate" + 0.010*"card" + 0.009*"home" + 0.009*"score"
+2020-05-26 11:01:45,149 : INFO : topic #2 (0.010): 0.014*"year" + 0.013*"investor" + 0.012*"company" + 0.010*"market" + 0.010*"investment" + 0.010*"property" + 0.010*"china" + 0.008*"chinese" + 0.008*"new" + 0.007*"deal"
+2020-05-26 11:01:45,149 : INFO : topic #12 (0.010): 0.019*"fund" + 0.011*"manager" + 0.010*"investment" + 0.009*"year" + 0.008*"datum" + 0.008*"company" + 0.007*"market" + 0.007*"insurance" + 0.007*"investor" + 0.007*"active"
+2020-05-26 11:01:45,150 : INFO : topic #0 (0.010): 0.015*"property" + 0.011*"accord" + 0.010*"year" + 0.010*"insurance" + 0.008*"home" + 0.008*"market" + 0.007*"investor" + 0.006*"commercial" + 0.006*"insurer" + 0.006*" 	"
+2020-05-26 11:01:45,151 : INFO : topic #10 (0.010): 0.027*"company" + 0.014*"datum" + 0.010*"technology" + 0.008*"ai" + 0.008*"service" + 0.007*"information" + 0.007*"use" + 0.006*"firm" + 0.006*"business" + 0.006*"chief"
+2020-05-26 11:01:45,152 : INFO : topic diff=0.282932, rho=0.372885
+2020-05-26 11:01:45,152 : INFO : PROGRESS: pass 4, at document #4000/4384
+2020-05-26 11:01:49,109 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:49,152 : INFO : topic #13 (0.010): 0.019*"asset" + 0.012*"investment" + 0.012*"manager" + 0.011*"business" + 0.011*"executive" + 0.011*"chief" + 0.010*"management" + 0.010*"market" + 0.010*"group" + 0.010*"year"
+2020-05-26 11:01:49,152 : INFO : topic #4 (0.010): 0.020*"year" + 0.020*"company" + 0.012*"share" + 0.011*"cent" + 0.011*"market" + 0.009*"price" + 0.007*"investor" + 0.007*"revenue" + 0.006*"stock" + 0.006*"growth"
+2020-05-26 11:01:49,153 : INFO : topic #8 (0.010): 0.020*"bank" + 0.013*"financial" + 0.008*"company" + 0.007*"regulator" + 0.007*"rule" + 0.006*"firm" + 0.006*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"law"
+2020-05-26 11:01:49,154 : INFO : topic #0 (0.010): 0.014*"property" + 0.011*"accord" + 0.011*"insurance" + 0.010*"year" + 0.009*"home" + 0.007*"investor" + 0.007*"market" + 0.007*"insurer" + 0.006*"mall" + 0.006*"loss"
+2020-05-26 11:01:49,155 : INFO : topic #9 (0.010): 0.043*"fund" + 0.013*"hedge" + 0.013*"market" + 0.012*"investor" + 0.012*"bond" + 0.011*"investment" + 0.010*"stock" + 0.010*"year" + 0.009*"asset" + 0.007*"money"
+2020-05-26 11:01:49,156 : INFO : topic diff=0.236391, rho=0.372885
+2020-05-26 11:01:50,419 : INFO : -7.451 per-word bound, 175.0 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:01:50,419 : INFO : PROGRESS: pass 4, at document #4384/4384
+2020-05-26 11:01:51,077 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:01:51,121 : INFO : topic #3 (0.010): 0.019*"bank" + 0.010*"rate" + 0.009*"fed" + 0.008*"year" + 0.007*"u.s" + 0.007*"market" + 0.007*"policy" + 0.006*"central" + 0.006*"growth" + 0.005*"economic"
+2020-05-26 11:01:51,121 : INFO : topic #1 (0.010): 0.033*"loan" + 0.023*"mortgage" + 0.021*"credit" + 0.020*"lender" + 0.016*"year" + 0.015*"borrower" + 0.013*"rate" + 0.012*"card" + 0.009*"deal" + 0.008*"bank"
+2020-05-26 11:01:51,122 : INFO : topic #8 (0.010): 0.020*"bank" + 0.012*"financial" + 0.009*"company" + 0.007*"regulator" + 0.006*"rule" + 0.006*"firm" + 0.005*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"law"
+2020-05-26 11:01:51,123 : INFO : topic #2 (0.010): 0.014*"year" + 0.012*"investor" + 0.012*"company" + 0.011*"china" + 0.010*"investment" + 0.010*"market" + 0.009*"chinese" + 0.008*"property" + 0.007*"capital" + 0.007*"accord"
+2020-05-26 11:01:51,124 : INFO : topic #11 (0.010): 0.068*"price" + 0.048*"fund" + 0.030*"unit" + 0.025*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"valuation" + 0.013*"pricing" + 0.013*"investment"
+2020-05-26 11:01:51,125 : INFO : topic diff=0.275112, rho=0.372885
+2020-05-26 11:01:51,125 : INFO : PROGRESS: pass 5, at document #2000/4384
+2020-05-26 11:01:54,125 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:54,168 : INFO : topic #12 (0.010): 0.019*"fund" + 0.011*"manager" + 0.010*"investment" + 0.009*"year" + 0.008*"datum" + 0.008*"company" + 0.007*"investor" + 0.007*"insurance" + 0.007*"market" + 0.007*"etf"
+2020-05-26 11:01:54,168 : INFO : topic #4 (0.010): 0.021*"company" + 0.020*"year" + 0.012*"share" + 0.011*"market" + 0.011*"cent" + 0.009*"price" + 0.008*"investor" + 0.007*"revenue" + 0.006*"stock" + 0.006*"growth"
+2020-05-26 11:01:54,169 : INFO : topic #8 (0.010): 0.021*"bank" + 0.012*"financial" + 0.008*"company" + 0.007*"regulator" + 0.007*"rule" + 0.006*"firm" + 0.006*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"include"
+2020-05-26 11:01:54,170 : INFO : topic #3 (0.010): 0.020*"bank" + 0.011*"rate" + 0.009*"fed" + 0.008*"year" + 0.008*"market" + 0.007*"u.s" + 0.007*"policy" + 0.006*"growth" + 0.006*"central" + 0.006*"economic"
+2020-05-26 11:01:54,171 : INFO : topic #13 (0.010): 0.019*"asset" + 0.012*"investment" + 0.012*"manager" + 0.011*"executive" + 0.011*"business" + 0.011*"chief" + 0.011*"group" + 0.010*"management" + 0.010*"year" + 0.010*"market"
+2020-05-26 11:01:54,172 : INFO : topic diff=0.223074, rho=0.349386
+2020-05-26 11:01:54,172 : INFO : PROGRESS: pass 5, at document #4000/4384
+2020-05-26 11:01:57,806 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:01:57,849 : INFO : topic #12 (0.010): 0.018*"fund" + 0.011*"manager" + 0.010*"investment" + 0.008*"datum" + 0.008*"year" + 0.008*"company" + 0.008*"insurance" + 0.007*"etf" + 0.007*"investor" + 0.007*"market"
+2020-05-26 11:01:57,849 : INFO : topic #4 (0.010): 0.020*"company" + 0.020*"year" + 0.012*"share" + 0.011*"market" + 0.011*"cent" + 0.009*"price" + 0.008*"investor" + 0.007*"revenue" + 0.006*"stock" + 0.006*"growth"
+2020-05-26 11:01:57,850 : INFO : topic #1 (0.010): 0.040*"loan" + 0.026*"credit" + 0.024*"mortgage" + 0.021*"lender" + 0.016*"borrower" + 0.016*"year" + 0.013*"rate" + 0.011*"card" + 0.009*"bank" + 0.009*"score"
+2020-05-26 11:01:57,851 : INFO : topic #8 (0.010): 0.020*"bank" + 0.013*"financial" + 0.008*"company" + 0.007*"rule" + 0.007*"regulator" + 0.007*"firm" + 0.006*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"law"
+2020-05-26 11:01:57,852 : INFO : topic #13 (0.010): 0.019*"asset" + 0.013*"investment" + 0.012*"manager" + 0.011*"business" + 0.011*"executive" + 0.011*"chief" + 0.011*"management" + 0.011*"group" + 0.010*"year" + 0.010*"market"
+2020-05-26 11:01:57,853 : INFO : topic diff=0.184197, rho=0.349386
+2020-05-26 11:01:59,107 : INFO : -7.433 per-word bound, 172.8 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:01:59,107 : INFO : PROGRESS: pass 5, at document #4384/4384
+2020-05-26 11:01:59,764 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:01:59,807 : INFO : topic #11 (0.010): 0.068*"price" + 0.048*"fund" + 0.030*"unit" + 0.025*"trust" + 0.020*"charge" + 0.020*"operator" + 0.018*"manager" + 0.013*"valuation" + 0.013*"investment" + 0.013*"pricing"
+2020-05-26 11:01:59,808 : INFO : topic #14 (0.010): 0.022*"bank" + 0.012*"technology" + 0.008*" " + 0.008*"" + 0.008*"financial" + 0.008*"big" + 0.008*"customer" + 0.007*"new" + 0.006*"	" + 0.006*"company"
+2020-05-26 11:01:59,808 : INFO : topic #4 (0.010): 0.020*"year" + 0.020*"company" + 0.011*"share" + 0.011*"market" + 0.011*"cent" + 0.009*"price" + 0.008*"investor" + 0.007*"revenue" + 0.006*"growth" + 0.006*"big"
+2020-05-26 11:01:59,809 : INFO : topic #10 (0.010): 0.025*"company" + 0.015*"datum" + 0.011*"technology" + 0.011*"ai" + 0.008*"service" + 0.008*"information" + 0.007*"use" + 0.006*"chief" + 0.006*"business" + 0.006*"include"
+2020-05-26 11:01:59,810 : INFO : topic #13 (0.010): 0.019*"asset" + 0.012*"investment" + 0.012*"executive" + 0.012*"manager" + 0.011*"business" + 0.011*"year" + 0.011*"chief" + 0.010*"management" + 0.010*"group" + 0.009*"cent"
+2020-05-26 11:01:59,811 : INFO : topic diff=0.225756, rho=0.349386
+2020-05-26 11:01:59,812 : INFO : PROGRESS: pass 6, at document #2000/4384
+2020-05-26 11:02:02,832 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:02,877 : INFO : topic #7 (0.010): 0.038*"fund" + 0.029*"firm" + 0.023*"company" + 0.022*"capital" + 0.017*"investment" + 0.015*"partner" + 0.011*"invest" + 0.010*"equity" + 0.010*"new" + 0.009*"accord"
+2020-05-26 11:02:02,878 : INFO : topic #3 (0.010): 0.020*"bank" + 0.011*"rate" + 0.009*"fed" + 0.008*"market" + 0.008*"year" + 0.008*"u.s" + 0.007*"policy" + 0.006*"growth" + 0.006*"central" + 0.006*"economic"
+2020-05-26 11:02:02,879 : INFO : topic #8 (0.010): 0.021*"bank" + 0.012*"financial" + 0.008*"company" + 0.007*"regulator" + 0.007*"rule" + 0.007*"firm" + 0.005*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"law"
+2020-05-26 11:02:02,879 : INFO : topic #12 (0.010): 0.018*"fund" + 0.011*"manager" + 0.010*"investment" + 0.009*"year" + 0.008*"company" + 0.008*"datum" + 0.008*"investor" + 0.008*"etf" + 0.007*"insurance" + 0.007*"market"
+2020-05-26 11:02:02,880 : INFO : topic #1 (0.010): 0.040*"loan" + 0.026*"mortgage" + 0.022*"credit" + 0.021*"lender" + 0.017*"borrower" + 0.016*"year" + 0.013*"rate" + 0.011*"card" + 0.010*"bank" + 0.008*"home"
+2020-05-26 11:02:02,881 : INFO : topic diff=0.188104, rho=0.329834
+2020-05-26 11:02:02,882 : INFO : PROGRESS: pass 6, at document #4000/4384
+2020-05-26 11:02:06,698 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:06,742 : INFO : topic #2 (0.010): 0.014*"year" + 0.013*"china" + 0.012*"investor" + 0.011*"company" + 0.010*"investment" + 0.010*"market" + 0.010*"chinese" + 0.009*"property" + 0.008*"deal" + 0.007*"accord"
+2020-05-26 11:02:06,743 : INFO : topic #7 (0.010): 0.040*"fund" + 0.030*"firm" + 0.023*"capital" + 0.023*"company" + 0.017*"investment" + 0.015*"partner" + 0.012*"invest" + 0.010*"new" + 0.010*"equity" + 0.010*"accord"
+2020-05-26 11:02:06,743 : INFO : topic #3 (0.010): 0.020*"bank" + 0.011*"rate" + 0.009*"fed" + 0.008*"year" + 0.008*"market" + 0.007*"u.s" + 0.007*"policy" + 0.007*"central" + 0.006*"growth" + 0.006*"economic"
+2020-05-26 11:02:06,744 : INFO : topic #6 (0.010): 0.034*" " + 0.029*"think" + 0.020*"know" + 0.015*"go" + 0.011*"thing" + 0.009*"people" + 0.008*"lot" + 0.008*"right" + 0.008*"question" + 0.008*"look"
+2020-05-26 11:02:06,745 : INFO : topic #11 (0.010): 0.067*"price" + 0.047*"fund" + 0.029*"unit" + 0.026*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"investment" + 0.012*"valuation" + 0.012*"pricing"
+2020-05-26 11:02:06,746 : INFO : topic diff=0.153637, rho=0.329834
+2020-05-26 11:02:08,005 : INFO : -7.419 per-word bound, 171.2 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:02:08,005 : INFO : PROGRESS: pass 6, at document #4384/4384
+2020-05-26 11:02:08,648 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:02:08,692 : INFO : topic #4 (0.010): 0.020*"year" + 0.020*"company" + 0.012*"share" + 0.011*"market" + 0.011*"cent" + 0.009*"price" + 0.008*"investor" + 0.007*"revenue" + 0.006*"growth" + 0.006*"stock"
+2020-05-26 11:02:08,692 : INFO : topic #8 (0.010): 0.020*"bank" + 0.012*"financial" + 0.009*"company" + 0.007*"regulator" + 0.007*"rule" + 0.007*"firm" + 0.005*"new" + 0.005*"year" + 0.004*"u.s" + 0.004*"law"
+2020-05-26 11:02:08,693 : INFO : topic #10 (0.010): 0.025*"company" + 0.016*"datum" + 0.011*"technology" + 0.011*"ai" + 0.008*"service" + 0.008*"information" + 0.007*"use" + 0.006*"chief" + 0.006*"business" + 0.006*"executive"
+2020-05-26 11:02:08,694 : INFO : topic #14 (0.010): 0.023*"bank" + 0.012*"technology" + 0.009*" " + 0.008*"" + 0.008*"financial" + 0.008*"big" + 0.008*"customer" + 0.007*"new" + 0.006*"	" + 0.006*"company"
+2020-05-26 11:02:08,694 : INFO : topic #12 (0.010): 0.017*"fund" + 0.010*"manager" + 0.009*"investment" + 0.009*"year" + 0.009*"company" + 0.008*"insurance" + 0.008*"active" + 0.008*"datum" + 0.008*"etf" + 0.007*"investor"
+2020-05-26 11:02:08,695 : INFO : topic diff=0.195210, rho=0.329834
+2020-05-26 11:02:08,696 : INFO : PROGRESS: pass 7, at document #2000/4384
+2020-05-26 11:02:11,674 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:11,720 : INFO : topic #11 (0.010): 0.068*"price" + 0.047*"fund" + 0.029*"unit" + 0.027*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"valuation" + 0.013*"investment" + 0.012*"pricing"
+2020-05-26 11:02:11,720 : INFO : topic #4 (0.010): 0.021*"company" + 0.020*"year" + 0.012*"share" + 0.012*"market" + 0.011*"cent" + 0.010*"price" + 0.008*"investor" + 0.007*"revenue" + 0.007*"stock" + 0.006*"growth"
+2020-05-26 11:02:11,721 : INFO : topic #8 (0.010): 0.021*"bank" + 0.013*"financial" + 0.008*"company" + 0.007*"regulator" + 0.007*"rule" + 0.007*"firm" + 0.005*"new" + 0.004*"year" + 0.004*"u.s" + 0.004*"law"
+2020-05-26 11:02:11,722 : INFO : topic #14 (0.010): 0.022*"bank" + 0.012*"technology" + 0.008*"financial" + 0.008*"big" + 0.008*"customer" + 0.007*"new" + 0.007*"" + 0.007*" " + 0.006*"service" + 0.006*"digital"
+2020-05-26 11:02:11,723 : INFO : topic #0 (0.010): 0.016*"property" + 0.011*"insurance" + 0.011*"accord" + 0.010*"home" + 0.009*"year" + 0.008*"market" + 0.007*"investor" + 0.007*"insurer" + 0.007*"commercial" + 0.007*" 	"
+2020-05-26 11:02:11,724 : INFO : topic diff=0.165152, rho=0.313235
+2020-05-26 11:02:11,724 : INFO : PROGRESS: pass 7, at document #4000/4384
+2020-05-26 11:02:15,404 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:15,448 : INFO : topic #11 (0.010): 0.067*"price" + 0.047*"fund" + 0.029*"unit" + 0.026*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"investment" + 0.013*"valuation" + 0.012*"pricing"
+2020-05-26 11:02:15,449 : INFO : topic #10 (0.010): 0.026*"company" + 0.017*"datum" + 0.011*"technology" + 0.008*"information" + 0.008*"ai" + 0.008*"service" + 0.007*"use" + 0.006*"chief" + 0.006*"business" + 0.006*"executive"
+2020-05-26 11:02:15,450 : INFO : topic #6 (0.010): 0.034*" " + 0.029*"think" + 0.020*"know" + 0.015*"go" + 0.011*"thing" + 0.009*"people" + 0.008*"lot" + 0.008*"right" + 0.008*"question" + 0.008*"look"
+2020-05-26 11:02:15,450 : INFO : topic #7 (0.010): 0.040*"fund" + 0.030*"firm" + 0.023*"company" + 0.023*"capital" + 0.017*"investment" + 0.015*"partner" + 0.012*"invest" + 0.010*"equity" + 0.010*"new" + 0.010*"accord"
+2020-05-26 11:02:15,451 : INFO : topic #3 (0.010): 0.020*"bank" + 0.011*"rate" + 0.010*"fed" + 0.008*"market" + 0.008*"year" + 0.008*"u.s" + 0.007*"policy" + 0.007*"central" + 0.006*"growth" + 0.006*"economic"
+2020-05-26 11:02:15,452 : INFO : topic diff=0.133870, rho=0.313235
+2020-05-26 11:02:16,794 : INFO : -7.410 per-word bound, 170.1 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:02:16,794 : INFO : PROGRESS: pass 7, at document #4384/4384
+2020-05-26 11:02:17,418 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:02:17,462 : INFO : topic #3 (0.010): 0.019*"bank" + 0.011*"rate" + 0.009*"fed" + 0.008*"year" + 0.008*"market" + 0.008*"u.s" + 0.007*"policy" + 0.007*"growth" + 0.007*"central" + 0.006*"economic"
+2020-05-26 11:02:17,463 : INFO : topic #11 (0.010): 0.068*"price" + 0.048*"fund" + 0.030*"unit" + 0.025*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"valuation" + 0.013*"investment" + 0.013*"pricing"
+2020-05-26 11:02:17,463 : INFO : topic #4 (0.010): 0.020*"company" + 0.020*"year" + 0.012*"share" + 0.012*"market" + 0.011*"cent" + 0.009*"price" + 0.008*"investor" + 0.007*"revenue" + 0.006*"stock" + 0.006*"growth"
+2020-05-26 11:02:17,464 : INFO : topic #14 (0.010): 0.023*"bank" + 0.012*"technology" + 0.009*" " + 0.009*"" + 0.008*"financial" + 0.008*"big" + 0.008*"customer" + 0.007*"new" + 0.006*"	" + 0.006*"company"
+2020-05-26 11:02:17,465 : INFO : topic #12 (0.010): 0.017*"fund" + 0.010*"manager" + 0.009*"investment" + 0.009*"year" + 0.009*"company" + 0.008*"etf" + 0.008*"insurance" + 0.008*"active" + 0.008*"datum" + 0.008*"investor"
+2020-05-26 11:02:17,466 : INFO : topic diff=0.174442, rho=0.313235
+2020-05-26 11:02:17,466 : INFO : PROGRESS: pass 8, at document #2000/4384
+2020-05-26 11:02:20,421 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:20,465 : INFO : topic #10 (0.010): 0.025*"company" + 0.017*"datum" + 0.011*"technology" + 0.008*"ai" + 0.008*"information" + 0.008*"service" + 0.007*"use" + 0.006*"chief" + 0.006*"business" + 0.006*"customer"
+2020-05-26 11:02:20,465 : INFO : topic #7 (0.010): 0.038*"fund" + 0.030*"firm" + 0.023*"company" + 0.022*"capital" + 0.017*"investment" + 0.015*"partner" + 0.012*"invest" + 0.010*"equity" + 0.010*"new" + 0.009*"accord"
+2020-05-26 11:02:20,466 : INFO : topic #14 (0.010): 0.023*"bank" + 0.012*"technology" + 0.008*"financial" + 0.008*"big" + 0.008*"customer" + 0.008*" " + 0.008*"" + 0.008*"new" + 0.006*"service" + 0.006*"digital"
+2020-05-26 11:02:20,467 : INFO : topic #11 (0.010): 0.068*"price" + 0.047*"fund" + 0.029*"unit" + 0.027*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"valuation" + 0.013*"investment" + 0.012*"pricing"
+2020-05-26 11:02:20,468 : INFO : topic #9 (0.010): 0.049*"fund" + 0.014*"market" + 0.013*"hedge" + 0.013*"investment" + 0.013*"investor" + 0.012*"stock" + 0.012*"bond" + 0.010*"asset" + 0.009*"year" + 0.008*"money"
+2020-05-26 11:02:20,468 : INFO : topic diff=0.148770, rho=0.298914
+2020-05-26 11:02:20,469 : INFO : PROGRESS: pass 8, at document #4000/4384
+2020-05-26 11:02:24,075 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:24,118 : INFO : topic #9 (0.010): 0.049*"fund" + 0.015*"market" + 0.014*"hedge" + 0.013*"investment" + 0.013*"investor" + 0.013*"bond" + 0.012*"stock" + 0.010*"asset" + 0.010*"year" + 0.008*"money"
+2020-05-26 11:02:24,119 : INFO : topic #7 (0.010): 0.040*"fund" + 0.030*"firm" + 0.023*"company" + 0.023*"capital" + 0.017*"investment" + 0.015*"partner" + 0.012*"invest" + 0.010*"equity" + 0.010*"new" + 0.010*"accord"
+2020-05-26 11:02:24,119 : INFO : topic #10 (0.010): 0.026*"company" + 0.018*"datum" + 0.011*"technology" + 0.008*"information" + 0.008*"ai" + 0.008*"service" + 0.007*"use" + 0.006*"chief" + 0.006*"business" + 0.006*"customer"
+2020-05-26 11:02:24,120 : INFO : topic #0 (0.010): 0.015*"property" + 0.013*"insurance" + 0.011*"accord" + 0.010*"home" + 0.009*"year" + 0.008*"insurer" + 0.007*"market" + 0.007*"investor" + 0.007*" 	" + 0.007*"mall"
+2020-05-26 11:02:24,121 : INFO : topic #4 (0.010): 0.021*"company" + 0.020*"year" + 0.013*"share" + 0.012*"market" + 0.011*"cent" + 0.010*"price" + 0.008*"investor" + 0.007*"stock" + 0.007*"revenue" + 0.006*"growth"
+2020-05-26 11:02:24,122 : INFO : topic diff=0.120047, rho=0.298914
+2020-05-26 11:02:25,399 : INFO : -7.403 per-word bound, 169.2 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:02:25,399 : INFO : PROGRESS: pass 8, at document #4384/4384
+2020-05-26 11:02:26,034 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:02:26,077 : INFO : topic #7 (0.010): 0.037*"fund" + 0.030*"firm" + 0.022*"company" + 0.022*"capital" + 0.017*"investment" + 0.016*"partner" + 0.011*"invest" + 0.010*"equity" + 0.010*"new" + 0.009*"accord"
+2020-05-26 11:02:26,077 : INFO : topic #0 (0.010): 0.016*"property" + 0.014*"insurance" + 0.011*"accord" + 0.010*"home" + 0.009*"year" + 0.009*"insurer" + 0.008*"market" + 0.007*"investor" + 0.007*"claim" + 0.007*" 	"
+2020-05-26 11:02:26,078 : INFO : topic #13 (0.010): 0.019*"asset" + 0.013*"executive" + 0.012*"manager" + 0.012*"investment" + 0.011*"chief" + 0.011*"business" + 0.011*"management" + 0.011*"year" + 0.011*"group" + 0.010*"cent"
+2020-05-26 11:02:26,079 : INFO : topic #3 (0.010): 0.019*"bank" + 0.011*"rate" + 0.010*"fed" + 0.008*"year" + 0.008*"market" + 0.008*"u.s" + 0.007*"policy" + 0.007*"growth" + 0.007*"central" + 0.006*"economic"
+2020-05-26 11:02:26,080 : INFO : topic #1 (0.010): 0.036*"loan" + 0.023*"mortgage" + 0.021*"credit" + 0.021*"lender" + 0.016*"year" + 0.015*"borrower" + 0.013*"rate" + 0.012*"card" + 0.010*"bank" + 0.009*"deal"
+2020-05-26 11:02:26,081 : INFO : topic diff=0.159262, rho=0.298914
+2020-05-26 11:02:26,081 : INFO : PROGRESS: pass 9, at document #2000/4384
+2020-05-26 11:02:29,028 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:29,072 : INFO : topic #0 (0.010): 0.016*"property" + 0.012*"insurance" + 0.011*"accord" + 0.010*"home" + 0.009*"year" + 0.008*"market" + 0.008*"insurer" + 0.007*"investor" + 0.007*"commercial" + 0.007*" 	"
+2020-05-26 11:02:29,072 : INFO : topic #5 (0.010): 0.038*"venture" + 0.023*"startup" + 0.021*"company" + 0.020*"capital" + 0.019*"round" + 0.016*"funding" + 0.015*"lead" + 0.014*"investor" + 0.013*"raise" + 0.013*"partner"
+2020-05-26 11:02:29,073 : INFO : topic #9 (0.010): 0.049*"fund" + 0.014*"market" + 0.013*"investment" + 0.013*"hedge" + 0.013*"investor" + 0.012*"stock" + 0.012*"bond" + 0.010*"asset" + 0.009*"year" + 0.008*"money"
+2020-05-26 11:02:29,074 : INFO : topic #10 (0.010): 0.025*"company" + 0.018*"datum" + 0.011*"technology" + 0.008*"ai" + 0.008*"information" + 0.008*"service" + 0.007*"use" + 0.006*"chief" + 0.006*"customer" + 0.006*"business"
+2020-05-26 11:02:29,076 : INFO : topic #4 (0.010): 0.021*"company" + 0.020*"year" + 0.013*"share" + 0.012*"market" + 0.011*"cent" + 0.010*"price" + 0.008*"investor" + 0.007*"stock" + 0.007*"revenue" + 0.006*"growth"
+2020-05-26 11:02:29,077 : INFO : topic diff=0.136316, rho=0.286393
+2020-05-26 11:02:29,078 : INFO : PROGRESS: pass 9, at document #4000/4384
+2020-05-26 11:02:32,716 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:02:32,759 : INFO : topic #11 (0.010): 0.067*"price" + 0.047*"fund" + 0.029*"unit" + 0.027*"trust" + 0.020*"charge" + 0.019*"operator" + 0.018*"manager" + 0.013*"valuation" + 0.013*"investment" + 0.012*"pricing"
+2020-05-26 11:02:32,760 : INFO : topic #3 (0.010): 0.020*"bank" + 0.012*"rate" + 0.010*"fed" + 0.008*"market" + 0.008*"year" + 0.008*"u.s" + 0.008*"policy" + 0.007*"central" + 0.007*"growth" + 0.006*"economic"
+2020-05-26 11:02:32,761 : INFO : topic #1 (0.010): 0.042*"loan" + 0.025*"credit" + 0.024*"mortgage" + 0.021*"lender" + 0.016*"year" + 0.016*"borrower" + 0.013*"rate" + 0.012*"card" + 0.011*"bank" + 0.009*"lending"
+2020-05-26 11:02:32,761 : INFO : topic #6 (0.010): 0.034*" " + 0.029*"think" + 0.020*"know" + 0.015*"go" + 0.011*"thing" + 0.009*"people" + 0.008*"lot" + 0.008*"right" + 0.008*"question" + 0.008*"look"
+2020-05-26 11:02:32,762 : INFO : topic #10 (0.010): 0.025*"company" + 0.018*"datum" + 0.011*"technology" + 0.008*"information" + 0.008*"ai" + 0.008*"service" + 0.007*"use" + 0.006*"chief" + 0.006*"business" + 0.006*"customer"
+2020-05-26 11:02:32,763 : INFO : topic diff=0.109722, rho=0.286393
+2020-05-26 11:02:34,008 : INFO : -7.397 per-word bound, 168.6 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:02:34,008 : INFO : PROGRESS: pass 9, at document #4384/4384
+2020-05-26 11:02:34,660 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:02:34,703 : INFO : topic #7 (0.010): 0.037*"fund" + 0.030*"firm" + 0.022*"company" + 0.022*"capital" + 0.017*"investment" + 0.016*"partner" + 0.011*"invest" + 0.010*"equity" + 0.010*"new" + 0.009*"accord"
+2020-05-26 11:02:34,704 : INFO : topic #6 (0.010): 0.039*" " + 0.030*"think" + 0.020*"know" + 0.014*"go" + 0.011*"thing" + 0.009*"people" + 0.009*"lot" + 0.008*"look" + 0.008*"question" + 0.007*"right"
+2020-05-26 11:02:34,705 : INFO : topic #0 (0.010): 0.016*"property" + 0.014*"insurance" + 0.011*"accord" + 0.010*"home" + 0.009*"insurer" + 0.009*"year" + 0.008*"market" + 0.007*"investor" + 0.007*"claim" + 0.007*" 	"
+2020-05-26 11:02:34,705 : INFO : topic #4 (0.010): 0.021*"company" + 0.021*"year" + 0.012*"share" + 0.012*"market" + 0.011*"cent" + 0.010*"price" + 0.008*"investor" + 0.007*"revenue" + 0.007*"stock" + 0.006*"growth"
+2020-05-26 11:02:34,706 : INFO : topic #12 (0.010): 0.017*"fund" + 0.010*"manager" + 0.009*"etf" + 0.009*"investment" + 0.009*"year" + 0.009*"company" + 0.008*"active" + 0.008*"insurance" + 0.008*"investor" + 0.008*"datum"
+2020-05-26 11:02:34,707 : INFO : topic diff=0.147671, rho=0.286393
+2020-05-26 11:03:44,182 : INFO :  EM iter 0
+2020-05-26 11:03:44,182 : INFO : E Step
+2020-05-26 11:03:44,186 : INFO : using symmetric eta at 0.06666666666666667
+2020-05-26 11:03:44,190 : INFO : using serial LDA version on this node
+2020-05-26 11:53:35,491 : INFO : using symmetric eta at 0.1
+2020-05-26 11:53:35,496 : INFO : using serial LDA version on this node
+2020-05-26 11:53:35,546 : INFO : running online (multi-pass) LDA training, 10 topics, 10 passes over the supplied corpus of 4384 documents, updating model once every 2000 documents, evaluating perplexity every 4384 documents, iterating 50x with a convergence threshold of 0.001000
+2020-05-26 11:53:35,546 : INFO : PROGRESS: pass 0, at document #2000/4384
+2020-05-26 11:53:37,998 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:38,027 : INFO : topic #5 (0.010): 0.012*"company" + 0.009*"fund" + 0.007*"market" + 0.006*"investor" + 0.006*"year" + 0.006*"business" + 0.006*"new" + 0.005*"financial" + 0.005*"investment" + 0.005*"firm"
+2020-05-26 11:53:38,028 : INFO : topic #8 (0.010): 0.013*"fund" + 0.010*"company" + 0.010*"market" + 0.008*"year" + 0.008*"bank" + 0.006*"new" + 0.006*"investor" + 0.006*"investment" + 0.006*"financial" + 0.005*"capital"
+2020-05-26 11:53:38,028 : INFO : topic #6 (0.010): 0.013*"fund" + 0.011*"company" + 0.010*"year" + 0.009*"bank" + 0.007*"capital" + 0.007*"market" + 0.006*"investor" + 0.005*"firm" + 0.005*"investment" + 0.005*"new"
+2020-05-26 11:53:38,029 : INFO : topic #3 (0.010): 0.016*"company" + 0.008*"investment" + 0.007*"new" + 0.007*"year" + 0.007*"bank" + 0.006*"investor" + 0.005*"fund" + 0.004*"business" + 0.004*"market" + 0.004*"financial"
+2020-05-26 11:53:38,029 : INFO : topic #9 (0.010): 0.011*"fund" + 0.009*"bank" + 0.008*"company" + 0.008*"market" + 0.007*"year" + 0.007*"new" + 0.006*"financial" + 0.006*"firm" + 0.006*"investment" + 0.005*"capital"
+2020-05-26 11:53:38,030 : INFO : topic diff=5.719482, rho=1.000000
+2020-05-26 11:53:38,030 : INFO : PROGRESS: pass 0, at document #4000/4384
+2020-05-26 11:53:41,694 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:41,713 : INFO : topic #8 (0.010): 0.017*"fund" + 0.010*"company" + 0.009*"market" + 0.008*"capital" + 0.008*"investment" + 0.008*"new" + 0.007*"year" + 0.007*"bank" + 0.007*"investor" + 0.007*"firm"
+2020-05-26 11:53:41,713 : INFO : topic #1 (0.010): 0.009*"bank" + 0.007*"year" + 0.005*"firm" + 0.005*"market" + 0.005*"company" + 0.005*"investor" + 0.005*"u.s" + 0.005*"fund" + 0.004*"rate" + 0.004*"new"
+2020-05-26 11:53:41,714 : INFO : topic #7 (0.010): 0.012*"company" + 0.012*"year" + 0.009*"investor" + 0.006*"firm" + 0.006*"bank" + 0.006*"market" + 0.005*"investment" + 0.005*"accord" + 0.004*"fund" + 0.004*"datum"
+2020-05-26 11:53:41,714 : INFO : topic #6 (0.010): 0.021*"fund" + 0.012*"company" + 0.011*"capital" + 0.009*"firm" + 0.008*"year" + 0.007*"price" + 0.007*"investor" + 0.007*"investment" + 0.006*"venture" + 0.006*"bank"
+2020-05-26 11:53:41,715 : INFO : topic #9 (0.010): 0.010*"fund" + 0.010*"bank" + 0.008*"financial" + 0.006*"firm" + 0.006*"investment" + 0.006*"company" + 0.006*"new" + 0.006*"market" + 0.006*"year" + 0.005*"asset"
+2020-05-26 11:53:41,715 : INFO : topic diff=2.423266, rho=0.707107
+2020-05-26 11:53:42,597 : INFO : -8.244 per-word bound, 303.1 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:53:42,597 : INFO : PROGRESS: pass 0, at document #4384/4384
+2020-05-26 11:53:43,089 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:53:43,107 : INFO : topic #8 (0.010): 0.016*"fund" + 0.010*"investment" + 0.009*"company" + 0.009*"capital" + 0.009*"market" + 0.008*"firm" + 0.007*"year" + 0.007*"new" + 0.007*"investor" + 0.006*"partner"
+2020-05-26 11:53:43,108 : INFO : topic #5 (0.010): 0.013*"fund" + 0.009*"company" + 0.009*"etf" + 0.008*"year" + 0.008*"manager" + 0.007*"market" + 0.007*"active" + 0.006*"investor" + 0.006*"investment" + 0.006*"new"
+2020-05-26 11:53:43,108 : INFO : topic #9 (0.010): 0.011*"fund" + 0.008*"asset" + 0.008*"bank" + 0.008*"investment" + 0.006*"financial" + 0.006*"year" + 0.006*"manager" + 0.006*"new" + 0.006*"company" + 0.006*"market"
+2020-05-26 11:53:43,109 : INFO : topic #6 (0.010): 0.023*"fund" + 0.015*"capital" + 0.013*"company" + 0.013*"venture" + 0.011*"price" + 0.010*"firm" + 0.010*"investment" + 0.009*"investor" + 0.008*"partner" + 0.007*"year"
+2020-05-26 11:53:43,109 : INFO : topic #3 (0.010): 0.021*"company" + 0.008*"technology" + 0.007*"datum" + 0.007*"new" + 0.006*"service" + 0.006*"year" + 0.005*"	" + 0.005*"include" + 0.005*"customer" + 0.005*"business"
+2020-05-26 11:53:43,110 : INFO : topic diff=1.431426, rho=0.577350
+2020-05-26 11:53:43,110 : INFO : PROGRESS: pass 1, at document #2000/4384
+2020-05-26 11:53:45,527 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:45,555 : INFO : topic #6 (0.010): 0.026*"fund" + 0.016*"capital" + 0.015*"company" + 0.013*"venture" + 0.011*"firm" + 0.010*"price" + 0.010*"investment" + 0.010*"investor" + 0.008*"partner" + 0.007*"new"
+2020-05-26 11:53:45,556 : INFO : topic #0 (0.010): 0.021*"company" + 0.009*"new" + 0.008*"datum" + 0.008*"business" + 0.007*"year" + 0.006*"include" + 0.005*"firm" + 0.005*"group" + 0.005*"credit" + 0.005*"service"
+2020-05-26 11:53:45,557 : INFO : topic #3 (0.010): 0.021*"company" + 0.009*"datum" + 0.009*"technology" + 0.007*"service" + 0.007*"new" + 0.006*"customer" + 0.005*"year" + 0.005*"	" + 0.005*"business" + 0.005*"use"
+2020-05-26 11:53:45,557 : INFO : topic #8 (0.010): 0.016*"fund" + 0.011*"investment" + 0.010*"market" + 0.010*"capital" + 0.009*"company" + 0.009*"firm" + 0.008*"investor" + 0.008*"new" + 0.007*"year" + 0.007*"group"
+2020-05-26 11:53:45,558 : INFO : topic #4 (0.010): 0.014*"bank" + 0.008*"think" + 0.007*" " + 0.007*"know" + 0.006*"fed" + 0.006*"financial" + 0.006*"year" + 0.005*"company" + 0.005*"rate" + 0.005*"policy"
+2020-05-26 11:53:45,559 : INFO : topic diff=0.982705, rho=0.488415
+2020-05-26 11:53:45,559 : INFO : PROGRESS: pass 1, at document #4000/4384
+2020-05-26 11:53:49,016 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:49,034 : INFO : topic #5 (0.010): 0.017*"fund" + 0.010*"etf" + 0.008*"manager" + 0.008*"market" + 0.008*"company" + 0.008*"year" + 0.008*"investor" + 0.007*"investment" + 0.007*"stock" + 0.006*"asset"
+2020-05-26 11:53:49,035 : INFO : topic #2 (0.010): 0.021*"bank" + 0.010*"year" + 0.009*"financial" + 0.007*"company" + 0.007*"new" + 0.007*"market" + 0.005*"big" + 0.005*"insurance" + 0.005*"business" + 0.004*"cent"
+2020-05-26 11:53:49,035 : INFO : topic #9 (0.010): 0.014*"fund" + 0.009*"investment" + 0.009*"asset" + 0.008*"manager" + 0.007*"financial" + 0.006*"bank" + 0.006*"year" + 0.006*"market" + 0.006*"hedge" + 0.006*"new"
+2020-05-26 11:53:49,036 : INFO : topic #8 (0.010): 0.016*"fund" + 0.011*"investment" + 0.011*"firm" + 0.010*"capital" + 0.010*"market" + 0.009*"company" + 0.008*"new" + 0.008*"investor" + 0.008*"group" + 0.007*"year"
+2020-05-26 11:53:49,036 : INFO : topic #3 (0.010): 0.022*"company" + 0.011*"datum" + 0.010*"technology" + 0.007*"service" + 0.007*"new" + 0.006*"customer" + 0.006*"use" + 0.005*"business" + 0.005*"year" + 0.005*"information"
+2020-05-26 11:53:49,037 : INFO : topic diff=0.809756, rho=0.488415
+2020-05-26 11:53:49,921 : INFO : -7.743 per-word bound, 214.2 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:53:49,921 : INFO : PROGRESS: pass 1, at document #4384/4384
+2020-05-26 11:53:50,397 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:53:50,416 : INFO : topic #0 (0.010): 0.022*"company" + 0.009*"new" + 0.008*"datum" + 0.008*"business" + 0.008*"year" + 0.007*"credit" + 0.007*"service" + 0.006*"include" + 0.005*"chief" + 0.005*"card"
+2020-05-26 11:53:50,417 : INFO : topic #9 (0.010): 0.015*"fund" + 0.011*"asset" + 0.010*"investment" + 0.009*"manager" + 0.007*"year" + 0.006*"management" + 0.006*"executive" + 0.006*"financial" + 0.005*"market" + 0.005*"hedge"
+2020-05-26 11:53:50,418 : INFO : topic #2 (0.010): 0.021*"bank" + 0.010*"year" + 0.008*"company" + 0.008*"financial" + 0.007*"market" + 0.007*"new" + 0.005*"cent" + 0.005*"insurance" + 0.005*"business" + 0.005*"big"
+2020-05-26 11:53:50,418 : INFO : topic #4 (0.010): 0.014*"bank" + 0.011*" " + 0.008*"think" + 0.008*"fed" + 0.006*"financial" + 0.006*"know" + 0.006*"policy" + 0.005*"rate" + 0.005*"year" + 0.005*"u.s"
+2020-05-26 11:53:50,419 : INFO : topic #5 (0.010): 0.018*"fund" + 0.010*"year" + 0.010*"etf" + 0.009*"manager" + 0.008*"market" + 0.008*"company" + 0.008*"investor" + 0.007*"investment" + 0.007*"active" + 0.007*"asset"
+2020-05-26 11:53:50,419 : INFO : topic diff=0.761240, rho=0.488415
+2020-05-26 11:53:50,420 : INFO : PROGRESS: pass 2, at document #2000/4384
+2020-05-26 11:53:52,768 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:52,796 : INFO : topic #1 (0.010): 0.017*"mortgage" + 0.014*"loan" + 0.010*"rate" + 0.009*"home" + 0.009*"year" + 0.008*"borrower" + 0.008*"bank" + 0.008*"lender" + 0.006*"market" + 0.005*"accord"
+2020-05-26 11:53:52,797 : INFO : topic #7 (0.010): 0.017*"year" + 0.013*"company" + 0.012*"investor" + 0.011*"market" + 0.007*"accord" + 0.006*"share" + 0.006*"property" + 0.005*"rise" + 0.005*"growth" + 0.005*"loan"
+2020-05-26 11:53:52,798 : INFO : topic #5 (0.010): 0.022*"fund" + 0.010*"etf" + 0.010*"year" + 0.009*"market" + 0.009*"manager" + 0.009*"investor" + 0.009*"investment" + 0.007*"stock" + 0.007*"company" + 0.007*"index"
+2020-05-26 11:53:52,798 : INFO : topic #4 (0.010): 0.015*"bank" + 0.008*"think" + 0.007*"fed" + 0.007*" " + 0.007*"financial" + 0.007*"know" + 0.005*"rate" + 0.005*"u.s" + 0.005*"policy" + 0.005*"year"
+2020-05-26 11:53:52,799 : INFO : topic #9 (0.010): 0.017*"fund" + 0.011*"asset" + 0.011*"investment" + 0.010*"manager" + 0.007*"management" + 0.006*"year" + 0.006*"hedge" + 0.006*"market" + 0.006*"financial" + 0.005*"executive"
+2020-05-26 11:53:52,800 : INFO : topic diff=0.535625, rho=0.438867
+2020-05-26 11:53:52,800 : INFO : PROGRESS: pass 2, at document #4000/4384
+2020-05-26 11:53:56,240 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:56,260 : INFO : topic #5 (0.010): 0.021*"fund" + 0.011*"etf" + 0.009*"year" + 0.009*"market" + 0.009*"manager" + 0.009*"investor" + 0.008*"investment" + 0.008*"stock" + 0.007*"index" + 0.007*"company"
+2020-05-26 11:53:56,260 : INFO : topic #3 (0.010): 0.021*"company" + 0.013*"datum" + 0.012*"technology" + 0.007*"service" + 0.007*"use" + 0.006*"new" + 0.006*"customer" + 0.005*"ai" + 0.005*"information" + 0.005*"business"
+2020-05-26 11:53:56,261 : INFO : topic #8 (0.010): 0.015*"firm" + 0.014*"fund" + 0.014*"investment" + 0.013*"capital" + 0.010*"group" + 0.009*"company" + 0.009*"market" + 0.008*"new" + 0.008*"accord" + 0.007*"investor"
+2020-05-26 11:53:56,261 : INFO : topic #4 (0.010): 0.015*"bank" + 0.008*"financial" + 0.007*" " + 0.007*"think" + 0.006*"fed" + 0.006*"know" + 0.005*"rule" + 0.005*"u.s" + 0.005*"policy" + 0.005*"rate"
+2020-05-26 11:53:56,262 : INFO : topic #6 (0.010): 0.034*"fund" + 0.020*"capital" + 0.018*"company" + 0.017*"venture" + 0.015*"firm" + 0.013*"investment" + 0.012*"partner" + 0.012*"price" + 0.011*"investor" + 0.010*"raise"
+2020-05-26 11:53:56,262 : INFO : topic diff=0.472260, rho=0.438867
+2020-05-26 11:53:57,101 : INFO : -7.629 per-word bound, 197.9 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:53:57,101 : INFO : PROGRESS: pass 2, at document #4384/4384
+2020-05-26 11:53:57,556 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:53:57,575 : INFO : topic #8 (0.010): 0.017*"firm" + 0.015*"investment" + 0.013*"capital" + 0.013*"fund" + 0.010*"group" + 0.010*"company" + 0.008*"new" + 0.008*"market" + 0.008*"accord" + 0.007*"investor"
+2020-05-26 11:53:57,576 : INFO : topic #4 (0.010): 0.014*"bank" + 0.010*" " + 0.008*"think" + 0.008*"fed" + 0.007*"financial" + 0.006*"know" + 0.006*"u.s" + 0.006*"policy" + 0.006*"rate" + 0.005*"year"
+2020-05-26 11:53:57,576 : INFO : topic #7 (0.010): 0.018*"year" + 0.013*"company" + 0.012*"investor" + 0.011*"market" + 0.007*"accord" + 0.006*"growth" + 0.006*"rise" + 0.005*"share" + 0.005*"property" + 0.005*"price"
+2020-05-26 11:53:57,577 : INFO : topic #2 (0.010): 0.023*"bank" + 0.010*"year" + 0.009*"company" + 0.008*"financial" + 0.007*"market" + 0.007*"new" + 0.005*"big" + 0.005*"business" + 0.005*"insurance" + 0.005*"cent"
+2020-05-26 11:53:57,578 : INFO : topic #3 (0.010): 0.020*"company" + 0.013*"technology" + 0.012*"datum" + 0.009*"ai" + 0.007*"service" + 0.007*"use" + 0.006*"customer" + 0.006*"new" + 0.005*"information" + 0.005*"year"
+2020-05-26 11:53:57,578 : INFO : topic diff=0.482035, rho=0.438867
+2020-05-26 11:53:57,578 : INFO : PROGRESS: pass 3, at document #2000/4384
+2020-05-26 11:53:59,898 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:53:59,927 : INFO : topic #7 (0.010): 0.018*"year" + 0.013*"company" + 0.012*"investor" + 0.012*"market" + 0.007*"accord" + 0.006*"rise" + 0.006*"price" + 0.006*"share" + 0.006*"growth" + 0.005*"property"
+2020-05-26 11:53:59,928 : INFO : topic #4 (0.010): 0.015*"bank" + 0.007*"financial" + 0.007*"think" + 0.007*"fed" + 0.007*" " + 0.007*"know" + 0.005*"u.s" + 0.005*"rate" + 0.005*"policy" + 0.005*"rule"
+2020-05-26 11:53:59,928 : INFO : topic #0 (0.010): 0.025*"company" + 0.009*"new" + 0.008*"business" + 0.008*"datum" + 0.008*"year" + 0.007*"credit" + 0.007*"service" + 0.007*"include" + 0.006*"card" + 0.005*"chief"
+2020-05-26 11:53:59,929 : INFO : topic #8 (0.010): 0.017*"firm" + 0.014*"investment" + 0.014*"capital" + 0.013*"fund" + 0.010*"group" + 0.010*"company" + 0.008*"new" + 0.008*"accord" + 0.008*"market" + 0.007*"investor"
+2020-05-26 11:53:59,930 : INFO : topic #1 (0.010): 0.018*"mortgage" + 0.018*"loan" + 0.011*"rate" + 0.010*"home" + 0.010*"lender" + 0.009*"borrower" + 0.009*"year" + 0.007*"bank" + 0.006*"market" + 0.005*"accord"
+2020-05-26 11:53:59,931 : INFO : topic diff=0.339767, rho=0.401869
+2020-05-26 11:53:59,931 : INFO : PROGRESS: pass 3, at document #4000/4384
+2020-05-26 11:54:03,434 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:03,453 : INFO : topic #0 (0.010): 0.026*"company" + 0.009*"new" + 0.008*"business" + 0.008*"datum" + 0.008*"year" + 0.008*"credit" + 0.007*"service" + 0.007*"include" + 0.006*"card" + 0.005*"chief"
+2020-05-26 11:54:03,453 : INFO : topic #9 (0.010): 0.020*"fund" + 0.013*"asset" + 0.013*"investment" + 0.013*"manager" + 0.008*"management" + 0.008*"hedge" + 0.007*"year" + 0.006*" " + 0.006*"head" + 0.006*"work"
+2020-05-26 11:54:03,454 : INFO : topic #6 (0.010): 0.035*"fund" + 0.021*"capital" + 0.020*"venture" + 0.019*"company" + 0.014*"firm" + 0.013*"investment" + 0.013*"partner" + 0.013*"price" + 0.012*"investor" + 0.011*"raise"
+2020-05-26 11:54:03,454 : INFO : topic #5 (0.010): 0.024*"fund" + 0.011*"etf" + 0.010*"investor" + 0.010*"year" + 0.009*"market" + 0.009*"manager" + 0.009*"investment" + 0.008*"index" + 0.008*"stock" + 0.007*"asset"
+2020-05-26 11:54:03,455 : INFO : topic #7 (0.010): 0.018*"year" + 0.013*"investor" + 0.012*"company" + 0.012*"market" + 0.007*"accord" + 0.006*"price" + 0.006*"rise" + 0.006*"share" + 0.006*"growth" + 0.005*"cent"
+2020-05-26 11:54:03,455 : INFO : topic diff=0.308248, rho=0.401869
+2020-05-26 11:54:04,278 : INFO : -7.576 per-word bound, 190.8 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:04,279 : INFO : PROGRESS: pass 3, at document #4384/4384
+2020-05-26 11:54:04,726 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:04,748 : INFO : topic #3 (0.010): 0.020*"company" + 0.013*"technology" + 0.013*"datum" + 0.009*"ai" + 0.007*"use" + 0.007*"customer" + 0.006*"service" + 0.006*"new" + 0.005*"work" + 0.005*"information"
+2020-05-26 11:54:04,748 : INFO : topic #0 (0.010): 0.025*"company" + 0.010*"new" + 0.009*"year" + 0.008*"business" + 0.008*"datum" + 0.008*"service" + 0.008*"credit" + 0.007*"card" + 0.007*"include" + 0.006*"chief"
+2020-05-26 11:54:04,749 : INFO : topic #6 (0.010): 0.030*"fund" + 0.021*"venture" + 0.020*"capital" + 0.017*"company" + 0.014*"price" + 0.013*"investment" + 0.013*"partner" + 0.012*"investor" + 0.012*"firm" + 0.011*"startup"
+2020-05-26 11:54:04,749 : INFO : topic #4 (0.010): 0.014*"bank" + 0.009*" " + 0.008*"fed" + 0.008*"think" + 0.007*"financial" + 0.006*"u.s" + 0.006*"know" + 0.006*"policy" + 0.005*"rate" + 0.005*"rule"
+2020-05-26 11:54:04,750 : INFO : topic #7 (0.010): 0.019*"year" + 0.013*"company" + 0.013*"investor" + 0.012*"market" + 0.007*"accord" + 0.007*"growth" + 0.006*"rise" + 0.006*"price" + 0.006*"cent" + 0.006*"share"
+2020-05-26 11:54:04,751 : INFO : topic diff=0.339040, rho=0.401869
+2020-05-26 11:54:04,751 : INFO : PROGRESS: pass 4, at document #2000/4384
+2020-05-26 11:54:07,002 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:07,030 : INFO : topic #2 (0.010): 0.027*"bank" + 0.010*"year" + 0.009*"financial" + 0.008*"company" + 0.008*"market" + 0.007*"new" + 0.006*"big" + 0.006*"business" + 0.006*"trading" + 0.005*"group"
+2020-05-26 11:54:07,031 : INFO : topic #0 (0.010): 0.026*"company" + 0.009*"new" + 0.009*"year" + 0.008*"business" + 0.008*"datum" + 0.008*"service" + 0.007*"credit" + 0.007*"include" + 0.007*"card" + 0.006*"chief"
+2020-05-26 11:54:07,032 : INFO : topic #8 (0.010): 0.021*"firm" + 0.015*"capital" + 0.015*"investment" + 0.013*"fund" + 0.011*"group" + 0.010*"company" + 0.009*"accord" + 0.009*"new" + 0.008*"deal" + 0.008*"office"
+2020-05-26 11:54:07,032 : INFO : topic #9 (0.010): 0.021*"fund" + 0.014*"asset" + 0.013*"investment" + 0.013*"manager" + 0.008*"management" + 0.007*"hedge" + 0.007*"year" + 0.007*"cent" + 0.006*"executive" + 0.006*"market"
+2020-05-26 11:54:07,033 : INFO : topic #7 (0.010): 0.018*"year" + 0.013*"market" + 0.013*"company" + 0.013*"investor" + 0.007*"accord" + 0.007*"price" + 0.006*"rise" + 0.006*"growth" + 0.006*"share" + 0.005*"cent"
+2020-05-26 11:54:07,034 : INFO : topic diff=0.248833, rho=0.372885
+2020-05-26 11:54:07,034 : INFO : PROGRESS: pass 4, at document #4000/4384
+2020-05-26 11:54:10,466 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:10,485 : INFO : topic #1 (0.010): 0.020*"loan" + 0.016*"mortgage" + 0.011*"home" + 0.010*"lender" + 0.010*"rate" + 0.009*"year" + 0.009*"borrower" + 0.006*"credit" + 0.006*"bank" + 0.006*"accord"
+2020-05-26 11:54:10,485 : INFO : topic #6 (0.010): 0.036*"fund" + 0.021*"venture" + 0.021*"capital" + 0.019*"company" + 0.013*"investment" + 0.013*"price" + 0.013*"partner" + 0.013*"firm" + 0.012*"investor" + 0.011*"startup"
+2020-05-26 11:54:10,486 : INFO : topic #5 (0.010): 0.025*"fund" + 0.012*"etf" + 0.010*"investor" + 0.010*"year" + 0.010*"market" + 0.010*"manager" + 0.010*"investment" + 0.008*"index" + 0.008*"stock" + 0.007*"asset"
+2020-05-26 11:54:10,486 : INFO : topic #7 (0.010): 0.019*"year" + 0.013*"market" + 0.013*"investor" + 0.012*"company" + 0.007*"accord" + 0.007*"price" + 0.006*"rise" + 0.006*"share" + 0.006*"growth" + 0.005*"cent"
+2020-05-26 11:54:10,487 : INFO : topic #0 (0.010): 0.027*"company" + 0.009*"new" + 0.008*"year" + 0.008*"business" + 0.008*"datum" + 0.008*"credit" + 0.007*"service" + 0.007*"include" + 0.007*"card" + 0.006*"executive"
+2020-05-26 11:54:10,487 : INFO : topic diff=0.226661, rho=0.372885
+2020-05-26 11:54:11,306 : INFO : -7.546 per-word bound, 186.9 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:11,307 : INFO : PROGRESS: pass 4, at document #4384/4384
+2020-05-26 11:54:11,738 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:11,757 : INFO : topic #0 (0.010): 0.025*"company" + 0.010*"new" + 0.009*"year" + 0.008*"business" + 0.008*"service" + 0.008*"datum" + 0.008*"card" + 0.008*"credit" + 0.007*"include" + 0.006*"chief"
+2020-05-26 11:54:11,758 : INFO : topic #7 (0.010): 0.019*"year" + 0.013*"market" + 0.013*"company" + 0.013*"investor" + 0.007*"accord" + 0.007*"growth" + 0.007*"price" + 0.006*"rise" + 0.006*"cent" + 0.006*"share"
+2020-05-26 11:54:11,758 : INFO : topic #8 (0.010): 0.024*"firm" + 0.016*"investment" + 0.016*"capital" + 0.013*"fund" + 0.011*"company" + 0.011*"group" + 0.009*"accord" + 0.009*"partner" + 0.009*"new" + 0.008*"deal"
+2020-05-26 11:54:11,759 : INFO : topic #9 (0.010): 0.020*"fund" + 0.014*"asset" + 0.013*"investment" + 0.012*"manager" + 0.008*"management" + 0.008*"year" + 0.007*"cent" + 0.007*"executive" + 0.007*"hedge" + 0.006*" "
+2020-05-26 11:54:11,759 : INFO : topic #4 (0.010): 0.014*"bank" + 0.009*" " + 0.007*"financial" + 0.007*"fed" + 0.007*"think" + 0.006*"u.s" + 0.006*"know" + 0.005*"policy" + 0.005*"rate" + 0.005*"rule"
+2020-05-26 11:54:11,760 : INFO : topic diff=0.262026, rho=0.372885
+2020-05-26 11:54:11,760 : INFO : PROGRESS: pass 5, at document #2000/4384
+2020-05-26 11:54:13,978 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:14,007 : INFO : topic #8 (0.010): 0.024*"firm" + 0.016*"capital" + 0.015*"investment" + 0.014*"fund" + 0.011*"company" + 0.011*"group" + 0.010*"accord" + 0.009*"new" + 0.009*"deal" + 0.008*"partner"
+2020-05-26 11:54:14,008 : INFO : topic #9 (0.010): 0.022*"fund" + 0.014*"asset" + 0.013*"investment" + 0.013*"manager" + 0.009*"management" + 0.008*"hedge" + 0.007*"year" + 0.007*"cent" + 0.007*"executive" + 0.006*"head"
+2020-05-26 11:54:14,008 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"datum" + 0.013*"technology" + 0.007*"use" + 0.007*"customer" + 0.007*"ai" + 0.007*"service" + 0.006*"new" + 0.006*"work" + 0.006*"people"
+2020-05-26 11:54:14,009 : INFO : topic #5 (0.010): 0.026*"fund" + 0.011*"etf" + 0.010*"investor" + 0.010*"year" + 0.010*"investment" + 0.010*"market" + 0.010*"manager" + 0.009*"index" + 0.008*"stock" + 0.007*"asset"
+2020-05-26 11:54:14,010 : INFO : topic #1 (0.010): 0.023*"loan" + 0.018*"mortgage" + 0.012*"lender" + 0.011*"home" + 0.011*"rate" + 0.010*"borrower" + 0.010*"year" + 0.007*"credit" + 0.006*"bank" + 0.006*"market"
+2020-05-26 11:54:14,010 : INFO : topic diff=0.201446, rho=0.349386
+2020-05-26 11:54:14,011 : INFO : PROGRESS: pass 5, at document #4000/4384
+2020-05-26 11:54:17,364 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:17,383 : INFO : topic #5 (0.010): 0.026*"fund" + 0.012*"etf" + 0.011*"investor" + 0.010*"investment" + 0.010*"market" + 0.010*"manager" + 0.010*"year" + 0.009*"index" + 0.008*"stock" + 0.007*"asset"
+2020-05-26 11:54:17,384 : INFO : topic #8 (0.010): 0.027*"firm" + 0.017*"capital" + 0.016*"investment" + 0.016*"fund" + 0.012*"company" + 0.011*"accord" + 0.011*"group" + 0.009*"new" + 0.009*"partner" + 0.009*"deal"
+2020-05-26 11:54:17,384 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"datum" + 0.014*"technology" + 0.007*"use" + 0.007*"customer" + 0.007*"ai" + 0.006*"service" + 0.006*"new" + 0.006*"work" + 0.006*"people"
+2020-05-26 11:54:17,385 : INFO : topic #0 (0.010): 0.027*"company" + 0.009*"new" + 0.009*"year" + 0.008*"business" + 0.008*"datum" + 0.007*"credit" + 0.007*"include" + 0.007*"service" + 0.007*"card" + 0.006*"executive"
+2020-05-26 11:54:17,385 : INFO : topic #2 (0.010): 0.028*"bank" + 0.010*"financial" + 0.010*"year" + 0.008*"company" + 0.008*"market" + 0.007*"new" + 0.007*"trading" + 0.006*"big" + 0.006*"business" + 0.006*"group"
+2020-05-26 11:54:17,386 : INFO : topic diff=0.183035, rho=0.349386
+2020-05-26 11:54:18,186 : INFO : -7.527 per-word bound, 184.5 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:18,186 : INFO : PROGRESS: pass 5, at document #4384/4384
+2020-05-26 11:54:18,622 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:18,641 : INFO : topic #2 (0.010): 0.027*"bank" + 0.010*"year" + 0.009*"financial" + 0.009*"company" + 0.007*"market" + 0.007*"new" + 0.006*"trading" + 0.006*"big" + 0.006*"business" + 0.006*" "
+2020-05-26 11:54:18,642 : INFO : topic #1 (0.010): 0.021*"loan" + 0.016*"mortgage" + 0.012*"lender" + 0.011*"rate" + 0.010*"year" + 0.010*"home" + 0.009*"borrower" + 0.007*"credit" + 0.007*"market" + 0.006*"insurance"
+2020-05-26 11:54:18,642 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"technology" + 0.013*"datum" + 0.009*"ai" + 0.007*"use" + 0.007*"customer" + 0.006*"service" + 0.006*"new" + 0.006*"work" + 0.005*"people"
+2020-05-26 11:54:18,643 : INFO : topic #5 (0.010): 0.023*"fund" + 0.012*"etf" + 0.011*"year" + 0.010*"manager" + 0.010*"market" + 0.010*"investor" + 0.009*"investment" + 0.008*"index" + 0.008*"active" + 0.007*"asset"
+2020-05-26 11:54:18,643 : INFO : topic #7 (0.010): 0.019*"year" + 0.013*"market" + 0.013*"investor" + 0.013*"company" + 0.007*"accord" + 0.007*"growth" + 0.007*"price" + 0.007*"rise" + 0.006*"cent" + 0.006*"share"
+2020-05-26 11:54:18,644 : INFO : topic diff=0.216961, rho=0.349386
+2020-05-26 11:54:18,644 : INFO : PROGRESS: pass 6, at document #2000/4384
+2020-05-26 11:54:20,846 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:20,874 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"datum" + 0.013*"technology" + 0.007*"use" + 0.007*"ai" + 0.007*"customer" + 0.006*"service" + 0.006*"new" + 0.006*"work" + 0.006*"people"
+2020-05-26 11:54:20,875 : INFO : topic #4 (0.010): 0.015*"bank" + 0.008*"financial" + 0.007*"fed" + 0.007*"think" + 0.007*" " + 0.006*"know" + 0.006*"u.s" + 0.005*"policy" + 0.005*"rule" + 0.005*"rate"
+2020-05-26 11:54:20,876 : INFO : topic #7 (0.010): 0.019*"year" + 0.014*"market" + 0.013*"investor" + 0.012*"company" + 0.007*"price" + 0.007*"accord" + 0.007*"rise" + 0.006*"growth" + 0.006*"share" + 0.006*"cent"
+2020-05-26 11:54:20,876 : INFO : topic #8 (0.010): 0.027*"firm" + 0.017*"capital" + 0.016*"investment" + 0.016*"fund" + 0.012*"company" + 0.011*"group" + 0.011*"accord" + 0.009*"new" + 0.009*"deal" + 0.009*"partner"
+2020-05-26 11:54:20,877 : INFO : topic #6 (0.010): 0.032*"fund" + 0.024*"venture" + 0.021*"capital" + 0.019*"company" + 0.014*"price" + 0.013*"startup" + 0.013*"investment" + 0.013*"investor" + 0.013*"partner" + 0.012*"raise"
+2020-05-26 11:54:20,877 : INFO : topic diff=0.173050, rho=0.329834
+2020-05-26 11:54:20,878 : INFO : PROGRESS: pass 6, at document #4000/4384
+2020-05-26 11:54:24,178 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:24,197 : INFO : topic #5 (0.010): 0.026*"fund" + 0.012*"etf" + 0.011*"investor" + 0.010*"investment" + 0.010*"market" + 0.010*"manager" + 0.010*"year" + 0.009*"index" + 0.008*"stock" + 0.007*"asset"
+2020-05-26 11:54:24,198 : INFO : topic #8 (0.010): 0.029*"firm" + 0.018*"fund" + 0.018*"capital" + 0.016*"investment" + 0.013*"company" + 0.011*"accord" + 0.011*"group" + 0.010*"new" + 0.010*"partner" + 0.009*"deal"
+2020-05-26 11:54:24,198 : INFO : topic #2 (0.010): 0.028*"bank" + 0.010*"financial" + 0.010*"year" + 0.008*"company" + 0.008*"market" + 0.007*"trading" + 0.007*"new" + 0.006*"big" + 0.006*"business" + 0.006*"group"
+2020-05-26 11:54:24,199 : INFO : topic #9 (0.010): 0.023*"fund" + 0.016*"asset" + 0.015*"manager" + 0.015*"investment" + 0.010*"management" + 0.009*"hedge" + 0.008*"year" + 0.007*"cent" + 0.007*"executive" + 0.007*" "
+2020-05-26 11:54:24,199 : INFO : topic #4 (0.010): 0.015*"bank" + 0.009*"financial" + 0.007*" " + 0.007*"think" + 0.006*"fed" + 0.006*"u.s" + 0.006*"rule" + 0.005*"know" + 0.005*"policy" + 0.005*"federal"
+2020-05-26 11:54:24,200 : INFO : topic diff=0.157114, rho=0.329834
+2020-05-26 11:54:25,002 : INFO : -7.514 per-word bound, 182.7 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:25,002 : INFO : PROGRESS: pass 6, at document #4384/4384
+2020-05-26 11:54:25,414 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:25,433 : INFO : topic #7 (0.010): 0.019*"year" + 0.014*"market" + 0.013*"investor" + 0.013*"company" + 0.007*"accord" + 0.007*"growth" + 0.007*"price" + 0.007*"rise" + 0.006*"cent" + 0.006*"share"
+2020-05-26 11:54:25,434 : INFO : topic #5 (0.010): 0.023*"fund" + 0.012*"etf" + 0.011*"year" + 0.010*"investor" + 0.010*"manager" + 0.010*"market" + 0.009*"investment" + 0.009*"index" + 0.008*"active" + 0.007*"stock"
+2020-05-26 11:54:25,434 : INFO : topic #0 (0.010): 0.026*"company" + 0.010*"new" + 0.010*"year" + 0.008*"business" + 0.008*"service" + 0.008*"card" + 0.008*"datum" + 0.007*"include" + 0.007*"credit" + 0.006*"chief"
+2020-05-26 11:54:25,435 : INFO : topic #6 (0.010): 0.030*"fund" + 0.024*"venture" + 0.020*"capital" + 0.018*"company" + 0.016*"price" + 0.014*"startup" + 0.013*"investor" + 0.013*"investment" + 0.012*"partner" + 0.011*"round"
+2020-05-26 11:54:25,435 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"technology" + 0.014*"datum" + 0.009*"ai" + 0.007*"use" + 0.007*"customer" + 0.006*"service" + 0.006*"new" + 0.006*"work" + 0.005*"people"
+2020-05-26 11:54:25,435 : INFO : topic diff=0.188109, rho=0.329834
+2020-05-26 11:54:25,436 : INFO : PROGRESS: pass 7, at document #2000/4384
+2020-05-26 11:54:27,640 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:27,668 : INFO : topic #6 (0.010): 0.031*"fund" + 0.025*"venture" + 0.021*"capital" + 0.019*"company" + 0.014*"price" + 0.014*"startup" + 0.013*"investor" + 0.013*"investment" + 0.013*"partner" + 0.012*"round"
+2020-05-26 11:54:27,669 : INFO : topic #9 (0.010): 0.024*"fund" + 0.015*"asset" + 0.014*"investment" + 0.014*"manager" + 0.009*"management" + 0.008*"hedge" + 0.008*"cent" + 0.008*"year" + 0.007*"executive" + 0.006*"head"
+2020-05-26 11:54:27,670 : INFO : topic #4 (0.010): 0.015*"bank" + 0.008*"financial" + 0.007*"fed" + 0.007*"think" + 0.007*" " + 0.006*"know" + 0.006*"u.s" + 0.005*"policy" + 0.005*"rule" + 0.005*"federal"
+2020-05-26 11:54:27,671 : INFO : topic #7 (0.010): 0.019*"year" + 0.014*"market" + 0.013*"investor" + 0.012*"company" + 0.007*"price" + 0.007*"accord" + 0.007*"rise" + 0.007*"growth" + 0.006*"share" + 0.006*"cent"
+2020-05-26 11:54:27,671 : INFO : topic #8 (0.010): 0.028*"firm" + 0.018*"fund" + 0.018*"capital" + 0.016*"investment" + 0.013*"company" + 0.011*"accord" + 0.011*"group" + 0.010*"partner" + 0.010*"deal" + 0.010*"new"
+2020-05-26 11:54:27,672 : INFO : topic diff=0.154126, rho=0.313235
+2020-05-26 11:54:27,672 : INFO : PROGRESS: pass 7, at document #4000/4384
+2020-05-26 11:54:30,906 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:30,925 : INFO : topic #4 (0.010): 0.015*"bank" + 0.009*"financial" + 0.007*" " + 0.006*"think" + 0.006*"fed" + 0.006*"u.s" + 0.006*"rule" + 0.005*"know" + 0.005*"policy" + 0.005*"federal"
+2020-05-26 11:54:30,925 : INFO : topic #5 (0.010): 0.026*"fund" + 0.012*"etf" + 0.011*"investor" + 0.010*"investment" + 0.010*"market" + 0.010*"manager" + 0.010*"year" + 0.009*"index" + 0.008*"stock" + 0.008*"asset"
+2020-05-26 11:54:30,926 : INFO : topic #7 (0.010): 0.019*"year" + 0.014*"market" + 0.013*"investor" + 0.012*"company" + 0.007*"price" + 0.007*"accord" + 0.007*"rise" + 0.007*"growth" + 0.006*"share" + 0.006*"cent"
+2020-05-26 11:54:30,926 : INFO : topic #3 (0.010): 0.019*"company" + 0.015*"datum" + 0.014*"technology" + 0.007*"use" + 0.007*"ai" + 0.007*"customer" + 0.006*"service" + 0.006*"new" + 0.006*"people" + 0.006*"work"
+2020-05-26 11:54:30,927 : INFO : topic #8 (0.010): 0.031*"firm" + 0.021*"fund" + 0.019*"capital" + 0.017*"investment" + 0.014*"company" + 0.012*"accord" + 0.010*"partner" + 0.010*"group" + 0.010*"new" + 0.010*"deal"
+2020-05-26 11:54:30,927 : INFO : topic diff=0.139930, rho=0.313235
+2020-05-26 11:54:31,733 : INFO : -7.504 per-word bound, 181.5 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:31,733 : INFO : PROGRESS: pass 7, at document #4384/4384
+2020-05-26 11:54:32,215 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:32,234 : INFO : topic #9 (0.010): 0.022*"fund" + 0.015*"asset" + 0.014*"investment" + 0.013*"manager" + 0.009*"management" + 0.008*"cent" + 0.008*"year" + 0.008*"executive" + 0.007*"hedge" + 0.007*" "
+2020-05-26 11:54:32,234 : INFO : topic #6 (0.010): 0.029*"fund" + 0.025*"venture" + 0.020*"capital" + 0.017*"company" + 0.016*"price" + 0.014*"startup" + 0.013*"investor" + 0.013*"investment" + 0.012*"partner" + 0.012*"round"
+2020-05-26 11:54:32,235 : INFO : topic #2 (0.010): 0.028*"bank" + 0.010*"year" + 0.009*"financial" + 0.009*"company" + 0.008*"market" + 0.007*"trading" + 0.006*"new" + 0.006*"big" + 0.006*"business" + 0.006*" "
+2020-05-26 11:54:32,235 : INFO : topic #5 (0.010): 0.024*"fund" + 0.012*"etf" + 0.011*"year" + 0.010*"investor" + 0.010*"market" + 0.010*"manager" + 0.009*"investment" + 0.009*"index" + 0.008*"active" + 0.008*"stock"
+2020-05-26 11:54:32,236 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"technology" + 0.014*"datum" + 0.009*"ai" + 0.007*"use" + 0.007*"customer" + 0.006*"service" + 0.006*"work" + 0.006*"new" + 0.006*"people"
+2020-05-26 11:54:32,236 : INFO : topic diff=0.169872, rho=0.313235
+2020-05-26 11:54:32,237 : INFO : PROGRESS: pass 8, at document #2000/4384
+2020-05-26 11:54:34,410 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:34,438 : INFO : topic #4 (0.010): 0.015*"bank" + 0.008*"financial" + 0.007*"fed" + 0.007*"think" + 0.007*" " + 0.006*"know" + 0.006*"u.s" + 0.005*"policy" + 0.005*"rule" + 0.005*"federal"
+2020-05-26 11:54:34,439 : INFO : topic #1 (0.010): 0.025*"loan" + 0.017*"mortgage" + 0.013*"lender" + 0.010*"home" + 0.010*"borrower" + 0.010*"rate" + 0.010*"year" + 0.008*"credit" + 0.007*"insurance" + 0.007*"insurer"
+2020-05-26 11:54:34,439 : INFO : topic #8 (0.010): 0.029*"firm" + 0.020*"fund" + 0.019*"capital" + 0.016*"investment" + 0.014*"company" + 0.011*"accord" + 0.011*"group" + 0.010*"partner" + 0.010*"deal" + 0.010*"new"
+2020-05-26 11:54:34,440 : INFO : topic #2 (0.010): 0.029*"bank" + 0.010*"year" + 0.010*"financial" + 0.009*"company" + 0.008*"market" + 0.007*"trading" + 0.007*"new" + 0.006*"big" + 0.006*"business" + 0.006*"group"
+2020-05-26 11:54:34,441 : INFO : topic #3 (0.010): 0.019*"company" + 0.015*"datum" + 0.014*"technology" + 0.007*"use" + 0.007*"ai" + 0.007*"customer" + 0.006*"service" + 0.006*"people" + 0.006*"work" + 0.006*"new"
+2020-05-26 11:54:34,442 : INFO : topic diff=0.141101, rho=0.298914
+2020-05-26 11:54:34,442 : INFO : PROGRESS: pass 8, at document #4000/4384
+2020-05-26 11:54:37,688 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:37,709 : INFO : topic #4 (0.010): 0.015*"bank" + 0.009*"financial" + 0.007*" " + 0.006*"think" + 0.006*"fed" + 0.006*"u.s" + 0.006*"rule" + 0.005*"know" + 0.005*"policy" + 0.005*"federal"
+2020-05-26 11:54:37,710 : INFO : topic #0 (0.010): 0.027*"company" + 0.009*"new" + 0.009*"year" + 0.008*"business" + 0.007*"datum" + 0.007*"include" + 0.007*"card" + 0.007*"service" + 0.007*"credit" + 0.006*"executive"
+2020-05-26 11:54:37,710 : INFO : topic #6 (0.010): 0.032*"fund" + 0.026*"venture" + 0.021*"capital" + 0.019*"company" + 0.016*"price" + 0.015*"startup" + 0.013*"investor" + 0.013*"investment" + 0.012*"partner" + 0.012*"round"
+2020-05-26 11:54:37,711 : INFO : topic #8 (0.010): 0.031*"firm" + 0.024*"fund" + 0.019*"capital" + 0.017*"investment" + 0.015*"company" + 0.012*"accord" + 0.011*"partner" + 0.010*"group" + 0.010*"new" + 0.010*"deal"
+2020-05-26 11:54:37,712 : INFO : topic #1 (0.010): 0.024*"loan" + 0.016*"mortgage" + 0.012*"lender" + 0.010*"home" + 0.010*"year" + 0.009*"borrower" + 0.009*"rate" + 0.009*"insurance" + 0.009*"credit" + 0.008*"insurer"
+2020-05-26 11:54:37,712 : INFO : topic diff=0.127573, rho=0.298914
+2020-05-26 11:54:38,522 : INFO : -7.497 per-word bound, 180.6 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:38,522 : INFO : PROGRESS: pass 8, at document #4384/4384
+2020-05-26 11:54:38,929 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:38,948 : INFO : topic #0 (0.010): 0.026*"company" + 0.010*"year" + 0.010*"new" + 0.008*"service" + 0.008*"business" + 0.008*"card" + 0.007*"datum" + 0.007*"include" + 0.007*"credit" + 0.006*"chief"
+2020-05-26 11:54:38,948 : INFO : topic #5 (0.010): 0.024*"fund" + 0.012*"etf" + 0.011*"year" + 0.010*"investor" + 0.010*"market" + 0.010*"manager" + 0.010*"investment" + 0.009*"index" + 0.008*"active" + 0.008*"stock"
+2020-05-26 11:54:38,949 : INFO : topic #7 (0.010): 0.019*"year" + 0.014*"market" + 0.013*"investor" + 0.012*"company" + 0.007*"price" + 0.007*"growth" + 0.007*"accord" + 0.007*"rise" + 0.006*"cent" + 0.006*"share"
+2020-05-26 11:54:38,949 : INFO : topic #3 (0.010): 0.019*"company" + 0.014*"datum" + 0.014*"technology" + 0.009*"ai" + 0.007*"use" + 0.007*"customer" + 0.006*"service" + 0.006*"work" + 0.006*"new" + 0.006*"people"
+2020-05-26 11:54:38,950 : INFO : topic #6 (0.010): 0.029*"fund" + 0.026*"venture" + 0.020*"capital" + 0.017*"company" + 0.016*"price" + 0.014*"startup" + 0.013*"investor" + 0.013*"investment" + 0.012*"partner" + 0.012*"round"
+2020-05-26 11:54:38,950 : INFO : topic diff=0.156555, rho=0.298914
+2020-05-26 11:54:38,950 : INFO : PROGRESS: pass 9, at document #2000/4384
+2020-05-26 11:54:41,155 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:41,183 : INFO : topic #8 (0.010): 0.030*"firm" + 0.022*"fund" + 0.019*"capital" + 0.016*"investment" + 0.015*"company" + 0.011*"accord" + 0.011*"partner" + 0.010*"group" + 0.010*"deal" + 0.010*"new"
+2020-05-26 11:54:41,184 : INFO : topic #3 (0.010): 0.019*"company" + 0.015*"datum" + 0.014*"technology" + 0.007*"ai" + 0.007*"use" + 0.007*"customer" + 0.006*"service" + 0.006*"people" + 0.006*"work" + 0.006*"new"
+2020-05-26 11:54:41,185 : INFO : topic #2 (0.010): 0.030*"bank" + 0.010*"year" + 0.010*"financial" + 0.009*"company" + 0.008*"market" + 0.007*"trading" + 0.007*"new" + 0.007*"big" + 0.006*"business" + 0.006*"group"
+2020-05-26 11:54:41,185 : INFO : topic #4 (0.010): 0.015*"bank" + 0.008*"financial" + 0.007*"fed" + 0.007*"think" + 0.007*" " + 0.006*"know" + 0.006*"u.s" + 0.005*"policy" + 0.005*"rule" + 0.005*"federal"
+2020-05-26 11:54:41,186 : INFO : topic #0 (0.010): 0.027*"company" + 0.010*"new" + 0.010*"year" + 0.008*"business" + 0.008*"service" + 0.008*"card" + 0.008*"include" + 0.007*"datum" + 0.007*"credit" + 0.006*"chief"
+2020-05-26 11:54:41,187 : INFO : topic diff=0.131124, rho=0.286393
+2020-05-26 11:54:41,187 : INFO : PROGRESS: pass 9, at document #4000/4384
+2020-05-26 11:54:44,489 : INFO : merging changes from 2000 documents into a model of 4384 documents
+2020-05-26 11:54:44,508 : INFO : topic #4 (0.010): 0.015*"bank" + 0.009*"financial" + 0.007*" " + 0.006*"think" + 0.006*"fed" + 0.006*"u.s" + 0.006*"rule" + 0.005*"know" + 0.005*"policy" + 0.005*"federal"
+2020-05-26 11:54:44,508 : INFO : topic #3 (0.010): 0.019*"company" + 0.015*"datum" + 0.014*"technology" + 0.007*"use" + 0.007*"ai" + 0.006*"customer" + 0.006*"service" + 0.006*"people" + 0.006*"work" + 0.006*"new"
+2020-05-26 11:54:44,509 : INFO : topic #7 (0.010): 0.019*"year" + 0.014*"market" + 0.013*"investor" + 0.012*"company" + 0.008*"price" + 0.007*"accord" + 0.007*"growth" + 0.007*"rise" + 0.006*"share" + 0.006*"cent"
+2020-05-26 11:54:44,509 : INFO : topic #2 (0.010): 0.030*"bank" + 0.010*"financial" + 0.010*"year" + 0.008*"company" + 0.008*"market" + 0.008*"trading" + 0.007*"new" + 0.007*"big" + 0.006*"business" + 0.006*"group"
+2020-05-26 11:54:44,510 : INFO : topic #9 (0.010): 0.025*"fund" + 0.016*"asset" + 0.015*"manager" + 0.015*"investment" + 0.010*"management" + 0.009*"hedge" + 0.008*"cent" + 0.008*"year" + 0.007*"executive" + 0.007*" "
+2020-05-26 11:54:44,510 : INFO : topic diff=0.118012, rho=0.286393
+2020-05-26 11:54:45,302 : INFO : -7.492 per-word bound, 180.0 perplexity estimate based on a held-out corpus of 384 documents with 164025 words
+2020-05-26 11:54:45,302 : INFO : PROGRESS: pass 9, at document #4384/4384
+2020-05-26 11:54:45,721 : INFO : merging changes from 384 documents into a model of 4384 documents
+2020-05-26 11:54:45,740 : INFO : topic #5 (0.010): 0.024*"fund" + 0.012*"etf" + 0.011*"investor" + 0.011*"year" + 0.010*"market" + 0.010*"manager" + 0.010*"investment" + 0.009*"index" + 0.008*"active" + 0.008*"stock"
+2020-05-26 11:54:45,741 : INFO : topic #4 (0.010): 0.014*"bank" + 0.008*" " + 0.008*"financial" + 0.007*"fed" + 0.007*"think" + 0.006*"u.s" + 0.006*"know" + 0.005*"policy" + 0.005*"rule" + 0.005*"federal"
+2020-05-26 11:54:45,741 : INFO : topic #9 (0.010): 0.023*"fund" + 0.016*"asset" + 0.014*"investment" + 0.014*"manager" + 0.009*"management" + 0.008*"cent" + 0.008*"year" + 0.008*"executive" + 0.008*"hedge" + 0.007*" "
+2020-05-26 11:54:45,742 : INFO : topic #0 (0.010): 0.026*"company" + 0.010*"year" + 0.010*"new" + 0.008*"service" + 0.008*"business" + 0.008*"card" + 0.007*"include" + 0.007*"datum" + 0.007*"credit" + 0.006*"chief"
+2020-05-26 11:54:45,742 : INFO : topic #6 (0.010): 0.028*"fund" + 0.026*"venture" + 0.020*"capital" + 0.017*"company" + 0.017*"price" + 0.015*"startup" + 0.013*"investor" + 0.013*"investment" + 0.012*"round" + 0.012*"partner"
+2020-05-26 11:54:45,743 : INFO : topic diff=0.145907, rho=0.286393
+2020-05-26 11:55:31,781 : INFO :  EM iter 0
+2020-05-26 11:55:31,781 : INFO : E Step
+2020-05-26 11:55:31,784 : INFO : using symmetric eta at 0.1
+2020-05-26 11:55:31,789 : INFO : using serial LDA version on this node
