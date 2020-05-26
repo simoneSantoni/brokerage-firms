@@ -18,32 +18,27 @@ Notes: NaN
 
 # %% load libraries
 # basic operations
-import os
-import json
-import re
 import logging
-import time
-import pickle
 # load data from mongodb
 from pymongo import MongoClient
 # data analysis/management/manipulation
-import numpy as np
 import pandas as pd
-# topic modeling
-import gensim
-from gensim.corpora import Dictionary
 # nlp pipeline
 import spacy
 import en_core_web_lg
+# building corpus/dictionary
+import gensim
+from gensim import corpora
 
 
-# %% Are libraries up-to-date? NLP libraries are in continuous flux!
-print("""spaCy version: {}
-      Gensim version: {}
-      """.format(spacy.__version__, gensim.__version__))
+# %% check software versions
+print("""
+spaCy version: {}
+Gensim version: {}
+""".format(spacy.__version__, gensim.__version__))
 
 
-# %% Read data
+# %% read data
 
 # create client
 uri = "mongodb://simone:DELL123@10.16.142.91/default_db?authSource=admin"
@@ -80,7 +75,7 @@ time_slices = data.values
 docs = [article.strip().lower() for article in df.text]
 
 # hyphen to underscores
-DOCS = [re.sub(r'\b-\b', '_', text) for text in DOCS]
+docs = [re.sub(r'\b-\b', '_', text) for text in docs]
 
 
 # %% exploratory data analysis
@@ -121,20 +116,20 @@ nlp = en_core_web_lg.load()
 
 # expand on spaCy's stopwords
 # -- my stopwrods
-MY_STOPWORDS = ['\x1c',
+my_stopwords = ['\x1c',
                 'ft', 'wsj', 'time', 'sec',
                 'say', 'says', 'said',
                 'mr.', 'mister', 'mr', 'miss', 'ms',
                 'inc']
-# -- expand on spaCy's stopwords
-for stopword in MY_STOPWORDS:
-    nlp.vocab[stopword].is_stop = True
+# -- expand on spacy's stopwords
+for stopword in my_stopwords:
+    nlp.vocab[stopword].is_stop = true
 
 # tokenize text
-DOCS_TOKENS, TMP_TOKENS = [], []
+docs_tokens, tmp_tokens = [], []
 
-for doc in DOCS:
-    TMP_TOKENS = [token.lemma_ for token in nlp(doc)
+for doc in docs:
+    tmp_tokens = [token.lemma_ for token in nlp(doc)
                   if not token.is_stop
                   and not token.is_punct
                   and not token.like_num
@@ -142,51 +137,52 @@ for doc in DOCS:
                   and not token.like_email
                   and not token.is_currency
                   and not token.is_oov]
-    DOCS_TOKENS.append(TMP_TOKENS)
-    TMP_TOKENS = []
+    docs_tokens.append(tmp_tokens)
+    tmp_tokens = []
 
 # take into account bi- and tri-grams
 # -- get rid of common terms
-COMMON_TERMS = [u'of', u'with', u'without', u'and', u'or', u'the', u'a',
+common_terms = [u'of', u'with', u'without', u'and', u'or', u'the', u'a',
                 u'not', 'be', u'to', u'this', u'who', u'in']
 # -- find phrases as bigrams
-BIGRAM = Phrases(DOCS_TOKENS,
+bigram = phrases(docs_tokens,
                  min_count=50,
                  threshold=5,
                  max_vocab_size=50000,
-                 common_terms=COMMON_TERMS)
+                 common_terms=common_terms)
 # -- fing phrases as trigrams
-TRIGRAM = Phrases(BIGRAM[DOCS_TOKENS],
+trigram = phrases(bigram[docs_tokens],
                   min_count=50,
                   threshold=5,
                   max_vocab_size=50000,
-                  common_terms=COMMON_TERMS)
+                  common_terms=common_terms)
 
 # uncomment if bi-grammed, tokenized document is preferred
-#DOCS_PHRASED = [BIGRAM[line] for line in DOCS_TOKENS]
+#docs_phrased = [bigram[line] for line in docs_tokens]
 
 # check outcome of nlp pipeline
 print('''
 =============================================================================
-Published article: {}
+published article: {}
 
 =============================================================================
-Tokenized article: {}
+tokenized article: {}
 
 =============================================================================
-Tri-grammed tokenized article: {}
+tri-grammed tokenized article: {}
 
-'''.format(DOCS[1],
-           DOCS_TOKENS[1],
-           DOCS_PHRASED[1])
+'''.format(docs[1],
+           docs_tokens[1],
+           docs_phrased[1]))
 
 
-# %% get corpus & dictionary to use for further NLP analysis
+# %% get corpus & dictionary to use for further nlp analysis
 
-# get dictionary and corpus
-DICT = Dictionary(DOCS_PHRASED)
-CORPUS = [DICT.doc2bow(doc) for doc in DOCS_PHRASED]
+# get dictionary and write it to a file
+pr_dictionary = dictionary(docs_phrased)
+pr_dictionary.save('/tmp/pr_dictionary.dict')
 
-# write dictionary and corpus to files
-
+# get corpus and write it to a file
+pr_corpus = [pr_dictionary.doc2bow(doc) for doc in docs_phrased]
+corpora.SvmLightCorpus.serialize('/tmp/pr_corpus.svmlight', corpus)
 
