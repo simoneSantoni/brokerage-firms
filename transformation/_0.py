@@ -19,9 +19,11 @@ Notes: NaN
 # %% load libraries
 # basic operations
 import logging
+import re
 # load data from mongodb
 from pymongo import MongoClient
 # data analysis/management/manipulation
+import numpy as np
 import pandas as pd
 # nlp pipeline
 import spacy
@@ -29,6 +31,8 @@ import en_core_web_lg
 # building corpus/dictionary
 import gensim
 from gensim import corpora
+# plot
+import matplotlib.pyplot as plt
 
 
 # %% check software versions
@@ -41,31 +45,27 @@ Gensim version: {}
 # %% read data
 
 # create client
-uri = "mongodb://simone:DELL123@10.16.142.91/default_db?authSource=admin"
-client = MongoClient(uri)
+uri = ''
+client = MongoClient()
 
 # pick-up db
 db = client.digitalTechs
 
 # load the data
-df = pd.DataFrame(list(db.find()))
+df = pd.DataFrame(list(db.press_releases.find()))
 
 
 # %% clean data
 
 # basic cleaning
-# -- date as datetime
-df.loc[:, 'date'] = pd.to_datetime(df['date.$date'])
 # -- get timespans
 df.loc[:, 'year'] = df['date'].dt.year
 # -- drop column
-df.drop(['date.$date', '_id.$oid'], axis=1, inplace=true)
-# -- remove returns
-df.loc[:, 'text'] = df['text'].str.replace('\n', '')
+df.drop(['_id'], axis=1, inplace=True)
 
 # arrange data for sequential lda
 # -- order data by year of publication
-df.sort_values('year', inplace=true)
+df.sort_values('year', inplace=True)
 # -- get stacks by year
 data = df.groupby('year').size()
 # -- time slices
@@ -104,9 +104,9 @@ notes = """notes: * the 2019 bucket contains documents published
               between jan-01 and mar-31."""
 plt.text(0.12, -0.25, notes, fontsize=12)
 # -- grid
-ax.grid(true, ls='--', axis='y', color='white')
-# -- save plot
-plt.savefig('barchart.pdf')
+ax.grid(True, ls='--', axis='y', color='white')
+# -- show plot
+plt.show()
 
 
 # %% NLP pipeline
@@ -123,7 +123,7 @@ my_stopwords = ['\x1c',
                 'inc']
 # -- expand on spacy's stopwords
 for stopword in my_stopwords:
-    nlp.vocab[stopword].is_stop = true
+    nlp.vocab[stopword].is_stop = True
 
 # tokenize text
 docs_tokens, tmp_tokens = [], []
