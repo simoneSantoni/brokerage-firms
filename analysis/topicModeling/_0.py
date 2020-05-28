@@ -51,6 +51,7 @@ df = pd.DataFrame(list(db.press_releases.find()))
 
 # time slices to pass to sequential lda
 
+
 # %% clean data read from Mongo
 
 # basic cleaning

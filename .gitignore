@@ -130,7 +130,7 @@ dmypy.json
 *.csv
 
 # data folders
-.data/
+#.data/
 
 # pycharm setting
 .idea/
