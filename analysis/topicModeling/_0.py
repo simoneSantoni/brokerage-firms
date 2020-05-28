@@ -49,6 +49,8 @@ df = pd.DataFrame(list(db.press_releases.find()))
 # corpus and dictionary
 
 
+# time slices to pass to sequential lda
+
 # %% clean data read from Mongo
 
 # basic cleaning
@@ -70,11 +72,7 @@ df.sort_values('year', inplace=True)
 data = df.groupby('year').size()
 
 
-
-
 # %% exploratory data analysis
-
-
 
 # barchart of the distribution of articles over time
 # --+ data series
