@@ -3,7 +3,7 @@
 """
 Docstring
 ------------------------------------------------------------------------------
-
+    _0.py    |    Creating a corpus and dictionary out of press data
 ------------------------------------------------------------------------------
 
 Author: Simone Santoni, simone.santoni.1@city.ac.uk
@@ -12,7 +12,26 @@ Edits:
     - created
     - last edit
 
-Notes: NaN
+Notes: the dataset contains 4,384 articles published in the Wall Street
+       Journal and the Financial Times that mention one or multiple
+       of the following keywords:
+
+       + Computer Software
+       + Internet of Things
+       + Machine Learning
+       + Robotics
+       + Technology
+       + Computer Science
+       + Computers
+       + Automation
+       + Augmented Reality
+       + Big Data
+       + Deep Learning
+       + Cloud Computing
+       + Natural Language Processing
+       + Pattern Recognition
+       + Analytics
+       + Computing
 
 """
 
@@ -60,6 +79,8 @@ os.chdir(wd)
 in my case, I'm reading data from a Mongo db. If you've got a local copy of
 dataset, just use Pandas.
 
+df = pd.read_json(pr_wsj_ft.json)
+
 Note: the 'uri' argument is mandatory to create a pipeline with a Mongo 
 server doesn't run on the machine you're sing to run this Python script 
 '''
@@ -74,6 +95,13 @@ df = pd.DataFrame(list(db.press_releases.find()))
 
 
 # %% clean data
+
+# slice the data
+'''
+let's focus on the 2009 - 2019 timespan, which concentrates the large majority
+of the data.
+'''
+df = df.loc[df['year'] > 2008]
 
 # basic cleaning
 # --+ get timespans
@@ -97,10 +125,6 @@ docs = [re.sub(r'\b-\b', '_', text) for text in docs]
 
 
 # %% exploratory data analysis
-
-'''
-the timespan of the dataset is; let's focus 
-'''
 
 # barchart of the distribution of articles over time
 # --+ data series
