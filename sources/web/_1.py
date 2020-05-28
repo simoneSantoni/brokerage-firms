@@ -99,4 +99,3 @@ for entity, year, url in targets:
     crawl_and_push(_entity=entity,
                    _year=year,
                    _url=url)
-

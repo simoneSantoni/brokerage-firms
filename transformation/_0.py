@@ -38,7 +38,7 @@ Notes: the dataset contains 4,384 articles published in the Wall Street
 # %% load libraries
 # basic operations
 import os
-import logging
+import pickle
 import re
 # load data from mongodb
 from pymongo import MongoClient
@@ -59,7 +59,7 @@ import matplotlib.pyplot as plt
 
 # %% check software versions
 print("""
-spaCy version: {}
+spaCy version : {}
 Gensim version: {}
 """.format(spacy.__version__, gensim.__version__))
 
@@ -96,16 +96,15 @@ df = pd.DataFrame(list(db.press_releases.find()))
 
 # %% clean data
 
-# slice the data
-'''
-let's focus on the 2009 - 2019 timespan, which concentrates the large majority
-of the data.
-'''
-df = df.loc[df['year'] > 2008]
-
 # basic cleaning
 # --+ get timespans
 df.loc[:, 'year'] = df['date'].dt.year
+# --+ slice the data
+'''
+let's focus on the 2013 - 2019 timespan, which concentrates the large majority
+of the data.
+'''
+df = df.loc[df['year'] >= 2013]
 # --+ drop column
 df.drop(['_id'], axis=1, inplace=True)
 
@@ -116,49 +115,14 @@ df.sort_values('year', inplace=True)
 data = df.groupby('year').size()
 # --+ time slices
 time_slices = data.values
+with open('pr_time_slices.pickle', 'wb') as pipe:
+    pickle.dump(time_slices, pipe)
 
 # prepare list to pass through spacy
 docs = [article.strip().lower() for article in df.text]
 
 # hyphen to underscores
 docs = [re.sub(r'\b-\b', '_', text) for text in docs]
-
-
-# %% exploratory data analysis
-
-# barchart of the distribution of articles over time
-# --+ data series
-x = data.index
-y = time_slices
-# --+ labels
-x_labels = ['%s' % i for i in x if i < 2019] + ['2019*']
-y_labels = ['%s' % i for i in np.arange(0, 1400, 200)]
-# --+ create figure
-fig = plt.figure(figsize=(6, 4))
-# --+ populate figure with a plot
-ax = fig.add_subplot(1, 1, 1)
-# --+ plot data
-ax.bar(x, y, color='r', alpha=0.5)
-# --+ axis properties
-ax.set_xticks(x)
-ax.set_xticklabels(x_labels, fontsize=14, rotation='vertical')
-ax.set_xlabel('year', fontsize=14)
-ax.set_yticklabels(y_labels, fontsize=14)
-ax.set_ylabel('counts of documents', fontsize=14)
-# --+ annotation
-notes = """notes: * the 2019 bucket contains documents published
-              between Jan-01 and Mar-31."""
-plt.text(0.12, -0.25, notes, fontsize=12)
-# --+ grid
-ax.grid(True, ls='--', axis='y', color='white')
-# --+ save plot
-#plt.show()
-#folder = 'ss_1/exhibits'
-plt.savefig('articles_by_year.pdf',
-            transparent=True,
-            bbox_inches='tight',
-            pad_inches=0,
-            dpi=600)
 
 
 # %% NLP pipeline
@@ -284,7 +248,7 @@ a dictionary is a mapping between words and their integer ids. See Gensim
 documentation here: https://radimrehurek.com/gensim/corpora/dictionary.html
 '''
 pr_dictionary = Dictionary(docs_phrased)
-pr_dictionary.save('/tmp/pr_dictionary.dict')
+pr_dictionary.save('.data/pr_dictionary.dict')
 
 # get corpus and write it to a file
 '''
@@ -298,5 +262,4 @@ Personally, I prefer the Matrix Market format [1]
 
 [1]: https://math.nist.gov/MatrixMarket/formats.html
 '''
-corpora.MmCorpus.serialize('/tmp/pr_corpus.mm', pr_corpus)
-
+corpora.MmCorpus.serialize('.data/pr_corpus.mm', pr_corpus)
