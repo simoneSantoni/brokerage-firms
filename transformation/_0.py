@@ -18,6 +18,7 @@ Notes: NaN
 
 # %% load libraries
 # basic operations
+import os
 import logging
 import re
 # load data from mongodb
@@ -40,6 +41,13 @@ print("""
 spaCy version: {}
 Gensim version: {}
 """.format(spacy.__version__, gensim.__version__))
+
+# %% work directory
+srv = '/home/simone'
+prj = 'githubRepos/digital-leadership-center'
+fdr = 'transformation'
+wd = os.path.join(srv, prj, fdr)
+os.chdir(wd)
 
 
 # %% read data
@@ -107,6 +115,14 @@ plt.text(0.12, -0.25, notes, fontsize=12)
 ax.grid(True, ls='--', axis='y', color='white')
 # -- show plot
 plt.show()
+srv, path = srv, path
+folder = 'ss_1/exhibits'
+out_file = '_0.pdf'
+plt.savefig('articles_by_year.pdf',
+            transparent=True,
+            bbox_inches='tight',
+            pad_inches=0,
+            dpi=600)
 
 
 # %% NLP pipeline
