@@ -3,7 +3,7 @@
 """
 Docstring
 ------------------------------------------------------------------------------
-    _0.py    |    Creating a corpus and dictionary out of press data
+    _1.py    |    Creating a corpus and dictionary out of web search data
 ------------------------------------------------------------------------------
 
 Author: Simone Santoni, simone.santoni.1@city.ac.uk
@@ -12,8 +12,9 @@ Edits:
        - created
        - last edit
 
-Notes: the dataset contains 4,384 articles published in the Wall Street
-       Journal and the Financial Times that mention one or multiple
+Notes: the dataset contains 49,197 web-pages that have been retrieved by
+       searching for the name of a company in conjunction with one or
+       multiple of the following keywords:
        of the following keywords:
 
        + Computer Software
@@ -49,7 +50,7 @@ import spacy
 import en_core_web_lg
 # building corpus/dictionary
 import gensim
-from gensim import corpora
+from gensim import corpora Mm
 from gensim.models import Phrases
 from gensim.corpora import Dictionary
 
@@ -79,19 +80,15 @@ client = MongoClient()
 db = client.digitalTechs
 
 # load the data
-df = pd.DataFrame(list(db.press_releases.find()))
+df = pd.DataFrame(list(db.web_contents.find()))
 
 
 # %% clean data
 
 # basic cleaning
 # --+ get timespans
-df.loc[:, 'year'] = df['date'].dt.year
+df.loc[:, 'year'] = pd.to_numeric(df['year'])
 # --+ slice the data
-'''
-let's focus on the 2013 - 2019 timespan, which concentrates the large majority
-of the data.
-'''
 df = df.loc[df['year'] >= 2013]
 # --+ drop column
 df.drop(['_id'], axis=1, inplace=True)
@@ -103,10 +100,13 @@ df.sort_values('year', inplace=True)
 data = df.groupby('year').size()
 # --+ time slices
 time_slices = data.values
-out_f = os.path.join('.data', 'pr_time_slices.txt')
+out_f = os.path.join('.data', 'ws_time_slices.txt')
 with open(out_f, 'w') as pipe:
     for item in time_slices:
         pipe.write('{}\n'.format(item))
+
+# filter-out non english documents
+
 
 # prepare list to pass through spacy
 docs = [article.strip().lower() for article in df.text]
@@ -193,6 +193,7 @@ pr_dictionary.save('.data/pr_dictionary.dict')
 
 # get corpus and write it to a file
 pr_corpus = [pr_dictionary.doc2bow(doc) for doc in docs_phrased]
-out_f = get_tmpfile('.data/pr_corpus.mm')
+
+out_f = ('.data/pr_corpus.mm')
 MmCorpus.serialize(out_f, pr_corpus)
 mm = MmCorpus(out_f)  # `mm` document stream now has random access

@@ -6,7 +6,7 @@ Overview
 ========
 
 This folder contains Python scripts to retrieve urls from Google search
-and to collect data from individual urls.
+and collect data from individual urls.
 
 
 | Script | Scope             | Status   | Notes |
@@ -17,9 +17,9 @@ and to collect data from individual urls.
 Sampling
 ========
 
-We started from `bloomber_export.csv` and retained the largest, unique 
-companies (N = 100) that are not holdings of groups operating in manufactuing or 
-service sectors. Below is the full list:
+We started from `bloomberg_export.csv` and retained the largest, unique
+companies (N = 100) that are not holdings of groups operating in  
+manufacturing or service sectors. Below is the full list:
 
 + legal & general assurance
 + aviva
