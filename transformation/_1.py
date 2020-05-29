@@ -41,7 +41,10 @@ Notes: the dataset contains 49,197 web-pages that have been retrieved by
 import os
 import pickle
 import re
+from urllib.parse import quote_plus
+from sshtunnel import SSHTunnelForwarder
 # load data from mongodb
+import pymongo
 from pymongo import MongoClient
 # data analysis/management/manipulation
 import pandas as pd
@@ -50,9 +53,8 @@ import spacy
 import en_core_web_lg
 # building corpus/dictionary
 import gensim
-from gensim import corpora Mm
+from gensim.corpora import MmCorpus, Dictionary
 from gensim.models import Phrases
-from gensim.corpora import Dictionary
 
 
 # %% check software versions
@@ -72,16 +74,32 @@ os.chdir(wd)
 
 # %% read data
 
-# create client
-uri = ''
-client = MongoClient()
-
-# pick-up db
-db = client.digitalTechs
-
+# open monog pipelin
+# --+ params
+mongo_host = "10.16.142.91"
+mongo_db = "digitalTechs"
+mongo_user = "simone"
+mongo_pass = "DELL123"
+# --+ server
+server = SSHTunnelForwarder(
+    mongo_host,
+    ssh_username=mongo_user,
+    ssh_password=mongo_pass,
+    remote_bind_address=('127.0.0.1', 27017)
+)
+# --+ start server
+server.start()
+# --+ create client
+client = MongoClient('127.0.0.1', server.local_bind_port) 
+# --+ target db
+db = client[mongo_db]
 # load the data
 df = pd.DataFrame(list(db.web_contents.find()))
+# --+ stop server
+server.stop()
 
+# double-check import
+df.info()
 
 # %% clean data
 
