@@ -177,6 +177,10 @@ trigram = Phrases(bigram[docs_tokens],
 # NOTE: uncomment if a tri-grammed, tokenized document is preferred
 docs_phrased = [bigram[line] for line in docs_tokens]
 #docs_phrased = [trigram[bigram[line]] for line in docs_tokens]
+# --+ write docs phrased to pickle
+out_f = os.path.join('.data', 'pr_docs_phrased.pickle')
+with open(out_f, 'wb') as pipe:
+    pickle.dump(docs_phrased, pipe)
 
 # check outcome of nlp pipeline
 print('''

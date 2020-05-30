@@ -431,7 +431,7 @@ df.loc[:, 'max'] = gr['prob'].transform(np.max)
 df.loc[:, 'first_topic'] = 0
 df.loc[df['prob'] == df['max'], 'first_topic'] = 1
 first_topic = df.loc[df['first_topic'] == 1]
-first_topic.set_index('doc_id'
+first_topic.set_index('doc_id', inplace=True)
 # ----+ arrange data as contingency table
 df = df.pivot_table(index='doc_id', columns='topic_n', values='prob', aggfunc=np.mean)
 # ----+ write data to files

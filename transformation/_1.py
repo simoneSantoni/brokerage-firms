@@ -101,6 +101,7 @@ server.stop()
 # double-check import
 df.info()
 
+
 # %% clean data
 
 # basic cleaning
@@ -125,6 +126,7 @@ with open(out_f, 'w') as pipe:
 
 # filter-out non english documents
 
+df.head()
 
 # prepare list to pass through spacy
 docs = [article.strip().lower() for article in df.text]
