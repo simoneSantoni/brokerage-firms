@@ -377,9 +377,11 @@ lda_30 = LdaMallet(mallet_path,
                    random_seed=123)
 # ----+ print topics (20 words per topic)
 lda_30.print_topics(num_topics=30, num_words=20)
-
+# --+ translate topic modeling outcome
+lda_30 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_30)
 # --+ term-to-topic probabilities (10 words per topic)
 top_terms_line = lda_30.show_topics(num_topics=30, num_words=10)
+
 # --+ rearrange data on top 10 terms per topic
 top_terms_m = []
 for i in top_terms_line:
@@ -411,6 +413,7 @@ df_h.to_latex(out_f, index=True)
 
 # --+ get transformed corpus as per the lda model
 transf_corpus = lda_30.get_document_topics(corpus)
+
 # ----+ rearrange data on document-topic pairs probabilities
 doc_topic_m = []
 for id, doc in enumerate(transf_corpus):
@@ -418,13 +421,16 @@ for id, doc in enumerate(transf_corpus):
         topic_n = topic[0]
         topic_prob = topic[1] 
         doc_topic_m.append([id, topic_n, topic_prob]) #, topic_prob])
+
 # ----+ get a df
 df = pd.DataFrame(doc_topic_m)
+
 # ----+ rename columns
 old_names = [0, 1, 2]
 new_names = ['doc_id', 'topic_n', 'prob']
 cols = dict(zip(old_names, new_names))
 df.rename(columns=cols, inplace=True)
+
 # ----+ dominant topic
 gr = df.groupby('doc_id')
 df.loc[:, 'max'] = gr['prob'].transform(np.max)
@@ -432,8 +438,10 @@ df.loc[:, 'first_topic'] = 0
 df.loc[df['prob'] == df['max'], 'first_topic'] = 1
 first_topic = df.loc[df['first_topic'] == 1]
 first_topic.set_index('doc_id', inplace=True)
+
 # ----+ arrange data as contingency table
 df = df.pivot_table(index='doc_id', columns='topic_n', values='prob', aggfunc=np.mean)
+
 # ----+ write data to files
 out_f = os.path.join('analysis', 'topicModeling',
                      '.output', '_5.csv')
