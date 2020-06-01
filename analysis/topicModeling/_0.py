@@ -183,7 +183,7 @@ def compute_coherence_values(_dictionary,
                                         dictionary=_dictionary,
                                         coherence='c_v')
         coherence_values.append(coherencemodel.get_coherence())
-    # return output 
+    # return output
     return model_list, coherence_values
 
 
@@ -339,9 +339,9 @@ transf_corpus = lda_8.get_document_topics(corpus)
 # ----+ rearrange data on document-topic pairs probabilities
 doc_topic_m = []
 for id, doc in enumerate(transf_corpus):
-    for topic in doc: 
+    for topic in doc:
         topic_n = topic[0]
-        topic_prob = topic[1] 
+        topic_prob = topic[1]
         doc_topic_m.append([id, topic_n, topic_prob]) #, topic_prob])
 # ----+ get a df
 df = pd.DataFrame(doc_topic_m)
@@ -367,7 +367,7 @@ out_f = os.path.join('analysis', 'topicModeling',
 first_topic.to_csv(out_f, index=True)
 
 
-# explore a model with 30 topics
+# model with 30 topics
 # ----+ estimate model
 mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
 lda_30 = LdaMallet(mallet_path,
@@ -411,12 +411,13 @@ df_h.to_latex(out_f, index=True)
 
 # --+ get transformed corpus as per the lda model
 transf_corpus = lda_30.get_document_topics(corpus)
+
 # ----+ rearrange data on document-topic pairs probabilities
 doc_topic_m = []
 for id, doc in enumerate(transf_corpus):
-    for topic in doc: 
+    for topic in doc:
         topic_n = topic[0]
-        topic_prob = topic[1] 
+        topic_prob = topic[1]
         doc_topic_m.append([id, topic_n, topic_prob]) #, topic_prob])
 # ----+ get a df
 df = pd.DataFrame(doc_topic_m)
