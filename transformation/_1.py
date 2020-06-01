@@ -202,6 +202,21 @@ df_5_50.info()
 # prepare list to pass through spacy
 docs = [article.strip().lower() for article in df_5_50.content]
 
+# remove non printables
+# --+ custom function
+def get_printable(html_str):
+    '''
+    : argument: 'html string' (e.g., stuff parsed with bs4)
+    : return  : printable version of the string
+    '''
+    y = ''.join(_x for _x in html_str if _x.isprintable())
+    return y
+
+
+# --+ run function
+docs = [get_printable(doc) for doc in docs]
+
+
 # load pipeline
 nlp = spacy.load('en_core_web_lg', disable=['parser', 'tagger', 'ner'])
 
@@ -224,14 +239,14 @@ language_detector = LanguageDetector()
 nlp.add_pipe(language_detector)
 
 # tokenize text conditional on english text
-docs_tokens = []
+docs_id_tokens = []
 docs_ln = []
 
-for _id, doc in zip(df_5_50._id[0:4], docs[0:4]):
+for _id, doc in zip(df_5_50._id, docs):
     doc = nlp(doc)
     ln = doc._.language
     docs_ln.append([_id, ln])
-    if (doc._.language == 'en') and (doc._.language_score >= 0.95):
+    if doc._.language == 'en':
         tmp_tokens = [token.lemma_ for token in doc
                       if not token.is_stop
                       and not token.is_punct
@@ -240,10 +255,18 @@ for _id, doc in zip(df_5_50._id[0:4], docs[0:4]):
                       and not token.like_email
                       and not token.is_currency
                       and not token.is_oov]
-        docs_tokens.append([_id, tmp_tokens])
+        docs_id_tokens.append([_id, tmp_tokens])
     else:
         pass
 
+# --+ df
+docs_id_tokens = pd.DataFrame(docs_id_tokens,
+                              columns=['_id', 'tokens'])
+
+# --+ list
+docs_tokens = docs_id_tokens.tokens.values
+
+# arrange info in a df
 
 # take into account bi- and tri-grams
 
@@ -257,19 +280,19 @@ bigram = Phrases(docs_tokens,
                  threshold=5,
                  max_vocab_size=50000,
                  common_terms=common_terms)
-# --+ fing phrases as trigrams
-trigram = Phrases(bigram[docs_tokens],
-                  min_count=50,
-                  threshold=5,
-                  max_vocab_size=50000,
-                  common_terms=common_terms)
+## --+ fing phrases as trigrams
+#trigram = Phrases(bigram[docs_tokens],
+#                  min_count=50,
+#                  threshold=5,
+#                  max_vocab_size=50000,
+#                  common_terms=common_terms)
 
 # uncomment if a tri-grammed, tokenized document is preferred
 docs_phrased = [bigram[line] for line in docs_tokens]
 #docs_phrased = [trigram[bigram[line]] for line in docs_tokens]
 
 # check outcome of nlp pipeline
-print('''
+print("""
 =============================================================================
 published article: {}
 
@@ -277,9 +300,9 @@ published article: {}
 tokenized article: {}
 
 =============================================================================
-tri-grammed tokenized article: {}
+bi-grammed tokenized article: {}
 
-'''.format(docs[1],
+""".format(docs[1],
            docs_tokens[1],
            docs_phrased[1]))
 
@@ -287,12 +310,12 @@ tri-grammed tokenized article: {}
 # %% get corpus & dictionary to use for further nlp analysis
 
 # get dictionary and write it to a file
-pr_dictionary = Dictionary(docs_phrased)
-pr_dictionary.save('.data/pr_dictionary.dict')
+ws_dictionary = Dictionary(docs_phrased)
+ws_dictionary.save('.data/ws_dictionary.dict')
 
 # get corpus and write it to a file
-pr_corpus = [pr_dictionary.doc2bow(doc) for doc in docs_phrased]
+ws_corpus = [ws_dictionary.doc2bow(doc) for doc in docs_phrased]
 
-out_f = ('.data/pr_corpus.mm')
-MmCorpus.serialize(out_f, pr_corpus)
+out_f = ('.data/ws_corpus.mm')
+MmCorpus.serialize(out_f, ws_corpus)
 mm = MmCorpus(out_f)  # `mm` document stream now has random access
