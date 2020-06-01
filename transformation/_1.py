@@ -335,10 +335,11 @@ server = SSHTunnelForwarder(
 server.start()
 # --+ create client
 client = MongoClient('127.0.0.1', server.local_bind_port)
+
 # ----+ target db
 db = client.digitalTechs
 # ----+ push data via bulk insert
-db.web_tokenized_5_50k.insert_many(df.to_dict('records'))
+db.web_tokenized_5_50k.insert_many(docs_id_tokens.to_dict('records'))
 # --+ stop server
 server.stop()
 
