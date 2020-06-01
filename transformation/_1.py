@@ -317,3 +317,28 @@ out_f = ('.data/ws_corpus.mm')
 MmCorpus.serialize(out_f, ws_corpus)
 mm = MmCorpus(out_f)  # `mm` document stream now has random access
 
+# send tokenized test to MongoDB
+# --+ open monog pipeline
+# ----+ params
+mongo_host = "10.16.142.91"
+mongo_db = "digitalTechs"
+mongo_user = "simone"
+mongo_pass = "DELL123"
+# ----+ server
+server = SSHTunnelForwarder(
+    mongo_host,
+    ssh_username=mongo_user,
+    ssh_password=mongo_pass,
+    remote_bind_address=('127.0.0.1', 27017)
+)
+# ----+ start server
+server.start()
+# --+ create client
+client = MongoClient('127.0.0.1', server.local_bind_port)
+# ----+ target db
+db = client.digitalTechs
+# ----+ push data via bulk insert
+db.web_tokenized_5_50k.insert_many(df.to_dict('records'))
+# --+ stop server
+server.stop()
+
