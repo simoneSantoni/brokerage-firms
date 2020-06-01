@@ -49,13 +49,15 @@ from pymongo import MongoClient
 # data analysis/management/manipulation
 import numpy as np
 import pandas as pd
+import powerlaw
 # data visualization
 import matplotlib.pyplot as plt
 from matplotlib import rc
 # nlp pipeline
 import spacy
 import en_core_web_lg
-from spacy_cld import LanguageDetector
+#from spacy_cld import LanguageDetector
+from spacy_fastlang import LanguageDetector
 # building corpus/dictionary
 import gensim
 from gensim.corpora import MmCorpus, Dictionary
@@ -130,74 +132,54 @@ out_f = os.path.join('.data', 'ws_time_slices.txt')
 with open(out_f, 'w') as pipe:
     for item in time_slices:
         pipe.write('{}\n'.format(item))
+# --+ remove returns and tabulates
+df.loc[:, 'content'] = df['content'].str.replace('\n', ' ')
+df.loc[:, 'content'] = df['content'].str.replace('\t', ' ')
+df.loc[:, 'content'] = df['content'].str.replace('|', ' ')
+df.loc[:, 'content'] = df['content'].str.replace('―', ' ')
+df.loc[:, 'content'] = df['content'].str.replace('--', ' ')
+df.loc[:, 'content'] = df['content'].str.replace('---', ' ')
+
+
+# %% sample documents to return based on text len
 
 # compute string len
 df.loc[:, 'len'] = df['content'].str.len()
 
 # visualize distribution of string len
 # --+ create figure
-fig, [ax0, ax1] = plt.subplots(1, 2, figsize=(6, 4), sharey=True)
+#fig, [ax0, ax1] = plt.subplots(1, 2, figsize=(9, 4))
+fig, ax1 = plt.subplots(1, 1, figsize=(6, 4))
 # --+ data series
 x = df.loc[df['len'] > 0, 'len']
-n, bins, patches = ax0.hist(x, n_bins, density=True, histtype='step',
-                            cumulative=True, label='Empirical')
-y = ((1 / (np.sqrt(2 * np.pi) * sigma)) *
-     np.exp(-0.5 * (1 / sigma * (bins - mu))**2))
-y = y.cumsum()
-y /= y[-1]
-# --+ create PANEL --  cumulative histogram
-ax0.plot(bins, y, 'k--', linewidth=1.5, label='Theoretical')
-# --+ overlay a reversed cumulative histogram.
-ax0.hist(x, bins=bins, density=True, histtype='step', cumulative=-1,
-         label='Reversed emp.')
-# axes
-ax0.set_xlabel("Text corpus length (characters)")
-ax0.set_ylabel("u'$Pr(x = x_{i}$)")
-ax0.set_xticks(np.arange(5, 10, 1))
-ax0.set_yticks(np.arange(_min, _max, 0.02))
-# reference line
-#ax0.ax0vline(x=11, ymin=0, ymax0=1, color='r')
-# grid
-ax0.grid(True, ls='--', axis='y', which='major')
-# --+ hide all spines while preserving ticks
-ax0.spines['right'].set_visible(False)
-ax0.spines['top'].set_visible(False)
-ax0.spines['bottom'].set_visible(False)
-ax0.spines['left'].set_visible(False)
-ax0.yaxis.set_ticks_position('left')
-ax0.xaxis.set_ticks_position('bottom')
-ax0.yaxis.set_ticks_position('left')
-ax0.xaxis.set_ticks_position('bottom')
-# -- textbox
-ax0.text(5, 0.51, u'$A$', fontsize=13)
-# --+ PANEL B
+fit = powerlaw.Fit(x, discrete=True, xmin=140, xmax=np.max(x))
 # --+ plot data
-ax1.plot(x1, y1, marker='o', color='k', ls='')
-# axes
-ax1.set_xlabel("Number of topics retained")
-ax1.set_xticks(np.arange(10, 35, 5))
-# grid
-ax1.grid(True, ls='--', axis='y', which='major')
+fit.plot_ccdf(color='k', label='Empirical')
+fit.power_law.plot_ccdf(color='k', ls='--', ax=ax1, label='Fit')
+# --+ axes
+ax1.set_xlabel("Characters")
+ax1.set_ylabel(u"$Pr(x=x_{i})$")
+# --+ legend
+ax1.legend(loc='best')
+# --+ grid
+ax1.grid(True, ls='-', linewidth='0.5',  which='major')
 # --+ hide all spines while preserving ticks
 ax1.spines['right'].set_visible(False)
 ax1.spines['top'].set_visible(False)
 ax1.spines['bottom'].set_visible(False)
 ax1.spines['left'].set_visible(False)
-#ax1.yaxis.set_ticks_position('left')
-#ax1.xaxis.set_ticks_position('bottom')
-#ax1.yaxis.set_ticks_position('left')
-#ax1.xaxis.set_ticks_position('bottom')
+ax1.yaxis.set_ticks_position('left')
+ax1.xaxis.set_ticks_position('bottom')
 # --+ textbox
-ax0.text(10, 0.51, u'$B$', fontsize=13)
+#ax0.text(10, 0.51, u'$B$', fontsize=13)
 # --+ write plot to file
-out_f = os.path.join('analysis', 'topicModeling', '.output', '_1.pdf')
+out_f = os.path.join('.output', '_0.pdf')
 plt.savefig(out_f,
             transparent=True,
             bbox_inches='tight',
             pad_inches=0)
 
-
-
+# stats on string len
 print("""
       Mean: {}
       SD  : {}
@@ -208,25 +190,23 @@ print("""
                  np.min(df.len),
                  np.max(df.len)))
 
-# remove returns and tabulates
-df.loc[:, 'content'] = df['content'].str.replace('\n', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('\t', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('|', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('―', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('--', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('---', ' ')
-
-# prepare list to pass through spacy
-docs = [article.strip().lower() for article in df.content]
+# sample documents
+# --+ between 5 and 50 K characters
+pattern = (df['len'] > 5000) & (df['len'] < 50000)
+df_5_50 = df.loc[pattern]
+df_5_50.info()
 
 
 # %% NLP pipeline
+
+# prepare list to pass through spacy
+docs = [article.strip().lower() for article in df_5_50.content]
 
 # load pipeline
 nlp = spacy.load('en_core_web_lg', disable=['parser', 'tagger', 'ner'])
 
 # specifiy max len
-nlp.max_length = 5000000
+nlp.max_length = 50000
 
 # expand on spaCy's stopwords
 # --+ my stopwrods
@@ -247,23 +227,20 @@ nlp.add_pipe(language_detector)
 docs_tokens = []
 docs_ln = []
 
-for _id, doc in zip(df._id, docs):
+for _id, doc in zip(df_5_50._id[0:4], docs[0:4]):
     doc = nlp(doc)
-    ln = doc._.languages
+    ln = doc._.language
     docs_ln.append([_id, ln])
-    if ('en' in ln):
-        if doc._.language_scores['en'] > 0.95:
-            tmp_tokens = [token.lemma_ for token in doc
-                          if not token.is_stop
-                          and not token.is_punct
-                          and not token.like_num
-                          and not token.like_url
-                          and not token.like_email
-                          and not token.is_currency
-                          and not token.is_oov]
-            docs_tokens.append([_id, tmp_tokens])
-        else:
-            pass
+    if (doc._.language == 'en') and (doc._.language_score >= 0.95):
+        tmp_tokens = [token.lemma_ for token in doc
+                      if not token.is_stop
+                      and not token.is_punct
+                      and not token.like_num
+                      and not token.like_url
+                      and not token.like_email
+                      and not token.is_currency
+                      and not token.is_oov]
+        docs_tokens.append([_id, tmp_tokens])
     else:
         pass
 
