@@ -136,9 +136,6 @@ with open(out_f, 'w') as pipe:
 df.loc[:, 'content'] = df['content'].str.replace('\n', ' ')
 df.loc[:, 'content'] = df['content'].str.replace('\t', ' ')
 df.loc[:, 'content'] = df['content'].str.replace('|', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('―', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('--', ' ')
-df.loc[:, 'content'] = df['content'].str.replace('---', ' ')
 
 
 # %% sample documents to return based on text len
@@ -254,7 +251,10 @@ for _id, doc in zip(df_5_50._id, docs):
                       and not token.like_url
                       and not token.like_email
                       and not token.is_currency
-                      and not token.is_oov]
+                      and not token.is_oov
+                      and not token.is_quote
+                      and not token.is_bracket
+                      and not token.is_space]
         docs_id_tokens.append([_id, tmp_tokens])
     else:
         pass
