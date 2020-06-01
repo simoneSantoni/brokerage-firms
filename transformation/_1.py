@@ -238,7 +238,7 @@ for stopword in my_stopwords:
 language_detector = LanguageDetector()
 nlp.add_pipe(language_detector)
 
-# tokenize text conditional on english text
+# containers
 docs_id_tokens = []
 docs_ln = []
 
@@ -259,8 +259,6 @@ for _id, doc in zip(df_5_50._id, docs):
     else:
         pass
 
-len(docs)
-
 # --+ df
 docs_id_tokens = pd.DataFrame(docs_id_tokens,
                               columns=['_id', 'tokens'])
@@ -268,28 +266,25 @@ docs_id_tokens = pd.DataFrame(docs_id_tokens,
 # --+ list
 docs_tokens = docs_id_tokens.tokens.values
 
-# arrange info in a df
-
-# take into account bi- and tri-grams
-
 # --+ get rid of common terms
 common_terms = [u'of', u'with', u'without', u'and', u'or', u'the', u'a',
                 u'not', 'be', u'to', u'this', u'who', u'in']
 
-# --+ fing phrases as bigrams
+# --+ find phrases as bigrams
 bigram = Phrases(docs_tokens,
                  min_count=50,
                  threshold=5,
-                 max_vocab_size=50000,
+                 max_vocab_size=1000000,
                  common_terms=common_terms)
-## --+ fing phrases as trigrams
-#trigram = Phrases(bigram[docs_tokens],
-#                  min_count=50,
-#                  threshold=5,
-#                  max_vocab_size=50000,
-#                  common_terms=common_terms)
 
-# uncomment if a tri-grammed, tokenized document is preferred
+# --+ fing phrases as trigrams
+trigram = Phrases(bigram[docs_tokens],
+                  min_count=50,
+                  threshold=5,
+                  max_vocab_size=1000000,
+                  common_terms=common_terms)
+
+# --+ uncomment if a tri-grammed, tokenized document is preferred
 docs_phrased = [bigram[line] for line in docs_tokens]
 #docs_phrased = [trigram[bigram[line]] for line in docs_tokens]
 
@@ -312,12 +307,13 @@ bi-grammed tokenized article: {}
 # %% get corpus & dictionary to use for further nlp analysis
 
 # get dictionary and write it to a file
-ws_dictionary = Dictionary(docs_phrased)
+ws_dictionary = Dictionary(docs_tokens)
 ws_dictionary.save('.data/ws_dictionary.dict')
 
 # get corpus and write it to a file
-ws_corpus = [ws_dictionary.doc2bow(doc) for doc in docs_phrased]
+ws_corpus = [ws_dictionary.doc2bow(doc) for doc in docs_tokens]
 
 out_f = ('.data/ws_corpus.mm')
 MmCorpus.serialize(out_f, ws_corpus)
 mm = MmCorpus(out_f)  # `mm` document stream now has random access
+
