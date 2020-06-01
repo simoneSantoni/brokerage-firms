@@ -259,6 +259,8 @@ for _id, doc in zip(df_5_50._id, docs):
     else:
         pass
 
+len(docs)
+
 # --+ df
 docs_id_tokens = pd.DataFrame(docs_id_tokens,
                               columns=['_id', 'tokens'])
