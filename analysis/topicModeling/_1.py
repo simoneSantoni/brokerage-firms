@@ -46,6 +46,10 @@ rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
 
 
+# %% external software
+mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
+
+
 # %% load data
 
 # collection in Mongo
@@ -184,7 +188,7 @@ limit, start, step = 10, 5, 1
 # --+ run function
 ml_5_9, cv_5_9 = compute_coherence_values(_dictionary=dictionary,
                                           _corpus=corpus,
-                                          _texts=docs_phrased,
+                                          _texts=docs,
                                           _start=start,
                                           _limit=limit,
                                           _step=step,
@@ -197,7 +201,7 @@ limit, start, step = 35, 10, 5
 # --+ run function
 ml_10_30, cv_10_30 = compute_coherence_values(_dictionary=dictionary,
                                               _corpus=corpus,
-                                              _texts=docs_phrased,
+                                              _texts=docs,
                                               _start=start,
                                               _limit=limit,
                                               _step=step,
@@ -259,7 +263,7 @@ ax1.spines['left'].set_visible(False)
 ax0.text(10, 0.51, u'$B$', fontsize=13)
 # --+ write plot to file
 out_f = os.path.join('analysis', 'topicModeling', '.output',
-                     'coherence_scores.pdf')
+                     'ws_coherence_scores.pdf')
 plt.savefig(out_f,
             transparent=True,
             bbox_inches='tight',

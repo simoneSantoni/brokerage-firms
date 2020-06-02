@@ -28,7 +28,7 @@ import pandas as pd
 import gensim
 from gensim.corpora import Dictionary, MmCorpus
 from gensim.models.ldamodel import LdaModel, CoherenceModel
-from gensim.models.wrappers import LdaMallet
+from gensim.models.wrappers import Lda
 from gensim.similarities import MatrixSimilarity
 
 
@@ -43,6 +43,10 @@ os.chdir(wd)
 plt.style.use('seaborn-bright')
 rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
+
+
+# %% external software
+_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
 
 
 # %% load data
@@ -151,7 +155,7 @@ def compute_coherence_values(_dictionary,
                              _limit,
                              _start,
                              _step,
-                             mallet_path,
+                             _path,
                              _seed):
     """
     Compute c_v coherence for various number of topics
@@ -173,7 +177,7 @@ def compute_coherence_values(_dictionary,
     coherence_values = []
     model_list = []
     for num_topics in range(_start, _limit, _step):
-        model = gensim.models.wrappers.LdaMallet(mallet_path,
+        model = gensim.models.wrappers.Lda(mallet_path,
                                                  corpus=_corpus,
                                                  num_topics=num_topics,
                                                  id2word=_dictionary,
@@ -209,7 +213,7 @@ ml_5_9, cv_5_9 = compute_coherence_values(_dictionary=dictionary,
                                           _limit=limit,
                                           _step=step,
                                           _seed=123,
-                                          mallet_path=mallet_path)
+                                          _path=mallet_path)
 
 # 10 - 30 topic models
 # --+ search grid
@@ -222,7 +226,7 @@ ml_10_30, cv_10_30 = compute_coherence_values(_dictionary=dictionary,
                                               _limit=limit,
                                               _step=step,
                                               _seed=123,
-                                              mallet_path=mallet_path)
+                                              _path=mallet_path)
 
 # plot collected coherence scores data
 # --+ create figure
@@ -279,7 +283,7 @@ ax1.spines['left'].set_visible(False)
 ax0.text(10, 0.51, u'$B$', fontsize=13)
 # --+ write plot to file
 out_f = os.path.join('analysis', 'topicModeling', '.output',
-                     'coherence_scores.pdf')
+                     'pr_coherence_scores.pdf')
 plt.savefig(out_f,
             transparent=True,
             bbox_inches='tight',
@@ -296,8 +300,7 @@ I focus on two models:
 
 # model with 8 topics
 # --+ estimate model
-mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
-lda_8 = LdaMallet(mallet_path,
+lda_8 = Lda(mallet_path,
                    corpus=corpus,
                    id2word=dictionary,
                    num_topics=8,
@@ -305,7 +308,7 @@ lda_8 = LdaMallet(mallet_path,
 # --+ print topics (20 words per topic)
 lda_8.print_topics(num_topics=8, num_words=20)
 # --+ translate topic modeling outcome
-lda_8 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_8)
+lda_8 = gensim.models.wrappers.lda.malletmodel2ldamodel(lda_8)
 
 # --+ term-to-topic probabilities (10 words per topic)
 top_terms_line = lda_8.show_topics(num_topics=8, num_words=10)
@@ -374,8 +377,8 @@ first_topic.to_csv(out_f, index=True)
 
 # model with 30 topics
 # ----+ estimate model
-mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
-lda_30 = LdaMallet(mallet_path,
+_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
+lda_30 = Lda(mallet_path,
                    corpus=corpus,
                    id2word=dictionary,
                    num_topics=30,
@@ -383,7 +386,7 @@ lda_30 = LdaMallet(mallet_path,
 # ----+ print topics (20 words per topic)
 lda_30.print_topics(num_topics=30, num_words=20)
 # --+ translate topic modeling outcome
-lda_30 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_30)
+lda_30 = gensim.models.wrappers.lda.malletmodel2ldamodel(lda_30)
 # --+ term-to-topic probabilities (10 words per topic)
 top_terms_line = lda_30.show_topics(num_topics=30, num_words=10)
 # --+ rearrange data on top 10 terms per topic
