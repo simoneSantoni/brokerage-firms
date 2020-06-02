@@ -3,7 +3,7 @@
 """
 Docstring
 ------------------------------------------------------------------------------
-    _0.py    |    LDA on press release-data
+    _1.py    |    LDA on web search data
 ------------------------------------------------------------------------------
 
 Author: Simone Santoni, simone.santoni.1@city.ac.uk
@@ -12,7 +12,7 @@ Edits:
        - created
        - last change
 
-Notes: The corpus oftext contains documents published over circa 10 years.
+Notes: The corpus oftext contains web pages released over circa 10 years.
        This LDA model analyzes the documents as a pooled cross section
        model (econometrics guys will appreciate that).
 
@@ -20,6 +20,7 @@ Notes: The corpus oftext contains documents published over circa 10 years.
 
 # %% load libraries
 import os
+import pickle
 from pymongo import MongoClient
 import numpy as np
 import matplotlib.pyplot as plt
@@ -53,70 +54,51 @@ client = MongoClient()
 # --+ pick-up db
 db = client.digitalTechs
 # --+ load the data
-df = pd.DataFrame(list(db.press_releases.find()))
+df0 = pd.DataFrame(list(db.web_contents_id.find()))
+df1 = pd.DataFrame(list(db.web_tokenized_5_50k.find()))
 
 # dictionary
-in_f = os.path.join('transformation', '.data', 'pr_dictionary.dict')
+in_f = os.path.join('transformation', '.data', 'ws_dictionary.dict')
 dictionary = Dictionary.load(in_f)
 
 # corpus
-in_f = os.path.join('transformation', '.data', 'pr_corpus.mm')
+in_f = os.path.join('transformation', '.data', 'ws_corpus.mm')
 corpus = MmCorpus(in_f)
 
 # docs phrased
-in_f= os.path.join('transformation', '.data', 'pr_docs_phrased.pickle')
-with open(in_f, 'rb') as pipe:
-    docs_phrased = pickle.load(pipe)
-
-# time slices to pass to the sequential lda
-in_f = os.path.join('transformation', '.data', 'pr_time_slices.txt')
-time_slices = []
-with open(in_f, 'rb') as pipe:
-    for line in pipe.readlines():
-        time_slices.append(int(line.strip()))
+docs = list(df1.tokens)
 
 
 # %% clean data read from Mongo
 
 # basic cleaning
 # --+ get timespans
-df.loc[:, 'year'] = df['date'].dt.year
-# --+ slice the data
-'''
-let's focus on the 2013 - 2019 timespan, which concentrates the large majority
-of the data.
-'''
-df = df.loc[df['year'] >= 2009]
-# --+ drop column
-df.drop(['_id'], axis=1, inplace=True)
-
+df0.loc[:, 'year'] = pd.to_numeric(df0['year'])
+# --+ match against tokenized documents
+df0 = pd.merge(df0, df1[['_id']], on='_id', how='right')
 
 # %% exploratory data analysis
 
 # barchart of the distribution of articles over time
 # --+ data series
 x = np.arange(2013, 2020, 1)
-y0 = df.loc[(df['outlet'] == 'ft') &
-            (df['year'] >=2013)].groupby('year').size().values
-y1 = df.loc[(df['outlet'] == 'wsj') &
-            (df['year'] >= 2013)].groupby('year').size().values
+y = df0.loc[df0['year'] < 2020].groupby('year').size().values
+
 # --+ labels
-x_labels = ['%s' % i for i in x if i < 2019] + ['2019*']
-y_labels = ['%s' % i for i in np.arange(0, 1400, 200)]
+x_labels = ['%s' % i for i in x]
+y_labels = ['%s' % i for i in np.arange(0, 3500, 500)]
 for i, s in enumerate(y_labels):
     if len(s) > 3:
         y_labels[i] = '{},{}'.format(s[0], s[1:])
     else:
         pass
+
 # --+ create figure
 fig = plt.figure(figsize=(6, 4))
 # --+ populate figure with a plot
 ax = fig.add_subplot(1, 1, 1)
 # --+ plot data
-ax.bar(x, y0, color='k', width=0.6, alpha=0.50, edgecolor='white',
-       label='Financial Times')
-ax.bar(x, y1, color='k', width=0.6, alpha=0.25, edgecolor='white', bottom=y0,
-       label='Wall Street Journal')
+ax.bar(x, y, color='k', width=0.6, alpha=0.25, edgecolor='white')
 # --+ axis properties
 ax.set_xticks(x)
 ax.set_xticklabels(x_labels, fontsize=14, rotation='vertical')
@@ -134,11 +116,9 @@ ax.yaxis.set_ticks_position('left')
 ax.xaxis.set_ticks_position('bottom')
 # --+ grid
 ax.grid(True, ls='--', axis='y', color='white')
-# --+ legend
-plt.legend(loc='best')
 # --+ save plot
 out_f = os.path.join('analysis', 'topicModeling', '.output',
-                     'articles_over_time.pdf')
+                     'webpages_over_time.pdf')
 plt.savefig(out_f, bbox_inches='tight', pad_inches=0)
 
 
