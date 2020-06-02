@@ -356,19 +356,19 @@ out_f = os.path.join('analysis', 'topicModeling',
 first_topic.to_csv(out_f, index=True)
 
 
-# model with 30 topics
+# model with 25 topics
 # ----+ estimate model
-lda_30 = LdaMallet(mallet_path,
+lda_25 = LdaMallet(mallet_path,
                    corpus=corpus,
                    id2word=dictionary,
-                   num_topics=30,
+                   num_topics=25,
                    random_seed=123)
 # ----+ print topics (20 words per topic)
-lda_30.print_topics(num_topics=30, num_words=20)
+lda_25.print_topics(num_topics=25, num_words=20)
 # --+ translate topic modeling outcome
-lda_30 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_30)
+lda_25 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_25)
 # --+ term-to-topic probabilities (10 words per topic)
-top_terms_line = lda_30.show_topics(num_topics=30, num_words=10)
+top_terms_line = lda_25.show_topics(num_topics=25, num_words=10)
 # --+ rearrange data on top 10 terms per topic
 top_terms_m = []
 for i in top_terms_line:
@@ -388,17 +388,17 @@ df.set_index(['term_sort', 'topic_n'], inplace=True)
 df = df.unstack()
 # --+ sidewaystable
 df_h = pd.DataFrame()
-for i in range(30):
+for i in range(25):
     terms = df['term'][i]
     weights = df['weight'][i]
     weights = pd.Series(['( %s )' % j for j in weights ])
     df_h = pd.concat([df_h, terms, weights], axis=1)
 # --+ write data to file
 out_f = os.path.join('analysis', 'topicModeling',
-                     '.output', '30t_term_topic.tex')
+                     '.output', '25t_term_topic.tex')
 df_h.to_latex(out_f, index=True)
 # --+ get transformed corpus as per the lda model
-transf_corpus = lda_30.get_document_topics(corpus)
+transf_corpus = lda_25.get_document_topics(corpus)
 # ----+ rearrange data on document-topic pairs probabilities
 doc_topic_m = []
 for id, doc in enumerate(transf_corpus):
@@ -425,10 +425,10 @@ df = df.pivot_table(index='doc_id', columns='topic_n', values='prob',
                     aggfunc=np.mean)
 # ----+ write data to files
 out_f = os.path.join('analysis', 'topicModeling',
-                     '.output', '30t_doc_topic_pr.csv')
+                     '.output', '25t_doc_topic_pr.csv')
 df.to_csv(out_f, index=True)
 out_f = os.path.join('analysis', 'topicModeling',
-                     '.output', '30t_dominant_topics.csv')
+                     '.output', '25t_dominant_topics.csv')
 first_topic.to_csv(out_f, index=True)
 
 
