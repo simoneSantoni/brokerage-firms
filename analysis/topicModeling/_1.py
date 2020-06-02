@@ -226,7 +226,7 @@ ax0.plot(x0, y0, marker='o', color='k', ls='')
 ax0.set_xlabel("Number of topics retained")
 ax0.set_ylabel("Coherence score")
 ax0.set_xticks(np.arange(5, 10, 1))
-ax0.set_yticks(np.arange(_min, _max, 0.02))
+ax0.set_yticks(np.arange(_min, 0.58, 0.02))
 # reference line
 #ax0.ax0vline(x=11, ymin=0, ymax0=1, color='r')
 # grid
@@ -241,7 +241,7 @@ ax0.xaxis.set_ticks_position('bottom')
 ax0.yaxis.set_ticks_position('left')
 ax0.xaxis.set_ticks_position('bottom')
 # -- textbox
-ax0.text(5, 0.51, u'$A$', fontsize=13)
+ax0.text(8.75, 0.4975, u'$A$', fontsize=13)
 # --+ PANEL B
 # --+ plot data
 ax1.plot(x1, y1, marker='o', color='k', ls='')
@@ -260,7 +260,7 @@ ax1.spines['left'].set_visible(False)
 #ax1.yaxis.set_ticks_position('left')
 #ax1.xaxis.set_ticks_position('bottom')
 # --+ textbox
-ax0.text(10, 0.51, u'$B$', fontsize=13)
+ax1.text(28.5, 0.4975, u'$B$', fontsize=13)
 # --+ write plot to file
 out_f = os.path.join('analysis', 'topicModeling', '.output',
                      'ws_coherence_scores.pdf')
@@ -278,21 +278,21 @@ I focus on two models:
     - 30 topic, ~ global optimum
 '''
 
-# model with 8 topics
+# model with 9 topics
 # --+ estimate model
-mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
-lda_8 = LdaMallet(mallet_path,
-                   corpus=corpus,
-                   id2word=dictionary,
-                   num_topics=8,
-                   random_seed=123)
-# --+ print topics (20 words per topic)
-lda_8.print_topics(num_topics=8, num_words=20)
-# --+ translate topic modeling outcome
-lda_8 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_8)
+lda_9 = LdaMallet(mallet_path,
+                  corpus=corpus,
+                  id2word=dictionary,
+                  num_topics=9,
+                  random_seed=123)
 
+# --+ print topics (20 words per topic)
+lda_9.print_topics(num_topics=9, num_words=20)
+# --+ translate topic modeling outcome
+lda_9 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_9)
 # --+ term-to-topic probabilities (10 words per topic)
-top_terms_line = lda_8.show_topics(num_topics=8, num_words=10)
+top_terms_line = lda_9.show_topics(num_topics=9, num_words=10)
+
 # ----+ rearrange data on top 10 terms per topic
 top_terms_m = []
 for i in top_terms_line:
@@ -312,17 +312,17 @@ df.set_index(['term_sort', 'topic_n'], inplace=True)
 df = df.unstack()
 # ----+ sidewaystable
 df_h = pd.DataFrame()
-for i in range(8):
+for i in range(9):
     terms = df['term'][i]
     weights = df['weight'][i]
     weights = pd.Series(['( %s )' % j for j in weights ])
     df_h = pd.concat([df_h, terms, weights], axis=1)
 # ----+ write data to file
 out_f = os.path.join('analysis', 'topicModeling',
-                     '.output', '8t_term_topic.tex')
+                     '.output', '9t_term_topic.tex')
 df_h.to_latex(out_f, index=True)
 # --+ get transformed corpus as per the lda model
-transf_corpus = lda_8.get_document_topics(corpus)
+transf_corpus = lda_9.get_document_topics(corpus)
 # ----+ rearrange data on document-topic pairs probabilities
 doc_topic_m = []
 for id, doc in enumerate(transf_corpus):
@@ -349,16 +349,15 @@ df = df.pivot_table(index='doc_id', columns='topic_n', values='prob',
                     aggfunc=np.mean)
 # ----+ write data to files
 out_f = os.path.join('analysis', 'topicModeling',
-                     '.output', '8t_doc_topic_pr.csv')
+                     '.output', '9t_doc_topic_pr.csv')
 df.to_csv(out_f, index=True)
 out_f = os.path.join('analysis', 'topicModeling',
-                     '.output', '8t_dominant_topics.csv')
+                     '.output', '9t_dominant_topics.csv')
 first_topic.to_csv(out_f, index=True)
 
 
 # model with 30 topics
 # ----+ estimate model
-mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
 lda_30 = LdaMallet(mallet_path,
                    corpus=corpus,
                    id2word=dictionary,
