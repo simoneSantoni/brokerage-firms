@@ -215,6 +215,9 @@ docs = [get_printable(doc) for doc in docs]
 
 
 # load pipeline
+'''
+Disabling some components of the pipeline to save time
+'''
 nlp = spacy.load('en_core_web_lg', disable=['parser', 'tagger', 'ner'])
 
 # specifiy max len
@@ -254,7 +257,8 @@ for _id, doc in zip(df_5_50._id, docs):
                       and not token.is_oov
                       and not token.is_quote
                       and not token.is_bracket
-                      and not token.is_space]
+                      and not token.is_space
+                      and len(token.lemma_) > 1]
         docs_id_tokens.append([_id, tmp_tokens])
     else:
         pass
@@ -312,7 +316,6 @@ ws_dictionary.save('.data/ws_dictionary.dict')
 
 # get corpus and write it to a file
 ws_corpus = [ws_dictionary.doc2bow(doc) for doc in docs_tokens]
-
 out_f = ('.data/ws_corpus.mm')
 MmCorpus.serialize(out_f, ws_corpus)
 mm = MmCorpus(out_f)  # `mm` document stream now has random access
@@ -335,7 +338,6 @@ server = SSHTunnelForwarder(
 server.start()
 # --+ create client
 client = MongoClient('127.0.0.1', server.local_bind_port)
-
 # ----+ target db
 db = client.digitalTechs
 # ----+ push data via bulk insert
