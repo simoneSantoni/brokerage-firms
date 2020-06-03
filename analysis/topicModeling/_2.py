@@ -20,6 +20,8 @@ Notes: This script deals with press-release .
 # %% load libraries
 import os
 from glob import glob
+from urllib.parse import quote_plus
+from sshtunnel import SSHTunnelForwarder
 from pymongo import MongoClient
 import numpy as np
 import matplotlib.pyplot as plt
@@ -27,6 +29,7 @@ from matplotlib.pyplot import rc
 import matplotlib.colors as mcolors
 import matplotlib.gridspec as gridspec
 import pandas as pd
+import networkx as nx
 
 
 # %% set working dir
@@ -44,21 +47,48 @@ rc('text', usetex=True)
 
 # %% document attributes
 
-# open pipeline
-client = MongoClient()
-# pick-up db
-db = client.digitalTechs
+# open monog pipeline
+'''
+I'm working on machine != dell_1
+'''
+# --+ params
+mongo_host = "10.16.142.91"
+mongo_db = "digitalTechs"
+mongo_user = "simone"
+mongo_pass = my_pwd # stored within ipython
+# --+ server
+server = SSHTunnelForwarder(
+    mongo_host,
+    ssh_username=mongo_user,
+    ssh_password=mongo_pass,
+    remote_bind_address=('127.0.0.1', 27017)
+)
+# --+ start server
+server.start()
+# --+ create client
+client = MongoClient('127.0.0.1', server.local_bind_port)
+# --+ target db
+db = client[mongo_db]
 # load the data
 df = pd.DataFrame(list(db.press_releases.find()))
-# cleaning
-df.loc[:, 'year'] = df['date'].dt.year 
-# slice data
-df = df.loc[df['year'] >= 2013]
+# --+ stop server
+server.stop()
 
 
 # %% data to visualize
 
 # manipulate
+
+# --+ time slices
+time_slices = [265, 385, 479, 825, 1070, 862, 327]
+years = [2013, 2014, 2015, 2016, 2017, 2018, 2019]
+
+df_year = []
+
+for i, j in zip(years, time_slices):
+    to_append = np.repeat(i, j)
+    df_year = np.hstack([df_year, to_append])
+
 
 # --+ 8 topic model
 # ----+ doc2topic probabilities
@@ -66,7 +96,7 @@ in_f = os.path.join('analysis', 'topicModeling', '.output',
                     '8t_doc_topic_pr.csv')
 df0 = pd.read_csv(in_f)
 # ----+ attach year
-df0.loc[:, 'year'] = df['year']
+df0.loc[:, 'year'] = df_year
 # ----+ drop redundant column
 df0.drop('doc_id', axis=1, inplace=True)
 # ----+ aggregate around years
@@ -77,7 +107,7 @@ in_f = os.path.join('analysis', 'topicModeling', '.output',
                     '8t_dominant_topics.csv')
 df1 = pd.read_csv(in_f)
 # ----+ attach year
-df1.loc[:, 'year'] = df['year']
+df1.loc[:, 'year'] = df_year
 # ----+ drop redundant column
 df1.drop('doc_id', axis=1, inplace=True)
 # ----+ aggregate around years
@@ -102,7 +132,7 @@ ax1 = fig.add_subplot(gs[0, 1]) # and so on and so forth...
 ax0 = fig.add_subplot(gs[0, 0], sharey=ax1) # this will occupy the first row-first colum
 # --+ data series
 x = (np.arange(2013, 2020, 1))
-y_min, y_max = 0.1, 0.16
+y_min, y_max = 0.10, 0.20
 # --+ create PANEL A, average pr by year
 # --+ plot data
 colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
@@ -110,21 +140,21 @@ colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
 for i, color in zip(np.arange(0, 8, 1), colors):
     topic = '{}'.format(i)
     y0 = df0.loc[:, topic] 
-    ax1.plot(x, y0, marker='o', mfc='white', mec='white', ms='3',
+    ax1.plot(x, y0, marker='o', mfc=color, mec=color, ms='4',
             color=color, ls='-', label=topic)
-    y1 = df1.loc[df1['topic_n']==i, 'prop']
-    for year, j, w in zip(x, y0, y1):
-        to_print = '{}'.format(int(w*100))
-        ax1.text(year, j, to_print,
-                bbox=dict(boxstyle='circle',
-                          ec=('white'),
-                          fc=('white'),))
+    #y1 = df1.loc[df1['topic_n']==i, 'prop']
+    #for year, j, w in zip(x, y0, y1):
+    #    to_print = '{}'.format(int(w*100))
+    #    ax1.text(year, j, to_print,
+    #            bbox=dict(boxstyle='circle',
+    #                      ec=('white'),
+    #                      fc=('white'),))
 # --+ axes
 ax1.set_xlabel("Year")
 #ax1.set_ylabel("")
 x_ticks = x 
 x_ticklabels = ['{}'.format(i) for i in x_ticks]
-y_ticks = np.arange(y_min, y_max + 0.02, 0.02)
+y_ticks = np.arange(y_min, y_max+0.05, 0.05)
 y_ticklabels= ['{}\%'.format(int(i * 100)) for i in y_ticks]
 ax1.set_xticks(x_ticks)
 ax1.set_xticklabels(x_ticklabels, rotation='vertical')
@@ -142,15 +172,27 @@ ax1.spines['left'].set_visible(False)
 ax1.yaxis.set_ticks_position('right')
 ax1.xaxis.set_ticks_position('bottom')
 # --+ topic labels
-y = [.1255, .1205, .1305, .112, .10975, .1185, .165, .1165]
+y = df0.loc[2013].values
+y[3] = y[7] + 0.01
+y[5] = y[7] - 0.01
+topic_labels =[
+    'Topic 1: company;\nventure; start-up;\n technology; include',
+    'Topic 2: fund;\ninvestment; asset;\nmarket; investor',
+    'Topic 3: market;\nrate; growth;\n price; rise',
+    'Topic 4: loan;\ncredit; insurance;\npay; accord',
+    'Topic 5: fund;\nfirm; capital;\ninvestment; price',
+    'Topic 6: bank;\n financial; rule;\nregulator; firm',
+    'Topic 7: datum;\ntechnology; people;\ncustomer; work\nservice',
+    'Topic 8: company;\ngroup; China; deal;\nproperty'
+]
 for i, color in zip(np.arange(0, 8,1), colors):
     topic = '{}'.format(i)
     y_pos = y[i]
-    to_print = 'Topic {}'.format(i + 1)
-    x_pos = 0.3
-    ax0.text(x_pos, y_pos, to_print, color=color,
+    to_print = topic_labels[i]
+    x_pos = 0.1
+    ax0.text(x_pos, y_pos, to_print, color=color, verticalalignment='center',
              bbox=dict(boxstyle='round',
-                       ec=(color),
+                       ec=('white'),
                        fc=('white'),))
 #ax1.set_ylabel("")
 x_ticks = [-.5, 0, +.5] 
@@ -172,7 +214,15 @@ out_f = os.path.join('analysis', 'topicModeling', '.output',
 plt.savefig(out_f, transparent=True, bbox_inches='tight', pad_inches=0)
 
 
-# !!!!!!!!!!!!!!!!!!! on going !!!!!!!!!!!!!!!!!!!!!!!!
-df3.loc[2013]
+# %% topology of topics
 
+# doc2topic probabilities
+# --+ load 
+in_f = os.path.join('analysis', 'topicModeling', '.output',
+                    '8t_doc_topic_pr.csv')
+df0 = pd.read_csv(in_f)
+# --+ attach year
+df0.loc[:, 'year'] = df_year
 
+# --+ new graph
+g = nx.from_pandas_adjacency(df0) 
