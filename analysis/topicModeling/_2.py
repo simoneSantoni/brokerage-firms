@@ -23,6 +23,7 @@ from glob import glob
 from pymongo import MongoClient
 import numpy as np
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import rc
 import matplotlib.colors as mcolors
 import matplotlib.gridspec as gridspec
 import pandas as pd
