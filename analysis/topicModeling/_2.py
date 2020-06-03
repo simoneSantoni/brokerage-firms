@@ -223,6 +223,14 @@ in_f = os.path.join('analysis', 'topicModeling', '.output',
 df0 = pd.read_csv(in_f)
 # --+ attach year
 df0.loc[:, 'year'] = df_year
+# --+ melt
+df0 = df0.melt(id_vars=['doc_id', 'year'], var_name='topic', value_name='pr')
 
-# --+ new graph
-g = nx.from_pandas_adjacency(df0) 
+# --+ update document label id to avoid overlap with topic label id
+df0.loc[:, 'doc_id'] = 10000 + df0['doc_id']
+
+# --+ get a NetworkX graph
+bg = nx.from_pandas_edgelist(df0, source='doc_id', target='topic',
+                             edge_attr='pr')
+
+
