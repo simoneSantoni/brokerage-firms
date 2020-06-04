@@ -51,7 +51,7 @@ colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
 
 # %% document attributes
 
-# open monog pipeline
+# open mongo pipeline
 '''
 I'm working on machine != dell_1
 '''
@@ -73,43 +73,44 @@ server.start()
 client = MongoClient('127.0.0.1', server.local_bind_port)
 # --+ target db
 db = client[mongo_db]
-# load the data
-df = pd.DataFrame(list(db.press_releases.find()))
+
+# --+ company-year
+df0 = pd.DataFrame(list(db.web_contents_id.find()))
+
+# --+ id 
+df1 = pd.DataFrame(list(db.web_tokenized_5_50k.find()))
+
 # --+ stop server
 server.stop()
+
+# --+ merge
+df1.loc[:, 'doc_id'] = np.arange(0, len(df1), 1)
+
+df = pd.merge(df0, df1, on='_id', how='right')
 
 
 # %% data to visualize
 
-# manipulate
-
-# --+ time slices
-time_slices = [265, 385, 479, 825, 1070, 862, 327]
-years = [2013, 2014, 2015, 2016, 2017, 2018, 2019]
-
-df_year = []
-
-for i, j in zip(years, time_slices):
-    to_append = np.repeat(i, j)
-    df_year = np.hstack([df_year, to_append])
-
-
-# --+ 8 topic model
-# ----+ doc2topic probabilities
+# load 9 topic model
+# --+ doc2topic probabilities
 in_f = os.path.join('analysis', 'topicModeling', '.output',
-                    '8t_doc_topic_pr.csv')
-df0 = pd.read_csv(in_f)
-# ----+ attach year
-df0.loc[:, 'year'] = df_year
+                    '9t_doc_topic_pr.csv')
+df2 = pd.read_csv(in_f)
+
+# maattach year
+df = pd.merge(df2, df, on='doc_id', how='inner')
+
 # ----+ drop redundant column
-df0.drop('doc_id', axis=1, inplace=True)
+df.drop('_id', axis=1, inplace=True)
+
 # ----+ aggregate around years
 df0 = df0.groupby('year').agg(np.mean)
 
 # ----+ dominant topics
 in_f = os.path.join('analysis', 'topicModeling', '.output',
-                    '8t_dominant_topics.csv')
+                    '9t_dominant_topics.csv')
 df1 = pd.read_csv(in_f)
+
 # ----+ attach year
 df1.loc[:, 'year'] = df_year
 # ----+ drop redundant column
