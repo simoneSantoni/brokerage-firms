@@ -454,3 +454,6 @@ first_topic.to_csv(out_f, index=True)
 
 # %% descriptive analysis of topic modeling outcome
 
+
+
+

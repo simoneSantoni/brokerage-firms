@@ -24,6 +24,7 @@ from urllib.parse import quote_plus
 from sshtunnel import SSHTunnelForwarder
 from pymongo import MongoClient
 import numpy as np
+from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 from matplotlib.pyplot import rc
 import matplotlib.colors as mcolors
@@ -41,10 +42,12 @@ os.chdir(wd)
 
 
 # %% viz options
+%matplotlib inline
 plt.style.use('seaborn-bright')
 rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
-
+colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
+         'tab:gray', 'tab:pink', 'tab:brown']
 
 # %% document attributes
 
@@ -136,8 +139,6 @@ x = (np.arange(2013, 2020, 1))
 y_min, y_max = 0.10, 0.20
 # --+ create PANEL A, average pr by year
 # --+ plot data
-colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
-         'tab:gray', 'tab:pink', 'tab:brown']
 for i, color in zip(np.arange(0, 8, 1), colors):
     topic = '{}'.format(i)
     y0 = df0.loc[:, topic] 
@@ -224,43 +225,60 @@ in_f = os.path.join('analysis', 'topicModeling', '.output',
 df0 = pd.read_csv(in_f)
 # --+ attach year
 df0.loc[:, 'year'] = df_year
-
 # --+ get rid of missing values
 df0.fillna(0, inplace=True)
-
 # --+ get correlations among topics
 correlations = []
-
 for year in years:
     for i in np.arange(0, 8, 1):
         for j in np.arange(0, 8, 1):
             if i < j:
                 x = df0.loc[df0['year'] == year, '%s' % i]
                 y = df0.loc[df0['year'] == year, '%s' % j]
-                corr_xy = np.corrcoef(x, y)[0][1]
-                to_append = [i, j, corr_xy, year]
+                r, p = pearsonr(x, y)
+                to_append = [i, j, r, p, year]
                 correlations.append(to_append)
-
 # --+ edges along with weights
-edges = pd.DataFrame(correlations, columns=['u', 'v', 'strength', 'year'])
+edges = pd.DataFrame(correlations, columns=['u', 'v', 'r', 'p', 'year'])
 # --+ node attributes
 df0.drop('doc_id', axis=1, inplace=True)
 node_attrs = df0.groupby('year').aggregate(np.mean)
-# --+ empty UG
-g = nx.from_pandas_edgelist(df=edges,
+# node labels
+topic_set = np.arange(0, 8, 1)
+labels = dict(zip(topic_set,
+                  ['{}'.format(i + 1) for i in topic_set]))
+# ----+ fix the color of edges
+ts_min = np.min(edges.r)
+ts_max = np.max(edges.r)
+
+
+# --+ itearate over years
+
+year = 2013
+
+g = nx.from_pandas_edgelist(df=edges.loc[edges['year'] == year],
                             source='u', target='v',
                             edge_attr=['strength', 'year'],
-                            create_using=nx.Graph)
+                            create_using=nx.MultiGraph)
 
-# --+ slice data with respect to year
-g_2013 = nx.Graph([(u, v, d) for u, v, d in g.edges(data=True)
-                   if d['year'] == 2013])
+# ----+ add node attributes
+n_size = node_attrs.loc[2013].values
 
-# --+ add node attributes
+# ----+ add edge attributes
+ts_dict = nx.get_edge_attributes(g, 'strength')
+ts = [ts_dict[d] for d in ts_dict]
 
-
-# --+ draw graph
-
-
-
-
+# ----+ create figure
+fig = plt.figure(figsize=(4, 4))
+# ----+ positions
+pos = nx.circular_layout(g)
+# ----+ draw networks
+nx.draw_networkx_nodes(g, pos, node_color=colors, node_size=300)
+nx.draw_networkx_edges(g, pos, linewidths=ts)
+nx.draw_networkx_labels(g, pos, labels=labels, font_color='white')
+# ----+ axis off
+plt.axis('off')
+# ----+ write plot to file
+out_f = os.path.join('analysis', 'topicModeling', '.output',
+                     'pr_topic_topology.pdf')
+plt.savefig(out_f, bbox_inches='tight', pad_inches=0, transparent=True)
