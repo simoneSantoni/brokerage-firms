@@ -241,6 +241,14 @@ gr = df2.groupby(['entity', 'year'])
 df2.loc[:, 'max'] = gr['count'].transform(np.max)
 # --+ slice data
 df3 = df2.loc[df2['count'] == df2['max']]
+# --+ reshape data
+df3 = pd.pivot_table(df3, index='entity', columns='year', values='topic_n')
+# --+ remove companies with NaNs
+df3.dropna(inplace=True)
+# --+ write plot to file
+out_f = os.path.join('analysis', 'topicModeling', '.output',
+                     'ws_seq_analysis.csv')
+df3.to_csv(out_f, index=False)
 
 # get topic entropy within company-year
 # --+ get total instances
@@ -251,4 +259,8 @@ df2.loc[:, 'prop_2'] = np.square(df2['count']/df2['tot'])
 df4 = pd.DataFrame(gr['prop_2'].agg(np.sum))
 df4.reset_index(inplace=True)
 df4.loc[:, 'bi'] = 1 - df4['prop_2']
+# --+ write plot to file
+out_f = os.path.join('analysis', 'topicModeling', '.output',
+                     'ws_ts_clustering.csv')
+df4.to_csv(out_f, index=False)
 
