@@ -126,14 +126,14 @@ df1.loc[:, 'prop'] = df1['count']/df1['total']
 
 # --+ create figure
 fig = plt.figure(figsize=(7.5, 11))
-# --+ parition the figure into 4 subplots with 'gridspec'
-gs = gridspec.GridSpec(1, 2, # we want 2 rows, 2 cols
-                       figure=fig, # this gs applies to figure
-                       hspace=0, wspace=0, # separation between plots
-                       width_ratios=[1, 4]) # ratio between the first ans second row
+# --+ parition the figure into 2 subplots with 'gridspec'
+gs = gridspec.GridSpec(1, 2,
+                       figure=fig, 
+                       hspace=0, wspace=0, 
+                       width_ratios=[1, 4])
 # add plots
-ax1 = fig.add_subplot(gs[0, 1]) # and so on and so forth...
-ax0 = fig.add_subplot(gs[0, 0], sharey=ax1) # this will occupy the first row-first colum
+ax1 = fig.add_subplot(gs[0, 1]) 
+ax0 = fig.add_subplot(gs[0, 0], sharey=ax1) 
 # --+ data series
 x = (np.arange(2013, 2020, 1))
 y_min, y_max = 0.10, 0.20
@@ -144,13 +144,6 @@ for i, color in zip(np.arange(0, 8, 1), colors):
     y0 = df0.loc[:, topic] 
     ax1.plot(x, y0, marker='o', mfc=color, mec=color, ms='4',
             color=color, ls='-', label=topic)
-    #y1 = df1.loc[df1['topic_n']==i, 'prop']
-    #for year, j, w in zip(x, y0, y1):
-    #    to_print = '{}'.format(int(w*100))
-    #    ax1.text(year, j, to_print,
-    #            bbox=dict(boxstyle='circle',
-    #                      ec=('white'),
-    #                      fc=('white'),))
 # --+ axes
 ax1.set_xlabel("Year")
 #ax1.set_ylabel("")
@@ -247,38 +240,67 @@ node_attrs = df0.groupby('year').aggregate(np.mean)
 topic_set = np.arange(0, 8, 1)
 labels = dict(zip(topic_set,
                   ['{}'.format(i + 1) for i in topic_set]))
-# ----+ fix the color of edges
-ts_min = np.min(edges.r)
-ts_max = np.max(edges.r)
-
-
-# --+ itearate over years
-
-year = 2013
-
-g = nx.from_pandas_edgelist(df=edges.loc[edges['year'] == year],
-                            source='u', target='v',
-                            edge_attr=['strength', 'year'],
-                            create_using=nx.MultiGraph)
-
-# ----+ add node attributes
-n_size = node_attrs.loc[2013].values
-
-# ----+ add edge attributes
-ts_dict = nx.get_edge_attributes(g, 'strength')
-ts = [ts_dict[d] for d in ts_dict]
-
-# ----+ create figure
-fig = plt.figure(figsize=(4, 4))
-# ----+ positions
-pos = nx.circular_layout(g)
-# ----+ draw networks
-nx.draw_networkx_nodes(g, pos, node_color=colors, node_size=300)
-nx.draw_networkx_edges(g, pos, linewidths=ts)
-nx.draw_networkx_labels(g, pos, labels=labels, font_color='white')
-# ----+ axis off
-plt.axis('off')
-# ----+ write plot to file
+# --+ create figure
+fig = plt.figure(figsize=(7.5, 11))
+# --+ parition the figure into 2 subplots with 'gridspec'
+gs = gridspec.GridSpec(4, 4,
+                       figure=fig, 
+                       hspace=0, wspace=0)
+# --+ add plots
+ax0 = fig.add_subplot(gs[0, 1]) 
+ax1 = fig.add_subplot(gs[0, 0])
+ax2
+ax3
+ax4
+ax5
+ax6
+# --+ iterater over years
+for year in years:
+    g = nx.from_pandas_edgelist(df=edges.loc[edges['year'] == year],
+                                source='u', target='v',
+                                edge_attr=['r', 'p', 'year'],
+                                create_using=nx.Graph)
+    # --+ add node attributes
+    n_size = node_attrs.loc[2013].values
+    # --+ add edge attributes
+    # ----+ r, p
+    r_dict = nx.get_edge_attributes(g, 'r')
+    r = [r_dict[d] for d in r_dict]
+    p_dict = nx.get_edge_attributes(g, 'p')
+    p = [p_dict[d] for d in p_dict]
+    # ----+ code edge style
+    e_color, e_style = [], []
+    for i, j in zip(p, r):
+        if i > 0.01:
+            e_color.append('white'), e_style.append('solid')
+        else:
+            e_color.append('tab:gray')
+            if j > 0:
+                e_style.append('solid')
+            else:
+                e_style.append('dotted')
+    # --+ create figure
+    fig = plt.figure(figsize=(3, 3))
+    ax = fig.add_subplot(1, 1, 1)
+    # --+ positions
+    pos = nx.circular_layout(g)
+    # --+ draw networks
+    nx.draw_networkx_nodes(g, pos, node_color='white', node_size=300, ax=ax)
+    # --+ iterate over edges
+    e = [d for d in g.edges]
+    for d, c, s in zip(e, e_color, e_style):
+        if c != 'white':
+            nx.draw_networkx_edges(g, pos, edgelist=[d], edge_color=c, style=s,
+                                   width=0.75, ax=ax)
+        else:
+            pass
+    # --+ draw labels
+    nx.draw_networkx_labels(g, pos, labels=labels, font_color='k', ax=ax)
+    # --+ textbox
+    ax.text(-1.05, 0.975, year)
+    # --+ axis off
+    ax.axis('off')
+# --+ write plot to file
 out_f = os.path.join('analysis', 'topicModeling', '.output',
                      'pr_topic_topology.pdf')
 plt.savefig(out_f, bbox_inches='tight', pad_inches=0, transparent=True)
