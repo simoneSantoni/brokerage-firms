@@ -30,6 +30,7 @@ import matplotlib.colors as mcolors
 import matplotlib.gridspec as gridspec
 import pandas as pd
 import networkx as nx
+from networkx.algorithms import bipartite
 
 
 # %% set working dir
@@ -223,14 +224,43 @@ in_f = os.path.join('analysis', 'topicModeling', '.output',
 df0 = pd.read_csv(in_f)
 # --+ attach year
 df0.loc[:, 'year'] = df_year
-# --+ melt
-df0 = df0.melt(id_vars=['doc_id', 'year'], var_name='topic', value_name='pr')
 
-# --+ update document label id to avoid overlap with topic label id
-df0.loc[:, 'doc_id'] = 10000 + df0['doc_id']
+# --+ get rid of missing values
+df0.fillna(0, inplace=True)
 
-# --+ get a NetworkX graph
-bg = nx.from_pandas_edgelist(df0, source='doc_id', target='topic',
-                             edge_attr='pr')
+# --+ get correlations among topics
+correlations = []
+
+for year in years:
+    for i in np.arange(0, 8, 1):
+        for j in np.arange(0, 8, 1):
+            if i < j:
+                x = df0.loc[df0['year'] == year, '%s' % i]
+                y = df0.loc[df0['year'] == year, '%s' % j]
+                corr_xy = np.corrcoef(x, y)[0][1]
+                to_append = [i, j, corr_xy, year]
+                correlations.append(to_append)
+
+# --+ edges along with weights
+edges = pd.DataFrame(correlations, columns=['u', 'v', 'strength', 'year'])
+# --+ node attributes
+df0.drop('doc_id', axis=1, inplace=True)
+node_attrs = df0.groupby('year').aggregate(np.mean)
+# --+ empty UG
+g = nx.from_pandas_edgelist(df=edges,
+                            source='u', target='v',
+                            edge_attr=['strength', 'year'],
+                            create_using=nx.Graph)
+
+# --+ slice data with respect to year
+g_2013 = nx.Graph([(u, v, d) for u, v, d in g.edges(data=True)
+                   if d['year'] == 2013])
+
+# --+ add node attributes
+
+
+# --+ draw graph
+
+
 
 
