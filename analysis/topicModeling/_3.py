@@ -73,19 +73,15 @@ server.start()
 client = MongoClient('127.0.0.1', server.local_bind_port)
 # --+ target db
 db = client[mongo_db]
-
 # --+ company-year
 df0 = pd.DataFrame(list(db.web_contents_id.find()))
-
 # --+ id 
 df1 = pd.DataFrame(list(db.web_tokenized_5_50k.find()))
-
 # --+ stop server
 server.stop()
 
 # --+ merge
 df1.loc[:, 'doc_id'] = np.arange(0, len(df1), 1)
-
 df = pd.merge(df0, df1, on='_id', how='right')
 
 
@@ -97,31 +93,49 @@ in_f = os.path.join('analysis', 'topicModeling', '.output',
                     '9t_doc_topic_pr.csv')
 df2 = pd.read_csv(in_f)
 
-# maattach year
+# match year
 df = pd.merge(df2, df, on='doc_id', how='inner')
-
-# ----+ drop redundant column
+# --+ drop redundant column
 df.drop('_id', axis=1, inplace=True)
+# --+ remove NaN
+df.fillna(0, inplace=True)
 
-# ----+ aggregate around years
-df0 = df0.groupby('year').agg(np.mean)
+# aggregate data around years
+df0 = df.groupby('year').agg(np.mean)
+# --+ remove redundant col
+df0.drop('doc_id', axis=1, inplace=True)
 
-# ----+ dominant topics
+# dominant topics
 in_f = os.path.join('analysis', 'topicModeling', '.output',
                     '9t_dominant_topics.csv')
 df1 = pd.read_csv(in_f)
-
-# ----+ attach year
-df1.loc[:, 'year'] = df_year
-# ----+ drop redundant column
+# --+ attach year
+df1.loc[:, 'year'] = df['year']
+# --+ attach entity
+df1.loc[:, 'entity'] = df['entity']
+# --+ drop redundant column
 df1.drop('doc_id', axis=1, inplace=True)
-# ----+ aggregate around years
+
+# --+ aggregate around years
 gr = df1.groupby(['topic_n', 'year'])
 df1 = gr.size().reset_index()
 df1.rename({0: 'count'}, axis=1, inplace=True)
 df1.loc[:, 'total'] = df1.groupby('year')['count'].transform(np.sum)
 df1.loc[:, 'prop'] = df1['count']/df1['total']
 
+# --+ remove 2020 datapoints
+df0.drop('2020', axis=0, inplace=True)
+
+# --+ remove topic # 0
+df0.drop('0', axis=1, inplace=True)
+
+# ----+ rescale
+df0.loc[:, 'tot'] = df0.sum(axis=1)
+for i in np.arange(1, 9, 1):
+    column = '{}'.format(i)
+    df0.loc[:, column] = df0[column] / df0['tot']
+# ----+ drop redundant column
+df0.drop('tot', axis=1, inplace=True)
 
 # %% slope chart a' la Tufte 
 
@@ -137,10 +151,10 @@ ax1 = fig.add_subplot(gs[0, 1])
 ax0 = fig.add_subplot(gs[0, 0], sharey=ax1) 
 # --+ data series
 x = (np.arange(2013, 2020, 1))
-y_min, y_max = 0.10, 0.20
+y_min, y_max = 0.07, 0.20
 # --+ create PANEL A, average pr by year
 # --+ plot data
-for i, color in zip(np.arange(0, 8, 1), colors):
+for i, color in zip(np.arange(1, 9, 1), colors):
     topic = '{}'.format(i)
     y0 = df0.loc[:, topic] 
     ax1.plot(x, y0, marker='o', mfc=color, mec=color, ms='4',
@@ -150,7 +164,7 @@ ax1.set_xlabel("Year")
 #ax1.set_ylabel("")
 x_ticks = x 
 x_ticklabels = ['{}'.format(i) for i in x_ticks]
-y_ticks = np.arange(y_min, y_max+0.05, 0.05)
+y_ticks = np.arange(0.10, y_max+0.05, 0.05)
 y_ticklabels= ['{}\%'.format(int(i * 100)) for i in y_ticks]
 ax1.set_xticks(x_ticks)
 ax1.set_xticklabels(x_ticklabels, rotation='vertical')
@@ -168,24 +182,22 @@ ax1.spines['left'].set_visible(False)
 ax1.yaxis.set_ticks_position('right')
 ax1.xaxis.set_ticks_position('bottom')
 # --+ topic labels
-y = df0.loc[2013].values
-y[3] = y[7] + 0.01
-y[5] = y[7] - 0.01
+y = [0.155, 0.1275, 0.165, 0.09, 0.1175, 0.105, 0.185, 0.078]
 topic_labels =[
-    'Topic 1: company;\nventure; start-up;\n technology; include',
-    'Topic 2: fund;\ninvestment; asset;\nmarket; investor',
-    'Topic 3: market;\nrate; growth;\n price; rise',
-    'Topic 4: loan;\ncredit; insurance;\npay; accord',
-    'Topic 5: fund;\nfirm; capital;\ninvestment; price',
-    'Topic 6: bank;\n financial; rule;\nregulator; firm',
-    'Topic 7: datum;\ntechnology; people;\ncustomer; work\nservice',
-    'Topic 8: company;\ngroup; China; deal;\nproperty'
+    'Topic 1: job;\nmanagement;\nbusiness;\n university; director',
+    'Topic 2: market;\ntrade; fund;\ninvestment; stock',
+    'Topic 3: year; video;\nnews; post; day',
+    'Topic 4: service;\nproduct; energy;\nnews; technology',
+    'Topic 5: bank;\ninsurance; risk;\nfinancial; business',
+    'Topic 6: learn;\n science; model;\nresearch; health',
+    'Topic 7: datum;\ntechnology;\nanalytics;\nbusiness; legal',
+    'Topic 8: azure;\ncloud; datum;\nservice; app'
 ]
-for i, color in zip(np.arange(0, 8,1), colors):
+for i, color in zip(np.arange(1, 9, 1), colors):
     topic = '{}'.format(i)
-    y_pos = y[i]
-    to_print = topic_labels[i]
-    x_pos = 0.1
+    y_pos = y[i - 1]
+    to_print = topic_labels[i - 1]
+    x_pos = 0
     ax0.text(x_pos, y_pos, to_print, color=color, verticalalignment='center',
              bbox=dict(boxstyle='round',
                        ec=('white'),
@@ -206,114 +218,37 @@ ax0.axis('off') #.set_ticks_position('right')
 #ax0.xaxis.set_ticks_position('bottom')
 # --+ write plot to file
 out_f = os.path.join('analysis', 'topicModeling', '.output',
-                     'pr_slope_chart.pdf')
+                     'ws_slope_chart.pdf')
 plt.savefig(out_f, transparent=True, bbox_inches='tight', pad_inches=0)
 
 
-# %% topology of topics
+# %% arrange data to pass to R
 
-# doc2topic probabilities
-# --+ load 
-in_f = os.path.join('analysis', 'topicModeling', '.output',
-                    '8t_doc_topic_pr.csv')
-df0 = pd.read_csv(in_f)
-# --+ attach year
-df0.loc[:, 'year'] = df_year
-# --+ get rid of missing values
-df0.fillna(0, inplace=True)
-# --+ get correlations among topics
-correlations = []
-for year in years:
-    for i in np.arange(0, 8, 1):
-        for j in np.arange(0, 8, 1):
-            if i < j:
-                x = df0.loc[df0['year'] == year, '%s' % i]
-                y = df0.loc[df0['year'] == year, '%s' % j]
-                r, p = pearsonr(x, y)
-                to_append = [i, j, r, p, year]
-                correlations.append(to_append)
-# --+ edges along with weights
-edges = pd.DataFrame(correlations, columns=['u', 'v', 'r', 'p', 'year'])
-# --+ node attributes
-df0.drop('doc_id', axis=1, inplace=True)
-node_attrs = df0.groupby('year').aggregate(np.mean)
-# node labels
-topic_set = np.arange(0, 8, 1)
-labels = dict(zip(topic_set,
-                  ['{}'.format(i + 1) for i in topic_set]))
+# get the most prominent topic by company-year
+# --+ group data
+gr = df1.groupby(['entity', 'year', 'topic_n'], as_index=False)
+# --+ remove uninteresting topic
+df1 = df1.loc[df1['topic_n'] != 0]
+# --+ get collapsd df
+df2 = pd.DataFrame(gr.size())
+# --+ some cleaning
+# ----+ reset index
+df2.reset_index(inplace=True)
+# ----+ rename cols
+df2.rename(columns={0: 'count'}, inplace=True)
+# --+ get most recurrent topic
+gr = df2.groupby(['entity', 'year'])
+df2.loc[:, 'max'] = gr['count'].transform(np.max)
+# --+ slice data
+df3 = df2.loc[df2['count'] == df2['max']]
 
-# --+ create figure
-fig = plt.figure(figsize=(7.5, 11))
-# --+ parition the figure into 2 subplots with 'gridspec'
-gs = gridspec.GridSpec(4, 4,
-                       figure=fig, 
-                       hspace=0, wspace=0)
-# --+ add plots
-ax0 = fig.add_subplot(gs[0, 0:2]) 
-ax1 = fig.add_subplot(gs[0, 2:4])
-ax2 = fig.add_subplot(gs[1, 0:2])
-ax3 = fig.add_subplot(gs[1, 2:4])
-ax4 = fig.add_subplot(gs[2, 0:2])
-ax5 = fig.add_subplot(gs[2, 2:4])
-ax6 = fig.add_subplot(gs[3, 1:3])
-# --+ iterater over years
-for year, ax in zip(years, [ax0, ax1, ax2, ax3, ax4, ax5, ax6]):
-    g = nx.from_pandas_edgelist(df=edges.loc[edges['year'] == year],
-                                source='u', target='v',
-                                edge_attr=['r', 'p', 'year'],
-                                create_using=nx.Graph)
-    # --+ add node attributes
-    n_size = node_attrs.loc[2013].values
-    # --+ add edge attributes
-    # ----+ r, p
-    r_dict = nx.get_edge_attributes(g, 'r')
-    r = [r_dict[d] for d in r_dict]
-    p_dict = nx.get_edge_attributes(g, 'p')
-    p = [p_dict[d] for d in p_dict]
-    # ----+ code edge style
-    e_color, e_style = [], []
-    for i, j in zip(p, r):
-        if year <= 2017:
-            if i > 0.001:
-                e_color.append('white'), e_style.append('solid')
-            else:
-                e_color.append('tab:gray')
-                if j > 0:
-                    e_style.append('solid')
-                else:
-                    e_style.append('dotted')
-        else:
-            if year > 2017:
-                if i > 0.05:
-                    e_color.append('white'), e_style.append('solid')
-                else:
-                    e_color.append('tab:gray')
-                    if j > 0:
-                        e_style.append('solid')
-                    else:
-                        e_style.append('dotted')
-    # --+ positions
-    pos = nx.circular_layout(g)
-    # --+ draw networks
-    nx.draw_networkx_nodes(g, pos, node_color='white', node_size=300, ax=ax)
-    # --+ iterate over edges
-    e = [d for d in g.edges]
-    for d, c, s in zip(e, e_color, e_style):
-        if c != 'white':
-            nx.draw_networkx_edges(g, pos, edgelist=[d], edge_color=c, style=s,
-                                   width=0.75, ax=ax)
-        else:
-            pass
-    # --+ draw labels
-    nx.draw_networkx_labels(g, pos, labels=labels, font_color='k', ax=ax)
-    # --+ textbox
-    ax.text(-1.05, 0.975, year, color='white',
-            bbox=dict(boxstyle='round',
-                      ec=('white'),
-                      fc=('tab:gray')))
-    # --+ axis off
-    ax.axis('off')
-# --+ write plot to file
-out_f = os.path.join('analysis', 'topicModeling', '.output',
-                     'pr_topic_topology.pdf')
-plt.savefig(out_f, bbox_inches='tight', pad_inches=0, transparent=True)
+# get topic entropy within company-year
+# --+ get total instances
+df2.loc[:, 'tot'] = gr['count'].transform(np.sum)
+# --+ get proportions
+df2.loc[:, 'prop_2'] = np.square(df2['count']/df2['tot'])
+# --+ collapse data
+df4 = pd.DataFrame(gr['prop_2'].agg(np.sum))
+df4.reset_index(inplace=True)
+df4.loc[:, 'bi'] = 1 - df4['prop_2']
+
