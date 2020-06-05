@@ -27,10 +27,6 @@ dt <- read.csv(file = '.output/ws_seq_analysis.csv')
 # %% create a sequence object
 
 # fix color palette
-# ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
-         'tab:gray', 'tab:pink', 'tab:brown']
-
-
 colors <- c('#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', 
             '#7f7f7f', '#e377c2', '#8c564b')
 
@@ -40,8 +36,8 @@ dt.seq <- seqdef(dt, cpal = colors)
 
 
 # create chart
-outf = '.output/ws_seq_analysis.pdf'
-pdf(outf)
+outf = '.output/ws_seq_analysis.tiff'
+tiff(outf, res=300, width=6, height=6, unit='in')
 par(mfrow = c(2, 2))
 #seqiplot(dt.seq, with.legend = FALSE, border = NA)
 seqIplot(dt.seq, with.legend = FALSE)
