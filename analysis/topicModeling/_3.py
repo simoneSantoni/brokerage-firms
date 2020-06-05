@@ -42,7 +42,6 @@ os.chdir(wd)
 
 
 # %% viz options
-%matplotlib inline
 plt.style.use('seaborn-bright')
 rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
@@ -53,7 +52,7 @@ colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
 
 # open mongo pipeline
 '''
-I'm working on machine != dell_1
+mongo is runnining on a server
 '''
 # --+ params
 mongo_host = "10.16.142.91"
@@ -182,7 +181,7 @@ ax1.spines['left'].set_visible(False)
 ax1.yaxis.set_ticks_position('right')
 ax1.xaxis.set_ticks_position('bottom')
 # --+ topic labels
-y = [0.155, 0.1275, 0.165, 0.09, 0.1175, 0.105, 0.185, 0.078]
+y = [0.155, 0.112, 0.165, 0.09, 0.121, 0.10, 0.185, 0.078]
 topic_labels =[
     'Topic 1: job;\nmanagement;\nbusiness;\n university; director',
     'Topic 2: market;\ntrade; fund;\ninvestment; stock',
@@ -229,6 +228,7 @@ plt.savefig(out_f, transparent=True, bbox_inches='tight', pad_inches=0)
 gr = df1.groupby(['entity', 'year', 'topic_n'], as_index=False)
 # --+ remove uninteresting topic
 df1 = df1.loc[df1['topic_n'] != 0]
+
 # --+ get collapsd df
 df2 = pd.DataFrame(gr.size())
 # --+ some cleaning
@@ -239,12 +239,23 @@ df2.rename(columns={0: 'count'}, inplace=True)
 # --+ get most recurrent topic
 gr = df2.groupby(['entity', 'year'])
 df2.loc[:, 'max'] = gr['count'].transform(np.max)
+
 # --+ slice data
 df3 = df2.loc[df2['count'] == df2['max']]
+df3 = df3[df3['year'] != 2020]
+
+# ----+ take first
+gr = df3.groupby(['entity', 'year'])
+df3.loc[:, 'take_first'] = 1
+df3.loc[:, 'take_first'] = gr['take_first'].transform(np.cumsum)
+df3 = df3.loc[df3['take_first'] == 1]
+
 # --+ reshape data
 df3 = pd.pivot_table(df3, index='entity', columns='year', values='topic_n')
+
 # --+ remove companies with NaNs
 df3.dropna(inplace=True)
+
 # --+ write plot to file
 out_f = os.path.join('analysis', 'topicModeling', '.output',
                      'ws_seq_analysis.csv')
