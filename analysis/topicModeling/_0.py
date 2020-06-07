@@ -451,9 +451,3 @@ out_f = os.path.join('analysis', 'topicModeling',
                      '.output', '30t_dominant_topics.csv')
 first_topic.to_csv(out_f, index=True)
 
-
-# %% descriptive analysis of topic modeling outcome
-
-
-
-
