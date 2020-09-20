@@ -42,6 +42,8 @@ src = 'press'
 # read files
 in_files = glob.glob(os.path.join(fdr, src, '*.pickle'))
 
+# stupid left_index
+print(in_files)
 
 # %% manage the corpus of text
 
