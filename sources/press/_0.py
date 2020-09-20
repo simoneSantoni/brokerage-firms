@@ -24,16 +24,17 @@ import uuid
 
 
 # %% set path
-srv = '/home/simone'
+#NOTE: change user name if needed
+srv = '/home/simon'
 prj = 'githubRepos/digital-leadership-center'
 fdr = 'sources/press'
 wd = os.path.join(srv, prj, fdr)
 os.chdir(wd)
 
 
-# %% get textual data out of .rft
+# %% function definitions
 
-# define custom function
+# get textual data out of .rft
 def get_txt(_bundle):
     '''
     argument: bundle of .rtf files
@@ -50,6 +51,43 @@ def get_txt(_bundle):
     # run command
     os.system(_cmd)
 
+
+# splitting individual articles
+def split_string(_bundle):
+    '''
+    :param : _bundle: sets of factiva items
+    :return: None
+    :notes : use '### picture' as a tag for splitting text
+    '''
+    # read file
+    with open(_bundle, 'rb') as pipe:
+        text_body = pipe.read()
+    # split on picture tag
+    _articles = text_body.split(b'### picture')[1:]
+    # count of articles
+    _count = len(_articles)
+    # dissect the individual articles
+    for i in range(_count):
+        focal_article = _articles[i]
+        if not b' blogs, ' in focal_article:
+            substantive_info = focal_article.split(b'\n\n', 1)[1]
+            substantive_info = substantive_info.split(b'\n\n', 2)
+            if len(substantive_info) == 3:
+                _title = substantive_info[0].strip()
+                _attributes = substantive_info[1]
+                _text = substantive_info[2]
+                parsed = (_title in locals()) & (_attributes in locals())\
+                         & (_text is locals())
+                if not parsed:
+                    # document id
+                    document_id = str(uuid.uuid1())
+                    # write data
+                    out_f = '{}.pickle'.format(document_id)
+                    _l = [document_id, _title, _attributes, _text]
+                    with open(out_f, 'wb') as pipe:
+                       pickle.dump(_l, pipe)
+
+# %% get textual data out of .rtf
 
 # scan for files
 os.chdir('.data')
@@ -69,42 +107,6 @@ os.chdir(wd)
 
 
 # %% split on the string function
-
-# custom function that splits individual articles
-def split_string(_bundle):
-    '''
-    :param : _bundle: sets of factiva items
-    :return: None
-    :notes : use '### picture' as a tag for splitting text
-    '''
-    # read file
-    with open(_bundle, 'rb') as pipe:
-        text_body = pipe.read()
-    # split on picture tag
-    _articles = text_body.split('### picture')[1:]
-    # count of articles
-    _count = len(_articles)
-    # dissect the individual articles
-    for i in range(_count):
-        focal_article = _articles[i]
-        if not ' blogs, ' in focal_article:
-            substantive_info = focal_article.split('\n\n', 1)[1]
-            substantive_info = substantive_info.split('\n\n', 2)
-            if len(substantive_info) == 3:
-                _title = substantive_info[0].strip()
-                _attributes = substantive_info[1]
-                _text = substantive_info[2]
-                parsed = (_title in locals()) & (_attributes in locals())\
-                         & (_text is locals())
-                if not parsed:
-                    # document id
-                    document_id = str(uuid.uuid1())
-                    # write data
-                    out_f = '{}.pickle'.format(document_id)
-                    _l = [document_id, _title, _attributes, _text]
-                    with open(out_f, 'wb') as pipe:
-                       pickle.dump(_l, pipe)
-
 
 # list of txt files to parse
 os.chdir('.data')

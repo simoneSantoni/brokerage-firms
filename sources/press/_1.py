@@ -2,15 +2,15 @@
 
 """
 Docstring
--------------------------------------------------------------------------------
-    _1.py                          CREATE CORPUS OF TEXT
--------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+_1.py  |  creting corpus of text to upload to Mongo
+------------------------------------------------------------------------------
 
 Author: Simone Santoni, simone.santoni.1@city.ac.uk
 
 Dates:
     - created Mon Apr 15 10:02:46 UTC 2019
-    - revise --
+    - revise
 
 Notes: this should be re-run with dell_1
 
@@ -43,10 +43,10 @@ src = 'press'
 in_files = glob.glob(os.path.join(fdr, src, '*.pickle'))
 
 
-# %% manage the corpus of text 
+# %% manage the corpus of text
 
 # assign articles to a list
-# -- empty list 
+# -- empty list
 articles = []
 # -- iterate over pickles & append articles
 '''
@@ -125,7 +125,7 @@ df_d.set_index('document_id', inplace=True)
 
 # %% polish data
 
-# merge with all the rest 
+# merge with all the rest
 df = pd.merge(df, df_o, left_index=True, right_index=True, how='inner')
 df = pd.merge(df, df_d, left_index=True, right_index=True, how='inner')
 

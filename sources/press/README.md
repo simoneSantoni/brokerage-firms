@@ -108,3 +108,24 @@ Outcome of the query
 | Duplicates | Identical                                                                |
 | Status     | NOT TO CARRY OUT                                                         |
 |            |                                                                          |
+
+### Query 3
+
+| Attribute                         | Value                                                                                                                              |
+|:-------------------------------- -|:-----------------------------------------------------------------------------------------------------------------------------------|
+| Text                              | ("artificial intelligence" or "deep learning" or "machine learning" or "big data" or "natural language processing" or "analytics") |
+| Date                              | 01/04/2019 to 31/12/2019                                                                                                           |
+| Source                            | Financial Times (Available through Third Party Subscription Services) - All sources Or The Wall Street Journal - All sources       |
+| Author                            | All Authors                                                                                                                        |
+| Company                           | All Companies                                                                                                                      |
+| Subject                           | All Subjects                                                                                                                       |
+| Industry                          | Financial Services                                                                                                                 |
+| Region                            | All Regions                                                                                                                        |
+| Language                          | English                                                                                                                            |
+| News Filters	Industry:           | Financial Services                                                                                                                 |
+| Results Found                     | 2,056                                                                                                                              |
+| Timestamp                       	| 20 September 2020 10:06                                                                                                            |
+
+__Notes__: Factiva has stopped to index FT items ― thus, it is not possible
+to retrieve data on FT items from Factiva; a different source, such as Nexis,
+has to be used.
