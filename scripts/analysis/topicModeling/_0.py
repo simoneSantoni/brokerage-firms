@@ -197,7 +197,7 @@ def compute_coherence_values(_dictionary,
 
 # collect coherence scores as the number of retained topics change
 '''
-I contuct two searches:
+I make two searches:
 
     - 5 - 10 topics, step = 1
     - 10 - 30 topics, step = 5

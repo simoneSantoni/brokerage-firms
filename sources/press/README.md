@@ -19,8 +19,6 @@ Overview of scripts
 |:---------|:-----------------------------------|:-------|:---------|
 | _0.py    | parse .rtf downloaded from Factiva | run    | none     |
 | _1.py    | assemble corpus of data            | run    | none     |
-| _2.ipynb | topic modelling                    | run    | none     |
-| _3.py    | semantic network analysis          | run    | none     |
 
 Data collection procedures
 ==========================
