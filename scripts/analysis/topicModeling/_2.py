@@ -19,8 +19,6 @@ Notes: This script deals with press-release .
 
 # %% load libraries
 import os
-from glob import glob
-from urllib.parse import quote_plus
 from sshtunnel import SSHTunnelForwarder
 from pymongo import MongoClient
 import numpy as np
@@ -42,16 +40,17 @@ os.chdir(wd)
 
 
 # %% viz options
-%matplotlib inline
+#%matplotlib inline
 plt.style.use('seaborn-bright')
 rc('font',**{'family':'serif','serif':['Computer Modern Roman']})
 rc('text', usetex=True)
 colors= ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
          'tab:gray', 'tab:pink', 'tab:brown']
 
+
 # %% document attributes
 
-# open monog pipeline
+# open mono pipeline
 '''
 I'm working on machine != dell_1
 '''
@@ -76,7 +75,7 @@ db = client[mongo_db]
 # load the data
 df = pd.DataFrame(list(db.press_releases.find()))
 # --+ stop server
-server.stop()
+#server.stop()
 
 
 # %% data to visualize
@@ -84,7 +83,7 @@ server.stop()
 # manipulate
 
 # --+ time slices
-time_slices = [265, 385, 479, 825, 1070, 862, 327]
+time_slices = [265, 385, 479, 825, 1070, 862, 713]
 years = [2013, 2014, 2015, 2016, 2017, 2018, 2019]
 
 df_year = []
@@ -96,7 +95,7 @@ for i, j in zip(years, time_slices):
 
 # --+ 8 topic model
 # ----+ doc2topic probabilities
-in_f = os.path.join('analysis', 'topicModeling', '.output',
+in_f = os.path.join('scripts', 'analysis', 'topicModeling', '.output',
                     '8t_doc_topic_pr.csv')
 df0 = pd.read_csv(in_f)
 # ----+ attach year
@@ -107,7 +106,7 @@ df0.drop('doc_id', axis=1, inplace=True)
 df0 = df0.groupby('year').agg(np.mean)
 
 # ----+ dominant topics
-in_f = os.path.join('analysis', 'topicModeling', '.output',
+in_f = os.path.join('scripts', 'analysis', 'topicModeling', '.output',
                     '8t_dominant_topics.csv')
 df1 = pd.read_csv(in_f)
 # ----+ attach year
@@ -171,16 +170,17 @@ y = df0.loc[2013].values
 y[3] = y[7] + 0.01
 y[5] = y[7] - 0.01
 topic_labels =[
-    'Topic 1: company;\nventure; start-up;\n technology; include',
-    'Topic 2: fund;\ninvestment; asset;\nmarket; investor',
-    'Topic 3: market;\nrate; growth;\n price; rise',
-    'Topic 4: loan;\ncredit; insurance;\npay; accord',
-    'Topic 5: fund;\nfirm; capital;\ninvestment; price',
-    'Topic 6: bank;\n financial; rule;\nregulator; firm',
-    'Topic 7: datum;\ntechnology; people;\ncustomer; work\nservice',
-    'Topic 8: company;\ngroup; China; deal;\nproperty'
+    'Topic 1: people;\ncredit; loan;\n risk; pay',
+    'Topic 2: market;\nrate; growth;\n price; rise',
+    'Topic 3: bank;\n financial; rule;\nregulator; firm',
+    'Topic 4: datum;\ntechnology; people;\ncustomer; work\nservice',
+    'Topic 5: business;\nback; chief;\nexecutive; group',
+    'Topic 6: fund;\ninvestor; price;\nmanager; assett',
+    'Topic 7: company;\nventure; start-up;\ninvestor; technology',
+    'Topic 8: firm;\ncapital; partner;\naccord; equity'
 ]
-for i, color in zip(np.arange(0, 8,1), colors):
+
+for i, color in zip(np.arange(0, 8, 1), colors):
     topic = '{}'.format(i)
     y_pos = y[i]
     to_print = topic_labels[i]
@@ -204,7 +204,7 @@ ax0.spines['left'].set_visible(False)
 ax0.axis('off') #.set_ticks_position('right')
 #ax0.xaxis.set_ticks_position('bottom')
 # --+ write plot to file
-out_f = os.path.join('analysis', 'topicModeling', '.output',
+out_f = os.path.join('scripts', 'analysis', 'topicModeling', '.output',
                      'pr_slope_chart.pdf')
 plt.savefig(out_f, transparent=True, bbox_inches='tight', pad_inches=0)
 
@@ -316,3 +316,25 @@ for year, ax in zip(years, [ax0, ax1, ax2, ax3, ax4, ax5, ax6]):
 out_f = os.path.join('analysis', 'topicModeling', '.output',
                      'pr_topic_topology.pdf')
 plt.savefig(out_f, bbox_inches='tight', pad_inches=0, transparent=True)
+
+
+# %% sentiment scores at the topic level
+
+import spacy
+import en_core_web_lg
+nlp = en_core_web_lg.load()
+
+
+t1 = ['people', 'credit', 'loan', 'risk', 'pay']
+t2 = ['market', 'rate', 'growth', 'price', 'rise']
+t3 = ['bank', 'financial', 'rule', 'regulator', 'firm']
+t4 = ['datum', 'technology', 'people', 'customer', 'work', 'service']
+t5 = ['business', 'back', 'chief', 'executive', 'group']
+t6 = ['fund', 'investor', 'price', 'manager', 'assett']
+t7 = ['company', 'venture', 'start-up', 'investor', 'technology']
+t8 = ['firm', 'capital', 'partner', 'accord', 'equity']
+
+for word in t1:
+    doc = nlp(word)
+    for token in doc:
+        print(token)

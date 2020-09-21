@@ -63,7 +63,7 @@ Gensim version: {}
 # %% work directory
 srv = '/home/simone'
 prj = 'githubRepos/digital-leadership-center'
-fdr = 'transformation'
+fdr = 'scripts/transformation'
 wd = os.path.join(srv, prj, fdr)
 os.chdir(wd)
 

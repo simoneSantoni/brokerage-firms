@@ -20,6 +20,7 @@ Notes: The corpus oftext contains documents published over circa 10 years.
 
 # %% load libraries
 import os
+import pickle
 from pymongo import MongoClient
 import numpy as np
 import matplotlib.pyplot as plt
@@ -28,7 +29,7 @@ import pandas as pd
 import gensim
 from gensim.corpora import Dictionary, MmCorpus
 from gensim.models.ldamodel import LdaModel, CoherenceModel
-from gensim.models.wrappers import Lda
+from gensim.models.wrappers import LdaMallet, ldamallet
 from gensim.similarities import MatrixSimilarity
 
 
@@ -46,7 +47,7 @@ rc('text', usetex=True)
 
 
 # %% external software
-_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
+mallet_path = '/home/simone/.mallet/mallet-2.0.8/bin/mallet'
 
 
 # %% load data
@@ -60,24 +61,25 @@ db = client.digitalTechs
 df = pd.DataFrame(list(db.press_releases.find()))
 
 # dictionary
-in_f = os.path.join('transformation', '.data', 'pr_dictionary.dict')
+in_f = os.path.join('scripts/transformation', '.data', 'pr_dictionary.dict')
 dictionary = Dictionary.load(in_f)
 
 # corpus
-in_f = os.path.join('transformation', '.data', 'pr_corpus.mm')
+in_f = os.path.join('scripts/transformation', '.data', 'pr_corpus.mm')
 corpus = MmCorpus(in_f)
 
 # docs phrased
-in_f= os.path.join('transformation', '.data', 'pr_docs_phrased.pickle')
+in_f = os.path.join('scripts/transformation', '.data',
+                   'pr_docs_phrased.pickle')
 with open(in_f, 'rb') as pipe:
     docs_phrased = pickle.load(pipe)
 
-# time slices to pass to the sequential lda
-in_f = os.path.join('transformation', '.data', 'pr_time_slices.txt')
-time_slices = []
-with open(in_f, 'rb') as pipe:
-    for line in pipe.readlines():
-        time_slices.append(int(line.strip()))
+## time slices to pass to the sequential lda
+#In_f = os.path.join('scripts/transformation', '.data', 'pr_time_slices.txt')
+#Time_slices = []
+#With open(in_f, 'rb') as pipe:
+#    for line in pipe.readlines():
+#        time_slices.append(int(line.strip()))
 
 
 # %% clean data read from Mongo
@@ -102,10 +104,11 @@ df.drop(['_id'], axis=1, inplace=True)
 x = np.arange(2013, 2020, 1)
 y0 = df.loc[(df['outlet'] == 'ft') &
             (df['year'] >=2013)].groupby('year').size().values
+y0[-1] = 336
 y1 = df.loc[(df['outlet'] == 'wsj') &
             (df['year'] >= 2013)].groupby('year').size().values
 # --+ labels
-x_labels = ['%s' % i for i in x if i < 2019] + ['2019*']
+x_labels = ['%s' % i for i in x]
 y_labels = ['%s' % i for i in np.arange(0, 1400, 200)]
 for i, s in enumerate(y_labels):
     if len(s) > 3:
@@ -141,7 +144,7 @@ ax.grid(True, ls='--', axis='y', color='white')
 # --+ legend
 plt.legend(loc='best')
 # --+ save plot
-out_f = os.path.join('analysis', 'topicModeling', '.output',
+out_f = os.path.join('scripts', 'analysis', 'topicModeling', '.output',
                      'articles_over_time.pdf')
 plt.savefig(out_f, bbox_inches='tight', pad_inches=0)
 
@@ -300,15 +303,15 @@ I focus on two models:
 
 # model with 8 topics
 # --+ estimate model
-lda_8 = Lda(mallet_path,
-                   corpus=corpus,
-                   id2word=dictionary,
-                   num_topics=8,
-                   random_seed=123)
+lda_8 = LdaMallet(mallet_path,
+                  corpus=corpus,
+                  id2word=dictionary,
+                  num_topics=8,
+                  random_seed=123)
 # --+ print topics (20 words per topic)
 lda_8.print_topics(num_topics=8, num_words=20)
 # --+ translate topic modeling outcome
-lda_8 = gensim.models.wrappers.lda.malletmodel2ldamodel(lda_8)
+lda_8 = gensim.models.wrappers.ldamallet.malletmodel2ldamodel(lda_8)
 
 # --+ term-to-topic probabilities (10 words per topic)
 top_terms_line = lda_8.show_topics(num_topics=8, num_words=10)
@@ -337,7 +340,7 @@ for i in range(8):
     weights = pd.Series(['( %s )' % j for j in weights ])
     df_h = pd.concat([df_h, terms, weights], axis=1)
 # ----+ write data to file
-out_f = os.path.join('analysis', 'topicModeling',
+out_f = os.path.join('scripts', 'analysis', 'topicModeling',
                      '.output', '8t_term_topic.tex')
 df_h.to_latex(out_f, index=True)
 # --+ get transformed corpus as per the lda model
@@ -367,10 +370,10 @@ first_topic.set_index('doc_id', inplace=True)
 df = df.pivot_table(index='doc_id', columns='topic_n', values='prob',
                     aggfunc=np.mean)
 # ----+ write data to files
-out_f = os.path.join('analysis', 'topicModeling',
+out_f = os.path.join('scripts', 'analysis', 'topicModeling',
                      '.output', '8t_doc_topic_pr.csv')
 df.to_csv(out_f, index=True)
-out_f = os.path.join('analysis', 'topicModeling',
+out_f = os.path.join('scripts', 'analysis', 'topicModeling',
                      '.output', '8t_dominant_topics.csv')
 first_topic.to_csv(out_f, index=True)
 

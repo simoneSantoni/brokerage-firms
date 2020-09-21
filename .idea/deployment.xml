@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="simone@10.16.142.91:22 password">
+  <component name="PublishConfigData" autoUpload="Always" serverName="simone@10.16.143.121:22">
     <serverData>
-      <paths name="simone@10.16.142.91:22 password">
+      <paths name="simone@10.16.142.91:22">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_393" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/pycharm_project_612" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="ubuntu@ec2-3-10-232-201.eu-west-2.compute.amazonaws.com:22">
+      <paths name="simone@10.16.142.91:22 password">
         <serverdata>
           <mappings>
-            <mapping deploy="/tmp/pycharm_project_640" local="$PROJECT_DIR$" />
+            <mapping deploy="/tmp/pycharm_project_461" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="simone@10.16.143.121:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_873" local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
       </paths>

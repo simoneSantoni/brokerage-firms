@@ -36,7 +36,9 @@ os.chdir(wd)
 # %% scree for pickles containing individual articles
 
 # folder/source
-fdr = '2b50f5c0-9cd6-11ea-9ed2-f8b156d0a52b'
+# fdr = '2b50f5c0-9cd6-11ea-9ed2-f8b156d0a52b'
+# --+ data integrations
+fdr = '7993c3e8-fb36-11ea-92fa-d9d41eab827b'
 src = 'press'
 
 # read files
@@ -82,13 +84,13 @@ for item in articles:
     _attributes = item[2]
     # test for pattern matching
     # -- test for FT
-    if 'Financial Times' in _attributes:
+    if b'Financial Times' in _attributes:
         outlet.append([_id, 'ft'])
     # test for WSJ
-    elif ('Wall Street Journal' in _attributes) or ('WSJ' in _attributes):
+    elif (b'Wall Street Journal' in _attributes) or (b'WSJ' in _attributes):
         outlet.append([_id, 'wsj'])
     # test for The Economist
-    elif 'The Economist' in _attributes:
+    elif b'The Economist' in _attributes:
         outlet.append([_id, 'te'])
     else:
         pass
@@ -111,7 +113,7 @@ for item in articles:
     _attributes = item[2]
     # pattern matching
     # -- find month (word) + day (digit) + year (digit)
-    to_append = re.search("(\d+) (\w+) (\d+)", _attributes)
+    to_append = re.search(b"(\d+) (\w+) (\d+)", _attributes)
     if to_append is not None:
         date.append([_id, to_append.group(0)])
     else:
@@ -132,7 +134,11 @@ df = pd.merge(df, df_o, left_index=True, right_index=True, how='inner')
 df = pd.merge(df, df_d, left_index=True, right_index=True, how='inner')
 
 # date cleaning
-# -- dates and datetime
+# -- text as string
+df.loc[:, 'text'] = df['text'].str.decode('utf-8', errors='ignore')
+df.loc[:, 'title'] = df['title'].str.decode('utf-8', errors='ignore')
+# -- dates and datetimeco
+df.loc[:, 'date'] = df['date'].str.decode('utf-8')
 df.loc[:, 'date'] = pd.to_datetime(df['date'])
 # -- drop redundant cols
 df.drop('attributes', axis=1, inplace=True)
