@@ -33,7 +33,7 @@ from networkx.algorithms import bipartite
 
 
 # %% set working dir
-srv = '/home/simone'
+srv = '/Users/simone'
 prj = 'githubRepos/digital-leadership-center'
 wd = os.path.join(srv, prj)
 os.chdir(wd)
@@ -74,6 +74,8 @@ client = MongoClient('127.0.0.1', server.local_bind_port)
 db = client[mongo_db]
 # load the data
 df = pd.DataFrame(list(db.press_releases.find()))
+
+
 # --+ stop server
 #server.stop()
 
@@ -125,7 +127,7 @@ df1.loc[:, 'prop'] = df1['count']/df1['total']
 
 # --+ create figure
 fig = plt.figure(figsize=(7.5, 11))
-# --+ parition the figure into 2 subplots with 'gridspec'
+# --+ partition the figure into 2 subplots with 'gridspec'
 gs = gridspec.GridSpec(1, 2,
                        figure=fig, 
                        hspace=0, wspace=0, 
@@ -135,7 +137,7 @@ ax1 = fig.add_subplot(gs[0, 1])
 ax0 = fig.add_subplot(gs[0, 0], sharey=ax1) 
 # --+ data series
 x = (np.arange(2013, 2020, 1))
-y_min, y_max = 0.10, 0.20
+y_min, y_max = 0.10, 0.16
 # --+ create PANEL A, average pr by year
 # --+ plot data
 for i, color in zip(np.arange(0, 8, 1), colors):
@@ -148,7 +150,7 @@ ax1.set_xlabel("Year")
 #ax1.set_ylabel("")
 x_ticks = x 
 x_ticklabels = ['{}'.format(i) for i in x_ticks]
-y_ticks = np.arange(y_min, y_max+0.05, 0.05)
+y_ticks = np.arange(y_min, y_max+0.01, 0.02)
 y_ticklabels= ['{}\%'.format(int(i * 100)) for i in y_ticks]
 ax1.set_xticks(x_ticks)
 ax1.set_xticklabels(x_ticklabels, rotation='vertical')
@@ -169,6 +171,9 @@ ax1.xaxis.set_ticks_position('bottom')
 y = df0.loc[2013].values
 y[3] = y[7] + 0.01
 y[5] = y[7] - 0.01
+y[6] = y[3] - 0.004
+y[2] = y[0] - 0.003
+y[4] = y[0] + 0.004
 topic_labels =[
     'Topic 1: people;\ncredit; loan;\n risk; pay',
     'Topic 2: market;\nrate; growth;\n price; rise',
@@ -206,6 +211,7 @@ ax0.axis('off') #.set_ticks_position('right')
 # --+ write plot to file
 out_f = os.path.join('scripts', 'analysis', 'topicModeling', '.output',
                      'pr_slope_chart.pdf')
+#plt.show()
 plt.savefig(out_f, transparent=True, bbox_inches='tight', pad_inches=0)
 
 
