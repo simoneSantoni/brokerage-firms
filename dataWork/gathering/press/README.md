@@ -1,5 +1,4 @@
-Factiva data collection - README
-================================
+# Factiva data collection - README
 
 <!-- vim-toc-markdown -->
 
@@ -12,19 +11,16 @@ Factiva data collection - README
 
 <!-- vim-toc-markdown -->
 
-Overview of scripts
-===================
+# Overview of scripts
 
 | Script   | Task                               | Status | Warnings |
 |:---------|:-----------------------------------|:-------|:---------|
 | _0.py    | parse .rtf downloaded from Factiva | run    | none     |
 | _1.py    | assemble corpus of data            | run    | none     |
 
-Data collection procedures
-==========================
+# Data collection procedures
 
-Article search
---------------
+## Article search
 
 Keywords have been derived from the Google Knowledge Graph:
 
@@ -45,8 +41,7 @@ Keywords have been derived from the Google Knowledge Graph:
 + Analytics
 + Computing
 
-Outcome of the query
---------------------
+## Outcome of the query
 
 ### Query 0
 
