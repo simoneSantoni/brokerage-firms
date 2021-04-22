@@ -6,5 +6,3 @@ hosted by [The Business School (formerly Cass)](https://www.cass.city.ac.uk/).
 The repository contains contains the code along with sample data behind the
 visualizations reported in the website of the center along with the projects
 carried out by the affiliates of the center.
-
-Hello my name is Rojeen
