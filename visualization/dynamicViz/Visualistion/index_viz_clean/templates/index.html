@@ -1,0 +1,26 @@
+{% extends base %}
+
+{% block title %}AI and DL gianvito {% endblock %}
+
+{% block postamble %}
+  <style>
+    {% include 'styles.css' %}
+  </style>
+{% endblock %}
+
+{% block contents %}
+  <div class="content">
+    <h1 align="center">AI & DL</h1>
+
+    <p align="center">Description of AI/DL project objectives</a> </p>
+
+    {{ super() }}
+
+
+    <p>Possible point for improvement: fix axis for both graph, insert table for navigation,
+      e.g include value_counts to show number of datapoints for each city. Also to show growth over time
+      Additional words leading on to sentiment plot</p>
+
+
+  </div>
+{% endblock %}
