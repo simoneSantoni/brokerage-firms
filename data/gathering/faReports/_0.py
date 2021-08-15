@@ -10,12 +10,15 @@ usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
 name_ = "blackrock"
 # lb, ub
-year_ = 2013
-# destination folder
-dest_fdr = "/home/simone/Desktop/faReports/reports"
+year_ = 2016
+
+# %% destination folder
+os.chdir("/home/simone/faReports")
+#os.mkdir(name_)
+os.chdir(name_)
 
 # %% initialize a driver
-driver = webdriver.Firefox(executable_path=r"/opt/WebDriver/bin/geckodriver")
+driver = webdriver.Firefox(executable_path=r"/opt/selenium/bin/geckodriver")
 
 # %% open investtext
 # target
@@ -95,7 +98,6 @@ time.sleep(6)
 to_click.click()
 
 # %% record the number of documents
-# TODO: get attribute
 docs = driver.find_element_by_xpath("//*[@id='matched1']").text
 docs = int(docs.split(' ', 1)[0])
 
@@ -109,8 +111,8 @@ to_click.click()
 to_click = driver.find_element_by_xpath("//*[@id='excellinkid']")
 to_click.click()
 summary = glob.glob(os.path.join("/home/simone/Downloads", "*.xls"))[0]
-out_f = "{}_{}.xls".format(name_, year_,)
-os.rename(summary, os.path.join(dest_fdr, out_f))
+out_f = "{}_.xls".format(year_,)
+os.rename(summary, os.path.join('.', out_f))
 
 # %% download documents
 # iterate over pages
@@ -123,13 +125,13 @@ links = driver.find_elements_by_xpath(
 for i, link in enumerate(links):
     # download file
     link.click()
-    time.sleep(6)
+    time.sleep(12)
     # close new window
     # TODO: close newly opened tabs
     # rename file
     to_move = glob.glob(os.path.join("/home/simone/Downloads", "*.pdf"))[0]
-    out_f = "{}_{}_{}_{}.pdf".format(name_, year_, j, i)
-    os.rename(to_move, os.path.join(dest_fdr, out_f))
+    out_f = "{}_{}_{}.pdf".format(year_, j, i)
+    os.rename(to_move, os.path.join('.', out_f))
 # ----+ go to the next page
 to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
@@ -151,13 +153,13 @@ while j <= int(docs / 25):
         )
         # download file
         links[i].click()
-        time.sleep(6)
+        time.sleep(12)
         # close new window
         # TODO: close newly opened tabs
         # rename file
         to_move = glob.glob(os.path.join("/home/simone/Downloads", "*.pdf"))[0]
-        out_f = "{}_{}_{}_{}.pdf".format(name_, year_, j, i)
-        os.rename(to_move, os.path.join(dest_fdr, out_f))
+        out_f = "{}_{}_{}.pdf".format(year_, j, i)
+        os.rename(to_move, os.path.join('.', out_f))
     # go to the next page
     to_click = driver.find_element_by_xpath(
         "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a[2]"
