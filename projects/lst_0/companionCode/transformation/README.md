@@ -1,6 +1,6 @@
 # Data trasnformation - README
 
-This folder contains some scripts to transform the NL data gathered for various projects.
+This folder contains some scripts to transform the acquired text corpora.
 
 | Script | Scope                                | Status | Notes |
 |:-------|:-------------------------------------|:-------|:------|
