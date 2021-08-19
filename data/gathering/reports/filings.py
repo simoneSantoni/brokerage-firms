@@ -3,14 +3,15 @@
 
 """
 ------------------------------------------------------------------------------
-    filings.py   |    get 10-k modules from SEC's Edgar webiste
+    filings.py   |    get company filings from SEC's Edgar webiste
 ------------------------------------------------------------------------------
 
-Author   :
+Author   : Simone Santoni, simone.santoni.1@city.ac.uk
 
-Synopsis :
-
-Status   :
+Synopsis : Selenium-based workflow to get various types of filings from SEC's
+           Edgar webiste
+          
+Status   : Alpha version
 
 """
 
@@ -26,7 +27,7 @@ from bs4 import BeautifulSoup
 
 # %% params
 company_name = "blackrock"
-filing_type = "proxy"
+filing_type = "10-k"
 from_to = ["2000-01-01", "2021-06-30"]
 gecko_driver = r"/opt/selenium/bin/geckodriver"
 destination_folder = "/home/simone/filings/"
