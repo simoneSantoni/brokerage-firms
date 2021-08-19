@@ -157,7 +157,7 @@ for i, tab in enumerate(new_tabs):
     url = driver.current_url
     # get file type
     file_type = url[-4:]
-    if file_type is not 'json':
+    if (file_type is not 'json') & (file_type is not 'lank'):
         # populate download summary
         download_summary[i] = {'url': url, 'file_type': file_type}
         # save contents
