@@ -35,7 +35,7 @@ target_url = "https://www.sec.gov/"
 # %% initialize driver and visit the target webpage
 # storing data
 os.chdir(destination_folder)
-#os.mkdir(company_name)
+os.mkdir(company_name)
 os.chdir(company_name)
 # initialize a driver
 driver = webdriver.Firefox(executable_path=gecko_driver)
@@ -116,7 +116,7 @@ driver.switch_to.window(handles[0])
 # %% download documents
 # links
 links = driver.find_elements_by_xpath(
-    "/html/body/main/div[5]/div/div[3]/div[3]/div[2]/table/tbody//td[4]/a"
+    "/html/body/main/div[5]/div/div[3]/div[3]/div[2]/table/tbody//td[2]/div/a[1]"
 )
 # %% repoting dates
 reporting_dates = []
@@ -129,25 +129,20 @@ for i in range(len(links)):
     reporting_dates.append(item)
     
 # %% iterate over documents
-#TODO: broken, adjust
+# open documents
 for link, date in zip(links, reporting_dates):
-    # refesh links
-    #links = driver.find_elements_by_xpath(
-    #"/html/body/main/div[5]/div/div[3]/div[3]/div[2]/table/tbody//td[4]/a")
     # open the page
-    links[i].click()
-    # save the file
+    link.click()
+    # wait to fully load the page
+    time.sleep(10)
+# save documents
+handles = driver.window_handles
+for handle in handles[1:]:
+    # navigate to the tab
+    driver.switch_to.window(handle)
+    # save contents
     out_f = '{}.html'.format(date)
     with open(out_f, 'w') as pipe:
         pipe.write(driver.page_source)
     # get back to search page
     driver.switch_to.window(handles[0])
-    #driver.close()
-    #time.sleep(12)
-    ## rename file
-    #to_move = glob.glob(os.path.join("/home/simone/Downloads", "*.pdf"))[0]
-    #out_f = "{}_{}_{}.pdf".format(year_, j, i)
-    #os.rename(to_move, os.path.join('.', out_f))
-
-
-# %% !!!!!!!!!!!!!!!!!!!!!!!!! dirty stuff !!!!!!!!!!!!!!!!!!!!!!!!!!!
