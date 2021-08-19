@@ -25,8 +25,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
 # %% params
-company_name = "jpmorgan"
-filing_type = "10-k"
+company_name = "blackrock"
+filing_type = "proxy"
 from_to = ["2000-01-01", "2021-06-30"]
 gecko_driver = r"/opt/selenium/bin/geckodriver"
 destination_folder = "/home/simone/filings/"
@@ -35,8 +35,20 @@ target_url = "https://www.sec.gov/"
 # %% initialize driver and visit the target webpage
 # storing data
 os.chdir(destination_folder)
-os.mkdir(company_name)
+# company level folder
+if os.path.exists(company_name):
+    pass
+else:
+    os.mkdir(company_name)
+# navigate to the company folder
 os.chdir(company_name)
+# folders with the documents
+if os.path.exists(filing_type):
+    pass
+else:
+    os.mkdir(filing_type)
+# set current directory
+os.chdir(filing_type)
 # initialize a driver
 driver = webdriver.Firefox(executable_path=gecko_driver)
 # visit SEC's Edgar website
@@ -49,8 +61,8 @@ if filing_type == "10-k":
     xpath_0 = "/html/body/main/div[4]/div[2]/div[3]/h5"
     xpath_1 = "/html/body/main/div[4]/div[2]/div[3]/div/button[1]"
 elif filing_type == "proxy":
-    xpath_0 = ""
-    xpath_1 = ""
+    xpath_0 = "/html/body/main/div[4]/div[2]/div[4]/h5"
+    xpath_1 = "/html/body/main/div[4]/div[2]/div[4]/div/button[1]"
 else:
     print(
         """
@@ -70,12 +82,9 @@ to_click = driver.find_element_by_xpath(xpath_1)
 to_click.click()
 time.sleep(5)
 # filter-in target reports
-if filing_type == "10-k":
-    filter_in = driver.find_element_by_xpath('//*[@id="searchbox"]')
-    filter_in.send_keys(filing_type)
-    filter_in.send_keys(Keys.RETURN)
-else:
-    pass
+filter_in = driver.find_element_by_xpath('//*[@id="searchbox"]')
+filter_in.send_keys(filing_type)
+filter_in.send_keys(Keys.RETURN)
 # timespan for the search
 xpaths = ['//*[@id="filingDateFrom"]', '//*[@id="filingDateTo"]']
 for xpath, date in zip(xpaths, from_to):
@@ -126,8 +135,7 @@ for i in range(len(links)):
     col = 'td[4]/a'
     xpath = '/'.join([table, row, col])
     item = driver.find_element_by_xpath(xpath).text
-    reporting_dates.append(item)
-    
+    reporting_dates.append(item)  
 # %% iterate over documents
 # open documents
 for link, date in zip(links, reporting_dates):
@@ -135,14 +143,31 @@ for link, date in zip(links, reporting_dates):
     link.click()
     # wait to fully load the page
     time.sleep(10)
-# save documents
+# %% save documents
+# container for the download details
+download_summary = {}
+# get the set of newly opened windows
 handles = driver.window_handles
-for handle in handles[1:]:
+new_tabs = handles[1:]
+for i, tab in enumerate(new_tabs):
     # navigate to the tab
-    driver.switch_to.window(handle)
-    # save contents
-    out_f = '{}.html'.format(date)
-    with open(out_f, 'w') as pipe:
-        pipe.write(driver.page_source)
-    # get back to search page
-    driver.switch_to.window(handles[0])
+    driver.switch_to.window(tab)
+    # get url
+    url = driver.current_url
+    # get file type
+    file_type = url[-4:]
+    if file_type is not 'json':
+        # populate download summary
+        download_summary[i] = {'url': url, 'file_type': file_type}
+        # save contents
+        out_f = '{}{}'.format(i, file_type)
+        with open(out_f, 'w') as pipe:
+            pipe.write(driver.page_source)
+    else:
+        pass
+# write download summary to file
+with open('download_summary.json', 'w') as pipe:
+    json.dump(download_summary, pipe)
+
+
+# %%
