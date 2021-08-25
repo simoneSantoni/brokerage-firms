@@ -3,22 +3,34 @@ import os, glob
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 # %% arguments
 # user, password
 usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
-name_ = "blackrock"
+name_ = "jpmorgan"
 # lb, ub
-year_ = 2016
+year_ = 2018
 
 # %% destination folder
 os.chdir("/home/simone/faReports")
-#os.mkdir(name_)
+os.mkdir(name_)
 os.chdir(name_)
 
 # %% initialize a driver
+# local selenium
 driver = webdriver.Firefox(executable_path=r"/opt/selenium/bin/geckodriver")
+# remote selenium
+#driver = webdriver.Remote(
+#    command_executor="http://127.0.0.1:4444/wd/hub",
+#    desired_capabilities=DesiredCapabilities.FIREFOX,
+#    options=options
+#)
+#from selenium.webdriver.firefox.options import Options as FirefoxOptions
+#options = webdriver.FirefoxOptions()
+##options.add_argument('--headless')
+#options.set_headless(headless=True)
 
 # %% open investtext
 # target
@@ -99,7 +111,7 @@ to_click.click()
 
 # %% record the number of documents
 docs = driver.find_element_by_xpath("//*[@id='matched1']").text
-docs = int(docs.split(' ', 1)[0])
+docs = int(docs.split(" ", 1)[0])
 
 # %% go to the results page
 to_click = driver.find_element_by_xpath(
@@ -112,7 +124,7 @@ to_click = driver.find_element_by_xpath("//*[@id='excellinkid']")
 to_click.click()
 summary = glob.glob(os.path.join("/home/simone/Downloads", "*.xls"))[0]
 out_f = "{}_.xls".format(year_,)
-os.rename(summary, os.path.join('.', out_f))
+os.rename(summary, os.path.join(".", out_f))
 
 # %% download documents
 # iterate over pages
@@ -131,13 +143,13 @@ for i, link in enumerate(links):
     # rename file
     to_move = glob.glob(os.path.join("/home/simone/Downloads", "*.pdf"))[0]
     out_f = "{}_{}_{}.pdf".format(year_, j, i)
-    os.rename(to_move, os.path.join('.', out_f))
+    os.rename(to_move, os.path.join(".", out_f))
 # ----+ go to the next page
 to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
 )
 to_click.click()
-# --+ subsequent pages 
+# --+ subsequent pages
 while j <= int(docs / 25):
     # record paginations
     j += 1
@@ -149,7 +161,7 @@ while j <= int(docs / 25):
     for i in range(len(links)):
         # refresh links
         links = driver.find_elements_by_xpath(
-        "/html/body/div[6]/div[6]/table[2]/tbody//td[9]/a"
+            "/html/body/div[6]/div[6]/table[2]/tbody//td[9]/a"
         )
         # download file
         links[i].click()
@@ -159,7 +171,7 @@ while j <= int(docs / 25):
         # rename file
         to_move = glob.glob(os.path.join("/home/simone/Downloads", "*.pdf"))[0]
         out_f = "{}_{}_{}.pdf".format(year_, j, i)
-        os.rename(to_move, os.path.join('.', out_f))
+        os.rename(to_move, os.path.join(".", out_f))
     # go to the next page
     to_click = driver.find_element_by_xpath(
         "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a[2]"
@@ -168,5 +180,3 @@ while j <= int(docs / 25):
         to_click.click()
     except:
         print("It seems this is the last page")
-
-# %%
