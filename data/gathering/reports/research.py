@@ -11,7 +11,7 @@ usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
 name_ = "jpmorgan"
 # lb, ub
-year_ = 2018
+year_ = 2001
 
 # %% destination folder
 os.chdir("/home/simone/faReports")
@@ -180,3 +180,5 @@ while j <= int(docs / 25):
         to_click.click()
     except:
         print("It seems this is the last page")
+
+# %%
