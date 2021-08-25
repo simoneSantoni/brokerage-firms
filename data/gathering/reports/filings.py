@@ -26,8 +26,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from bs4 import BeautifulSoup
 
 # %% params
-company_name = "blackrock"
-filing_type = "10-k"
+company_name = "jpmorgan"
+filing_type = "proxy"
 from_to = ["2000-01-01", "2021-06-30"]
 gecko_driver = r"/opt/selenium/bin/geckodriver"
 destination_folder = "/home/simone/filings/"
