@@ -232,7 +232,7 @@ to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
 )
 to_click.click()
-# --+ subsequent pages
+# ----+ subsequent pages
 while j <= int(docs / 25):
     # record paginations
     j += 1
@@ -249,6 +249,7 @@ while j <= int(docs / 25):
         # download file
         links[i].click()
         time.sleep(12)
+        to_move = glob.glob(os.path.join("/home/simone/Downloads", "*.pdf"))
         if len(to_move) > 0:
             out_f = "{}_{}_{}.pdf".format(year_, j, i)
             os.rename(to_move[0], os.path.join(".", out_f))
