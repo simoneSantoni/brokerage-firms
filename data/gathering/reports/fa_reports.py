@@ -30,9 +30,9 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # user, password
 usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
-company_name = "jpmorgan"
+company_name = "jpm"
 # lb, ub
-year_ = 2002
+year_ = 2000
 
 # %%
 # destination folder
@@ -220,10 +220,13 @@ for i, link in enumerate(links):
                         os.rename(to_move[0], os.path.join(".", out_f))
                     else:
                         pass
-
-# %%
 # ----+ clean folder
-shutil.rmtree('/home/simone/Downloads')
+to_delete = glob.glob(os.path.join("/home/simone/Downloads", "*.*"))
+if len(to_delete) > 0:
+    for item in to_delete:
+        os.remove(item)
+    else:
+        pass
 # ----+ go to the next page
 to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
@@ -233,7 +236,7 @@ to_click.click()
 while j <= int(docs / 25):
     # record paginations
     j += 1
-    # get links
+    # get linksgg
     links = driver.find_elements_by_xpath(
         "/html/body/div[6]/div[6]/table[2]/tbody//td[9]/a"
     )
@@ -280,7 +283,11 @@ while j <= int(docs / 25):
                         else:
                             pass
     # clean dir
-    shutil.rmtree('/home/simone/Downloads')
+    if len(to_delete) > 0:
+        for item in to_delete:
+            os.remove(item)
+        else:
+            pass
     # go to the next page
     to_click = driver.find_element_by_xpath(
         "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a[2]"
