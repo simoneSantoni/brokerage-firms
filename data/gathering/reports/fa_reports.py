@@ -220,20 +220,21 @@ for i, link in enumerate(links):
                         os.rename(to_move[0], os.path.join(".", out_f))
                     else:
                         pass
-# ----+ clean folder
-to_delete = glob.glob(os.path.join("/home/simone/Downloads", "*.*"))
-if len(to_delete) > 0:
-    for item in to_delete:
-        os.remove(item)
-    else:
-        pass
-# ----+ go to the next page
+# ----+ to the next page
 to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
 )
 to_click.click()
-# ----+ subsequent pages
+
+# %% subsequent pages
 while j <= int(docs / 25):
+    # clean folder
+    to_delete = glob.glob(os.path.join("/home/simone/Downloads", "*.*"))
+    if len(to_delete) > 0:
+        for item in to_delete:
+            os.remove(item)
+        else:
+            pass
     # record paginations
     j += 1
     # get linksgg
@@ -283,12 +284,6 @@ while j <= int(docs / 25):
                             os.rename(to_move[0], os.path.join(".", out_f))
                         else:
                             pass
-    # clean dir
-    if len(to_delete) > 0:
-        for item in to_delete:
-            os.remove(item)
-        else:
-            pass
     # go to the next page
     to_click = driver.find_element_by_xpath(
         "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a[2]"
