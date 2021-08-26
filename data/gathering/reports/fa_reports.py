@@ -18,7 +18,7 @@ Status   : Alpha version
 # %%
 # lod libraries
 #
-import os, glob
+import os, glob, shutil
 import time
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -32,7 +32,7 @@ usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
 company_name = "jpmorgan"
 # lb, ub
-year_ = 2001
+year_ = 2002
 
 # %%
 # destination folder
@@ -222,6 +222,8 @@ for i, link in enumerate(links):
                         pass
 
 # %%
+# ----+ clean folder
+shutil.rmtree('/home/simone/Downloads')
 # ----+ go to the next page
 to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
@@ -277,6 +279,8 @@ while j <= int(docs / 25):
                             os.rename(to_move[0], os.path.join(".", out_f))
                         else:
                             pass
+    # clean dir
+    shutil.rmtree('/home/simone/Downloads')
     # go to the next page
     to_click = driver.find_element_by_xpath(
         "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a[2]"
