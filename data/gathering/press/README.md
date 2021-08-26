@@ -1,26 +1,28 @@
 # Factiva data collection - README
 
-<!-- vim-toc-markdown -->
-
-* [Overview of scripts](#overview-of-scripts)
-* [Article search](#article-search)
-* [Outcome of the query](#outcome-of-the-query)
-  * [Query 0](#query-0)
-  * [Query 1](#query-1)
-  * [Query 2](#query-2)
-
-<!-- vim-toc-markdown -->
-
-# Overview of scripts
+- [Factiva data collection - README](#factiva-data-collection---readme)
+  - [Overview of the scripts/procedures included in the current folder](#overview-of-the-scriptsprocedures-included-in-the-current-folder)
+  - [Eikon data](#eikon-data)
+  - [Factiva data](#factiva-data)
+    - [Article search](#article-search)
+    - [Outcome of the query](#outcome-of-the-query)
+      - [Query 0](#query-0)
+      - [Query 1](#query-1)
+      - [Query 2](#query-2)
+      - [Query 3](#query-3)
+## Overview of the scripts/procedures included in the current folder
 
 | Script   | Task                               | Status | Warnings |
-|:---------|:-----------------------------------|:-------|:---------|
-| _0.py    | parse .rtf downloaded from Factiva | run    | none     |
-| _1.py    | assemble corpus of data            | run    | none     |
+| :------- | :--------------------------------- | :----- | :------- |
+| eikon.py | parse .rtf downloaded from Factiva | run    | none     |
 
-# Data collection procedures
+The Factiva data collection sticks to a hand-curated workflow ― summarized 
+below.
+## Eikon data 
 
-## Article search
+__!! TO DO !!__
+## Factiva data
+### Article search
 
 Keywords have been derived from the Google Knowledge Graph:
 
@@ -41,12 +43,12 @@ Keywords have been derived from the Google Knowledge Graph:
 + Analytics
 + Computing
 
-## Outcome of the query
+### Outcome of the query
 
-### Query 0
+#### Query 0
 
 | Attribute | Value                                                    |
-|:----------|:---------------------------------------------------------|
+| :-------- | :------------------------------------------------------- |
 | Text      | ("artificial intelligence" or "deep learning")           |
 |           | and (rst=sfft or rst=sfwsj or rst=sfeco) and (in=ifinal) |
 | Date      | 01/01/2000 to 28/02/2019                                 |
@@ -61,10 +63,10 @@ Keywords have been derived from the Google Knowledge Graph:
 | Timestamp | 6 March 2019 21:52                                       |
 | Status    | NOT TO CARRY OUT                                         |
 
-### Query 1
+#### Query 1
 
 | Attribute  | Value                                                                    |
-|:-----------|:-------------------------------------------------------------------------|
+| :--------- | :----------------------------------------------------------------------- |
 | Text       | ("artificial intelligence" or "deep learning" or                         |
 |            | "machine learning" or "big data" or "natural language processing"        |
 |            | or "analytics") and (rst=sfft or rst=sfwsj or rst=sfeco) and (in=ifinal) |
@@ -81,10 +83,10 @@ Keywords have been derived from the Google Knowledge Graph:
 | Duplicates | Similar                                                                  |
 | Status     | COMPLETED                                                                |
 
-### Query 2
+#### Query 2
 
 | Attribute  | Value                                                                    |
-|:-----------|:-------------------------------------------------------------------------|
+| :--------- | :----------------------------------------------------------------------- |
 | Text       | ("artificial intelligence" or "deep learning" or                         |
 |            | "machine learning" or "big data" or "natural language processing"        |
 |            | or "analytics") and (rst=sfft or rst=sfwsj or rst=sfeco) and (in=ifinal) |
@@ -102,7 +104,7 @@ Keywords have been derived from the Google Knowledge Graph:
 | Status     | NOT TO CARRY OUT                                                         |
 |            |                                                                          |
 
-### Query 3
+#### Query 3
 
 | Attribute                         | Value                                                                                                                              |
 |:-------------------------------- -|:-----------------------------------------------------------------------------------------------------------------------------------|
