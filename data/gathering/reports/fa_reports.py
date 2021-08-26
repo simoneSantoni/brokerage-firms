@@ -32,7 +32,7 @@ usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
 company_name = "jpm"
 # lb, ub
-year_ = 2000
+year_ = 2001
 
 # %%
 # destination folder
@@ -224,9 +224,8 @@ for i, link in enumerate(links):
 to_click = driver.find_element_by_xpath(
     "/html/body/div[6]/div[6]/table[1]/tbody/tr[2]/td[3]/span/a"
 )
-to_click.click()
-
-# %% subsequent pages
+to_click.click() 
+# ----+ subsequent pages
 while j <= int(docs / 25):
     # clean folder
     to_delete = glob.glob(os.path.join("/home/simone/Downloads", "*.*"))
