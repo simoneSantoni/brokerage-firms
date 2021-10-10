@@ -32,7 +32,7 @@ usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
 # company name
 company_name = "jpm"
 # lb, ub
-year_ = 2001
+year_ = 2002
 
 # %%
 # destination folder
@@ -289,6 +289,7 @@ while j <= int(docs / 25):
     )
     try:
         to_click.click()
+        time.sleep(30)
     except:
         print("It seems this is the last page")
 
