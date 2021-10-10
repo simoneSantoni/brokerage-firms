@@ -3,18 +3,9 @@
 	"metadata": {
 		"mergent_name": "",
 		"mergent_ticker": "jpm",
-		"years": {
-			"2000": {
-				"status": "done",
-				"notes": "none"
-			},
-			"2001": {
-				"status": "on going",
-				"notes": "none"
-			},
-			"2002": {
-				"status": "on going",
-				"notes": "none"
+		"acquires": {
+			"years": {[2000, ]},
+			"notes": {[]
 			}
 		}
 	}
