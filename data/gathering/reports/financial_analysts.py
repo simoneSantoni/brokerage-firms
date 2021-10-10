@@ -3,7 +3,8 @@
 
 """
 ------------------------------------------------------------------------------
-    fa_reports.py   |    get company financial analyst reports from Mergent
+    financial_analysts.py   |    get company financial analyst reports 
+                            |    from Mergent
 ------------------------------------------------------------------------------
 
 Author   : Simone Santoni, simone.santoni.1@city.ac.uk
