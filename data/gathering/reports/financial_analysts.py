@@ -29,7 +29,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 # arguments
 #
 # user, password
-usr_, pwd_ = "sbbk475", "zeggan-xubto2-pEdzoh"
+usr_, pwd_ = "sbbk475", ""
 # company name
 company_name = "jpm"
 # lb, ub
