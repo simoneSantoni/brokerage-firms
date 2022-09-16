@@ -1,0 +1,26 @@
+List export,,,,,
+Product name,Orbis,,,,
+Update number,213003,,,,
+Software version,213,,,,
+Data update,13/08/2021 (n° 213003),,,,
+Username,City_University_IP-1,,,,
+Export date,17/08/2021 11:38:35 PM,,,,
+Search Strategy,,,,,
+Search Step,,,,Step result,Search result
+1. Status,,,"Active companies, Unknown situation","291,392,893","291,392,893"
+2. Specialisation,,,Banks,"142,687","114,579"
+3. Main stock exchange,,,New York Stock Exchange (NYSE) - [XNYS],"2,275",95
+Boolean search,,,1 and 2 and 3,,
+TOTAL,,,,95,
+Search options,,,,,
+Financial searches,Exclude companies with no recent financial data,,,,
+,Exclude public authorities/states/governments,,,,
+Sets of accounts,The most recent accounts available,,,,
+Information options,,,,,
+LexisNexis WorldCompliance categories filter,,Sanction / Enforcement / CurrentPEP / Other,,,
+Fiscal year end,,31/03,,,
+Definition of the Ultimate Owner,,,,,
+The minimum percentage of control in the path from a subject company to its Ultimate Owner must be: 50.01%,,,,,
+A company is considered to be an Ultimate Owner(UO) if it has no identified shareholders or if it's shareholder's percentages are not known.,,,,,
+Definition of the Beneficial Owner,,,,,
+"Path of minimum 10.00% at first level, minimum 50.01% at further levels, include top level individuals with unknown percentage or with minimum 10.00% (50.01% at each level)",,,,,
